@@ -1,0 +1,13 @@
+prefix=/home/src/HPCENC/hpcenc/deps/vs-r62
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/vapoursynth
+
+Name: vapoursynth
+Description: A frameserver for the 21st century
+Version: 62
+
+Requires.private: zimg
+Libs: -L${libdir} -lvapoursynth
+Libs.private: -L/root/src/hpcenc/deps/zimg-3.0.8/lib -lzimg   -ldl
+Cflags: -I${includedir}

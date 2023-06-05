@@ -1,0 +1,11 @@
+#%Module1.0
+
+module load hpcenc
+module load fribidi harfbuzz-7.3.0
+set __encroot [getenv ENCROOT]
+set _MROOT ${__encroot}/deps/libass-0.17.1
+set _LPATH ${_MROOT}/lib
+prepend-path LIBRARY_PATH ${_LPATH}
+prepend-path LD_LIBRARY_PATH ${_LPATH}
+prepend-path CPATH ${_MROOT}/include
+prepend-path PKG_CONFIG_PATH ${_LPATH}/pkgconfig

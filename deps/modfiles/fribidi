@@ -1,0 +1,12 @@
+#%Module1.0
+
+module load hpcenc
+set __encroot [getenv ENCROOT]
+set _MROOT ${__encroot}/deps/fribidi
+set _LPATH ${_MROOT}/lib
+prepend-path LIBRARY_PATH ${_LPATH}
+prepend-path LD_LIBRARY_PATH ${_LPATH}
+prepend-path CPATH ${_MROOT}/include
+prepend-path PATH ${_MROOT}/bin
+prepend-path MANPATH ${_MROOT}/share/man
+prepend-path PKG_CONFIG_PATH ${_LPATH}/pkgconfig

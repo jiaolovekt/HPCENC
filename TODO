@@ -1,0 +1,30 @@
+src prep:
+	m2ts prep
+	webname prep
+	assname prep
+web enc:
+	encode with config
+bd enc:
+	eeenc with profiles
+	
+
+DEP:
+
+gcc
+x264 -pre
+x265 -pre
+avs+
+	plgns:
+		lwl
+libass
+		mp3lame
+fdkaac
+		opus?
+vs
+py
+	(vse)
+ffmpeg -pre wox264 wolwl wolibass woaac
+	mediainfo
+	mkvtool
+	mp4box
+	eac3to

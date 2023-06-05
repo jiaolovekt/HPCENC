@@ -1,0 +1,12 @@
+prefix=/home/src/HPCENC/hpcenc/deps/harfbuzz-7.3.0
+exec_prefix=/home/src/HPCENC/hpcenc/deps/harfbuzz-7.3.0
+libdir=/home/src/HPCENC/hpcenc/deps/harfbuzz-7.3.0/lib
+includedir=/home/src/HPCENC/hpcenc/deps/harfbuzz-7.3.0/include
+
+Name: harfbuzz subsetter
+Description: HarfBuzz font subsetter
+Version: 7.3.0
+
+Requires: harfbuzz = 7.3.0
+Libs: -L${libdir} -lharfbuzz-subset
+Cflags: -I${includedir}/harfbuzz

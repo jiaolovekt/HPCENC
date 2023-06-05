@@ -1,0 +1,14 @@
+# ffms2.pc.  Generated from ffms2.pc.in by configure.
+
+prefix=/home/src/HPCENC/hpcenc/deps/ffms2
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: ffms2
+Description: The Fabulous FM Library 2
+Requires.private: libavformat libavcodec libswscale libavutil libswresample
+Version: 3.1.1
+Libs.private:  -lz
+Libs: -L${libdir} -lffms2
+Cflags: -I${includedir}

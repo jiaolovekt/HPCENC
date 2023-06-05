@@ -1,0 +1,15 @@
+#%Module1.0
+
+module load hpcenc
+set __encroot [getenv ENCROOT]
+set _MROOT ${__encroot}/deps/gcc-12.3
+set _LPATH ${_MROOT}/lib
+prepend-path LIBRARY_PATH ${_LPATH}
+prepend-path LIBRARY_PATH ${_LPATH}64
+prepend-path LIBRARY_PATH lib/gcc/x86_64-known-linux-gnu/12.3.0/
+prepend-path LD_LIBRARY_PATH ${_LPATH}
+prepend-path LD_LIBRARY_PATH ${_LPATH}64
+prepend-path LD_LIBRARY_PATH lib/gcc/x86_64-known-linux-gnu/12.3.0/
+prepend-path CPATH ${_MROOT}/include
+prepend-path PATH ${_MROOT}/bin
+prepend-path MANPATH ${_MROOT}/share/man

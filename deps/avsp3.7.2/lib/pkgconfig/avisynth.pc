@@ -1,0 +1,12 @@
+prefix=/root/src/hpcenc/deps/avsp3.7.1
+exec_prefix=/root/src/hpcenc/deps/avsp3.7.1
+libdir=${exec_prefix}/lib64
+includedir=${prefix}/include/avisynth
+
+Name: AviSynth+
+Description: A powerful nonlinear scripting language for video.
+Version: 3.7.2
+
+Libs: -L${libdir} -lavisynth
+Libs.private: -L${libdir} -lpthread -ldl
+Cflags: -I${includedir}

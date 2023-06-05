@@ -1,0 +1,12 @@
+#%Module1.0
+
+module load hpcenc
+module load zimg-3.0.4
+set __encroot [getenv ENCROOT]
+set _MROOT ${__encroot}/deps/vs-r62
+set _LPATH ${_MROOT}/lib
+prepend-path LIBRARY_PATH ${_LPATH}
+prepend-path LD_LIBRARY_PATH ${_LPATH}
+prepend-path CPATH ${_MROOT}/include
+prepend-path PATH ${_MROOT}/bin
+prepend-path PKG_CONFIG_PATH ${_LPATH}/pkgconfig

@@ -1,0 +1,14 @@
+# fribidi.pc.  Generated from fribidi.pc.in by configure.
+
+prefix=/home/src/HPCENC/hpcenc/deps/fribidi
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: GNU FriBidi
+Description: Unicode Bidirectional Algorithm Library
+Version: 1.0.13
+Libs: -L${libdir} -lfribidi
+Cflags: -I${includedir}/fribidi
+CFLAGS.private: 
+#Cflags: -I${includedir}/fribidi 

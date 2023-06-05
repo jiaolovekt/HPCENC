@@ -1,0 +1,14 @@
+prefix=/home/src/HPCENC/hpcenc/deps/ffmpeg-5-pre
+exec_prefix=${prefix}
+libdir=/home/src/HPCENC/hpcenc/deps/ffmpeg-5-pre/lib
+includedir=/home/src/HPCENC/hpcenc/deps/ffmpeg-5-pre/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 57.28.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -latomic -lX11
+Cflags: -I${includedir}

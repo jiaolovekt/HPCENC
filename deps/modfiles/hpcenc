@@ -1,0 +1,11 @@
+#%Module1.0
+
+#TODO: autodetect ENCROOT in module
+if { [ module-info mode load ] } {
+	set __encroot "[getenv ENCROOT]"
+	if { "${__encroot}" == "" } {
+		puts stderr "no ENCROOT defined, please export ENCROOT to hpcenc root"
+		break
+	}
+puts stderr "ENCROOT at ${__encroot}"
+}
