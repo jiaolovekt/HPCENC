@@ -1,0 +1,8 @@
+#Namemap file
+#Add new definitions when new season begins
+#Format OUTPUT={OUTPUTNAME} # PROJECT
+#Format example: OUTPUT=[KTXP][Ayakashi_Triangle][$INDEX][$LANGG][$RESO] SRC="Ayakashi Triangle" ASS=KAKT# KAKT (project name must be here)
+#Will use source file contains "Ayakashi Triangle" ASSfile contains "KAKT"
+#[SubsPlease] Ayakashi Triangle - 01 (1080p).mkv KAKT_01_GB.ass/KAKT_01_BIG5.ass will be used
+
+OUTNAME=[KTXP][Ayakashi_Triangle][$INDEX][$LANGG][$RESO]; SRC="Ayakashi Triangle" ; ASS=KAKT # KAKT

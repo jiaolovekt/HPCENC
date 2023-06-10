@@ -1,0 +1,114 @@
+#!/bin/bash
+LOGMODE=LOCAL
+logg()
+{
+        # level emerg alert crit err warn notice info debug
+        [ "$2" = "debug" ] && [ $DEBUG = 0 ] && return 0
+        echo $SHELLOPTS | grep -Fq xtrace && set +x && local trace=1
+        local dt=$(date)
+        local logcontent="$1"
+        local level=info
+        [ -n "$2" ] && level=$2
+        #[ "$2" = "warn" ] || [ "$2" = "err" ] || [ "$2" = "crit" ] && warn "$logcontent"
+        [ "$QUIET" = 0 ] && echo "[$dt]|[$$]|[$level]|(${FUNCNAME[*]})|$logcontent" 1>&2 || true
+        case $LOGMODE in
+                LOCAL)
+                        echo "[$dt]|[$$]|[$level]|(${FUNCNAME[*]})|$logcontent" 1>&2 || true
+                ;;
+                REMOTE)
+                        echo "[$dt]|[$$]|[$level]|(${FUNCNAME[*]})|$logcontent" 1>&2 || true
+                        logger -d -n $LOGSERVER -t $MYNAME -P 514 -p local5."$level" "(${FUNCNAME[*]})" "$logcontent"
+                ;;
+                SYSTEMD)
+                        echo "[$dt]|[$$]|[$level]|(${FUNCNAME[*]})|$logcontent" || true
+                ;;
+        esac
+        if [ "$2" = "emerg" ] ; then
+                local cnt=0
+                while [ "$cnt" -lt 4 ] ; do
+                        echo "[$$]|[$level]|(${FUNCNAME[*]})|$logcontent" | wall
+                        ((cnt++))
+                done
+        fi
+        [ "$trace" = 1 ] && set -x
+        return 0
+}
+
+sleep()
+{
+        local time=$1
+        [ -x /usr/bin/sleep ] || exit
+        /usr/bin/sleep "$time" & wait $!
+}
+
+getwebavs()
+{
+	local mode="$1" #X264 or X265
+	[[ "$mode" =~ 264 ]] && mode=264
+	[[ "$mode" =~ 265 ]] && mode=265
+	AVSFILE="$(ls ${SCDIR}/${PROJECT}*${INDEX}*${LANGG}*${RESO}*${mode}.avs|tail -n 1)"
+        if [ -f "$AVSFILE" ] ; then
+                logg "using $AVSFILE" info
+        elif [ "$Automissingavs" = "1" ] ; then
+		sleep 1
+		#TODO
+		#createavs "$PROJECT" "${INDEX}" "${LANGG}" "${RESO}" ${mode}
+	else
+                logg "${PROJECT}_${INDEX}_${LANGG}_${RESO}_264.avs not exist" err
+                exit 7
+        fi
+	if [ "$mode" = 265 ] && ! grep -q 'output_depth=10' "$AVSFILE" ; then
+		logg "Warning: 10bit output not found in the $AVSFILE" warn
+	fi
+}
+
+getwebsrcinfo()
+{
+	VideoFmt="$($MEDIAINFO_exec --Output="Video;%Format%" "${SRCDIR}/${SRCFILE}")"
+	Videorate="$($MEDIAINFO_exec --Output="Video;%Bitrate%" "${SRCDIR}/${SRCFILE}")"
+	Videorate="${Videorate:-$($MEDIAINFO_exec --Output="Video;%FromStats_BitRate%" "${SRCDIR}/${SRCFILE}")}"
+	AudioFmt="$($MEDIAINFO_exec --Output="Audio;%Format%" "${SRCDIR}/${SRCFILE}")"
+	Audiorate="$($MEDIAINFO_exec --Output="Audio;%Bitrate%" "${SRCDIR}/${SRCFILE}")"
+	Audiorate="${Audiorate:-$($MEDIAINFO_exec --Output="Audio;%FromStats_BitRate%" "${SRCDIR}/${SRCFILE}")}"
+	logg "${SRCDIR}/${SRCFILE} VideoFormat $VideoFmt Bitrate $Videorate AudioFormat $AudioFmt Bitrate $Audiorate"
+}
+
+getwebsrc()
+{
+        SRCFILE="$(ls ${SRCDIR} | grep "${SRC}.*${INDEX}"|head -n 1)"
+        if [ -n "$SRCFILE" ] ; then
+                logg "find src file ${SRCDIR}/${SRCFILE}" info
+        else
+                logg "cannot file $SRC $INDEX source file" err
+                exit 9
+        fi
+}
+
+createavs()
+{
+	sleep 1 #TODO 264/265 avs template
+}
+
+localtmp()
+{
+	sleep 1 #TODO /tmp 
+}
+
+cleanuptmp()
+{
+	if [ "$Cleartmp" != "0" ] ; then
+		logg "cleanup tmpfiles" info
+	else
+		logg "Will Not clean tmp" info
+		return 0
+	fi
+	local rmed=""
+	[ "$X264_EN" != "0" ] && rmed="$X264_TMP $X264_AUD_TMP"
+	[ "$X265_EN" != "0" ] && rmed="$rmed $X265_TMP $X265_AUD_TMP"
+	if [ "$DRYRUN" = 0 ] ; then
+		rm -f "$rmed"
+		logg "rm -f $rmed" info
+	else 
+		logg "rm -f $rmed" info
+	fi
+}
