@@ -3,7 +3,7 @@ LOGMODE=LOCAL
 logg()
 {
         # level emerg alert crit err warn notice info debug
-        [ "$2" = "debug" ] && [ $DEBUG = 0 ] && return 0
+        [ "$2" = "debug" ] && [ "$DEBUG" = "0" ] && return 0
         echo $SHELLOPTS | grep -Fq xtrace && set +x && local trace=1
         local dt=$(date)
         local logcontent="$1"
@@ -41,17 +41,29 @@ sleep()
         /usr/bin/sleep "$time" & wait $!
 }
 
+getwebass()
+{	
+	logg "getting ass file" debug
+	ASSFILE="$(find "${ASSDIR}" -name "${SRC}*${INDEX}*${LANGG}.ass")"
+	ASSFILE="${ASSFILE:-"$(find "${ASSDIR}" -name "${PROJECT}*${INDEX}*${LANGG}.ass")"}"
+	if [ -z "$ASSFILE" ] ; then
+		logg "cannot find assfile $SRC / $PROJECT $INDEX $LANGG" err
+		exit 11
+	else 
+		logg "using ass $ASSFILE" info
+	fi
+}
+
 getwebavs()
 {
 	local mode="$1" #X264 or X265
 	[[ "$mode" =~ 264 ]] && mode=264
 	[[ "$mode" =~ 265 ]] && mode=265
-	AVSFILE="$(ls ${SCDIR}/${PROJECT}*${INDEX}*${LANGG}*${RESO}*${mode}.avs|tail -n 1)"
+	AVSFILE="$(find "${SCDIR}" -name "${PROJECT}*${INDEX}*${LANGG}*${RESO}*${mode}.avs"|tail -n 1)"
         if [ -f "$AVSFILE" ] ; then
                 logg "using $AVSFILE" info
         elif [ "$Automissingavs" = "1" ] ; then
-		sleep 1
-		#TODO
+		createavs
 		#createavs "$PROJECT" "${INDEX}" "${LANGG}" "${RESO}" ${mode}
 	else
                 logg "${PROJECT}_${INDEX}_${LANGG}_${RESO}_264.avs not exist" err
@@ -64,20 +76,20 @@ getwebavs()
 
 getwebsrcinfo()
 {
-	VideoFmt="$($MEDIAINFO_exec --Output="Video;%Format%" "${SRCDIR}/${SRCFILE}")"
-	Videorate="$($MEDIAINFO_exec --Output="Video;%Bitrate%" "${SRCDIR}/${SRCFILE}")"
-	Videorate="${Videorate:-$($MEDIAINFO_exec --Output="Video;%FromStats_BitRate%" "${SRCDIR}/${SRCFILE}")}"
-	AudioFmt="$($MEDIAINFO_exec --Output="Audio;%Format%" "${SRCDIR}/${SRCFILE}")"
-	Audiorate="$($MEDIAINFO_exec --Output="Audio;%Bitrate%" "${SRCDIR}/${SRCFILE}")"
-	Audiorate="${Audiorate:-$($MEDIAINFO_exec --Output="Audio;%FromStats_BitRate%" "${SRCDIR}/${SRCFILE}")}"
-	logg "${SRCDIR}/${SRCFILE} VideoFormat $VideoFmt Bitrate $Videorate AudioFormat $AudioFmt Bitrate $Audiorate"
+	VideoFmt="$($MEDIAINFO_exec --Output="Video;%Format%" "${SRCFILE}")"
+	Videorate="$($MEDIAINFO_exec --Output="Video;%Bitrate%" "${SRCFILE}")"
+	Videorate="${Videorate:-$($MEDIAINFO_exec --Output="Video;%FromStats_BitRate%" "${SRCFILE}")}"
+	AudioFmt="$($MEDIAINFO_exec --Output="Audio;%Format%" "${SRCFILE}")"
+	Audiorate="$($MEDIAINFO_exec --Output="Audio;%Bitrate%" "${SRCFILE}")"
+	Audiorate="${Audiorate:-$($MEDIAINFO_exec --Output="Audio;%FromStats_BitRate%" "${SRCFILE}")}"
+	logg "${SRCFILE} VideoFormat $VideoFmt Bitrate $Videorate AudioFormat $AudioFmt Bitrate $Audiorate" info
 }
 
 getwebsrc()
 {
-        SRCFILE="$(ls ${SRCDIR} | grep "${SRC}.*${INDEX}"|head -n 1)"
+        SRCFILE="$(find "${SRCDIR}" -name "*${SRC}*${INDEX}*"|grep -v lwi|head -n 1)"
         if [ -n "$SRCFILE" ] ; then
-                logg "find src file ${SRCDIR}/${SRCFILE}" info
+                logg "find src file ${SRCFILE}" info
         else
                 logg "cannot file $SRC $INDEX source file" err
                 exit 9
@@ -85,13 +97,25 @@ getwebsrc()
 }
 
 createavs()
-{
-	sleep 1 #TODO 264/265 avs template
+{	
+	AVSFILE="${SCDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_${mode}.avs"
+	logg "create avs script for ${PROJECT} ${INDEX} ${LANGG} ${RESO} ${mode}" info
+	getwebass
+	local SRCFILE_s="${SRCFILE##*/}"
+	local FONTDIR_s="${FONTDIR##*/}"
+	local ASSFILE_s="${ASSFILE##*/}"
+	logg "font dir is $FONTDIR , relative dir is $FONTDIR_s" debug
+	sed "s|__ENCROOT__|${ENCROOT}|; s|__SRCFILE__|../src/${SRCFILE_s}|; s|__ASSFILE__|../ass/${ASSFILE_s}|; s|__FONTDIR__|../${FONTDIR_s}|" "${ENCROOT}/config/${AVSTMPL}" > "$AVSFILE"
+	if [ "$X265_EN" = "1" ] && ! grep -q 'output_depth=10' ; then
+		#Assume last line is Return
+		logg "Warning: x265 mode without 10bit out in script template? adding" warn
+		sed -i '$s/$/.f3kdb(input_depth=8,output_depth=10,output_mode=2)/' "$AVSFILE"
+	fi
 }
 
 localtmp()
 {
-	sleep 1 #TODO /tmp 
+	sleep 1 #TODO /tmp
 }
 
 cleanuptmp()
@@ -103,12 +127,14 @@ cleanuptmp()
 		return 0
 	fi
 	local rmed=""
-	[ "$X264_EN" != "0" ] && rmed="$X264_TMP $X264_AUD_TMP"
-	[ "$X265_EN" != "0" ] && rmed="$rmed $X265_TMP $X265_AUD_TMP"
 	if [ "$DRYRUN" = 0 ] ; then
+		[ "$X264_EN" = "1" ] && rmed="$X264_TMP $X264_AUD_TMP" && rm -f "$X264_TMP" "$X264_AUD_TMP"
+		[ "$X265_EN" = "1" ] && rmed="$X265_TMP $X265_AUD_TMP" && rm -f "$X265_TMP" "$X265_AUD_TMP"
 		rm -f "$rmed"
 		logg "rm -f $rmed" info
 	else 
+		[ "$X264_EN" = "1" ] && rmed="$X264_TMP $X264_AUD_TMP"
+		[ "$X265_EN" = "1" ] && rmed="$X265_TMP $X265_AUD_TMP"
 		logg "rm -f $rmed" info
 	fi
 }

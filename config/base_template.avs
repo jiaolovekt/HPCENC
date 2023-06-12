@@ -1,0 +1,6 @@
+AddAutoloadDir("__ENCROOT__/deps/avsp3.7.2/lib/avisynth")
+#LoadPlugin("__ENCROOT__/deps/avsp3.7.2/lib/avisynth/liblsmashsource.so")
+#LoadPlugin("__ENCROOT__/deps/avsp3.7.2/lib/avisynth/libassrender.so")
+V=LwLibavvideosource("__SRCFILE__")
+A=LwLibavaudiosource("__SRCFILE__")
+Return AudioDub(V,A).AssRender("__ASSFILE__",fontdir="__FONTDIR__")

@@ -1,19 +1,20 @@
 #!/bin/bash
 
 #Env Part
-WORKINGDIR="$PWD/template" #project dir
+WORKINGDIR="$PWD" #project dir
 SRCDIR="$WORKINGDIR/src"
 ASSDIR="$WORKINGDIR/ass"
 SCDIR="$WORKINGDIR/script"
 FONTDIR="$WORKINGDIR/font"
 TMPDIR="$WORKINGDIR/tmp" # or /tmp
 OUTDIR="$WORKINGDIR/out"
+AVSTMPL="base_template.avs"
 
 #Type
-X264_EN=1 #Encode x264
+#X264_EN=1
 X264_AUD=AAC #Use if X264 enabled
 X264_MUX=mp4 #Currently unused
-X265_EN=1
+#X265_EN=1
 X265_AUD=AAC
 X265_MUX=mkv
 
@@ -82,9 +83,9 @@ B5flag=BIG5	#modify if needed
 #GBflag=GB_CN	# or
 #B5flag=JPN_CHT
 
-
+Automissingavs=1
 SkipEAudio=0	#skip exist tmp files, may cause problem
-SkipEVideo=0
+SkipEVideo=1
 
 Cleartmp=1	#remove tmp files when complete
 Preferlocaltmp=1 #use local /tmp if storage/tmpfs have enoughspace
