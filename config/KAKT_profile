@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Env Part
-WORKINGDIR="$PWD/KAKT" #project dir
+WORKINGDIR="$ENCROOT/KAKT" #project dir
 SRCDIR="$WORKINGDIR/src"
 ASSDIR="$WORKINGDIR/ass"
 SCDIR="$WORKINGDIR/script"

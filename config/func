@@ -105,8 +105,12 @@ createavs()
 	local FONTDIR_s="${FONTDIR##*/}"
 	local ASSFILE_s="${ASSFILE##*/}"
 	logg "font dir is $FONTDIR , relative dir is $FONTDIR_s" debug
+	if [ "$X265_EN" = "1" ] ; then
+		[ -n "${AVS265TMPL}" ] && AVSTMPL="${AVS265TMPL}"
+	fi
 	sed "s|__ENCROOT__|${ENCROOT}|; s|__SRCFILE__|../src/${SRCFILE_s}|; s|__ASSFILE__|../ass/${ASSFILE_s}|; s|__FONTDIR__|../${FONTDIR_s}|" "${ENCROOT}/config/${AVSTMPL}" > "$AVSFILE"
-	if [ "$X265_EN" = "1" ] && ! grep -q 'output_depth=10' ; then
+	if [ "$X265_EN" = "1" ] && ! grep -q 'output_depth=10' "$AVSFILE" && [ -z "$AVS265TMPL" ] && [ "$Automissingdepth" = "1" ] ; then
+		#specified AVS265TMPL unconditionally skip this part
 		#Assume last line is Return
 		logg "Warning: x265 mode without 10bit out in script template? adding" warn
 		sed -i '$s/$/.f3kdb(input_depth=8,output_depth=10,output_mode=2)/' "$AVSFILE"
