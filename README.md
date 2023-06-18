@@ -40,4 +40,5 @@ You can create your own avs template according to config/base_template.avs, usin
 A symlink can be used for FONTDIR
 
 ### Submit encode jobs
-`encode [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265]`
+webrip:
+`srun -N 1 --ntasks-per-node 1 webencode.sh [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265]`
