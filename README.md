@@ -30,7 +30,8 @@ Defines the output name, the SRC name is also used to search source file and ass
 
 ### AVS template variable
 You can create your own avs template according to config/base_template.avs, using the following varaible for substitution.
-|----------|----------|
+|String|Usage|
+|-----------|----------|
 |__ENCROOT__|The HPCENC root dir|
 |__SRCFILE__|The source file name, without path|
 |__ASSFILE__|The ass file name without path|
