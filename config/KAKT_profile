@@ -8,3 +8,75 @@ SCDIR="$WORKINGDIR/script"
 FONTDIR="$WORKINGDIR/font"
 TMPDIR="$WORKINGDIR/tmp" # or /tmp
 OUTDIR="$WORKINGDIR/out"
+
+#X264param
+X264_exec=x264
+X264_crf=23
+X264_tune=animation
+X264_keyint=480
+X264_threads=0
+X264_bframes=9
+X264_qpmax=69
+X264_badapt=2
+X264_ref=6
+X264_vbvbuf=15000
+X264_vbvmaxrate=12000
+X264_lookahead=80
+X264_me=umh
+X264_subme=7
+X264_merange=24
+X264_aqmode=3
+X264_custom="" 	#custom x264 params here
+
+#X265param
+X265_exec=x265
+X265_preset=slow
+X265_profile=main10
+X265_crf=23
+X265_ref=6
+X265_keyint=240
+X265_rd=5
+X265_ctu=32
+X265_maxtu=32
+X265_rdoq=1
+X265_me=umh
+X265_subme=4
+X265_merange=32
+X265_badapt=2
+X265_psyrdoq=6.0
+X265_aqmode=1
+X265_qgsize=32
+X265_colormatx=bt709
+X265_lookahead=80
+X265_custom="" 	#custom x265 params here
+
+#FFMPEGparam
+FFMPEG_exec=ffmpeg
+
+#AACparam
+AudDirectmux=1			#Will use source file for mux, trims in avs/vs WILL BE IGNORED
+AudDirectmuxthreshold=160000	#if audio bitrate lower than (bits), direct mux rather than reencode
+AAC_Q=0.8
+
+#FLACparam
+#N/A yet
+
+#Muxparam
+MCOMMENT="Encoded by HPCENC"
+
+#procedure param
+MEDIAINFO_exec=mediainfo
+
+GBflag=GB
+B5flag=BIG5	#modify if needed
+#GBflag=GB_CN	# or
+#B5flag=JPN_CHT
+
+Automissingavs=1
+Separatelogfile=1	#use separate log file for x26x and ffmpeg
+SkipEAudio=0	#skip exist tmp files, may cause problem
+SkipEVideo=1
+
+Cleartmp=1	#remove tmp files when complete
+Preferlocaltmp=1 #use local /tmp if storage/tmpfs have enoughspace
+

@@ -69,8 +69,8 @@ getwebavs()
                 logg "${PROJECT}_${INDEX}_${LANGG}_${RESO}_264.avs not exist" err
                 exit 7
         fi
-	if [ "$mode" = 265 ] && ! grep -q 'output_depth=10' "$AVSFILE" ; then
-		logg "Warning: 10bit output not found in the $AVSFILE" warn
+	if [ "$mode" = 265 ] && ! grep -q -e 'depth=10' -e 'bits=10' -e "[Dd]own10" "$AVSFILE" ; then
+		logg "Warning: 10bit output not found in $AVSFILE" warn
 	fi
 }
 
