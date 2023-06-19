@@ -2,11 +2,11 @@
 A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clusters](https://en.wikipedia.org/wiki/Supercomputer). 
 
 ## Introduction
-  The motivation of this project is to find a faster way of encoding videos with avisynth/vapoursynth with x264/265.\ 
+  The motivation of this project is to find a faster way of encoding videos with avisynth/vapoursynth with x264/265.\
   My former solution is a series of semi-automatic windows cmd scripts, which distributes encoding jobs to a few windows slave machines.\
   However sometimes it is buggy because of various reasons(maybe Windows is the most significant one).
   So I decided to migrate everything to linux and, since there's some HPC resources available, submit encode jobs to clusters will [save a lot of time](https://en.wikipedia.org/wiki/Parallel_computing#Amdahl's_law_and_Gustafson's_law).\
-  You can submit a TV series of 12 episodes * 2 (1080p and 720p) * 2 (GB and BIG5) = 48 jobs to the cluster and, if there's enough nodes, you job will complete within the time of encoding just 1 episode.
+  You can submit a TV series of 12 episodes * 2 (1080p and 720p) * 2 (GB and BIG5) = 48 jobs to the cluster and, if there's enough nodes, your job will complete within the time of encoding just 1 episode.
 
 ## Content
  - Avisynth+ 3.7.2
