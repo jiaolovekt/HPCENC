@@ -112,8 +112,11 @@ createavs()
 	if [ "$X265_EN" = "1" ] && ! grep -q 'output_depth=10' "$AVSFILE" && [ -z "$AVS265TMPL" ] && [ "$Automissingdepth" = "1" ] ; then
 		#specified AVS265TMPL unconditionally skip this part
 		#Assume last line is Return
-		logg "Warning: x265 mode without 10bit out in script template? adding" warn
-		sed -i '$s/$/.f3kdb(input_depth=8,output_depth=10,output_mode=2)/' "$AVSFILE"
+		logg "Warning: x265 mode without 10bit out in script template?" warn
+	fi
+	if [[ "$RESO" =~ "720" ]] && ! grep -q '1280,720' "$AVSFILE" ; then
+		logg "Adding resize to 1280x720" info
+		sed -i '$s/$/.Spline36Resize(1280,720)/' "$AVSFILE"
 	fi
 }
 
