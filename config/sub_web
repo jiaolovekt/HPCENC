@@ -1,0 +1,11 @@
+#!/bin/sh
+#SBATCH -N 1
+#SBATCH -n 40
+
+#Default web submit job template
+echo Webrip job $PROJECT $INDEX $RESO $LANGG $CODEC
+echo running on $HOSTNAME at $PWD
+. ./init.sh
+
+srun -n 1 webencode.sh -n $PROJECT -i $INDEX -r $RESO -l $LANGG -c $CODEC
+#srun -n 1 /usr/bin/echo webencode.sh -n $PROJECT -i $INDEX -r $RESO -l $LANGG -c $CODEC
