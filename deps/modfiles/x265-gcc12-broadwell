@@ -1,0 +1,11 @@
+#%Module1.0
+
+module load hpcenc
+set __encroot [getenv ENCROOT]
+set _MROOT ${__encroot}/deps/x265-gcc12-broadwell
+set _LPATH ${_MROOT}/lib
+prepend-path LIBRARY_PATH ${_LPATH}
+prepend-path LD_LIBRARY_PATH ${_LPATH}
+prepend-path CPATH ${_MROOT}/include
+prepend-path PATH ${_MROOT}/bin
+prepend-path PKG_CONFIG_PATH ${_LPATH}/pkgconfig

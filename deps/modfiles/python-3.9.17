@@ -1,0 +1,14 @@
+#%Module1.0
+
+module load hpcenc
+set __encroot [getenv ENCROOT]
+set _MROOT ${__encroot}/deps/python-3.9.17
+set _LPATH ${_MROOT}/lib
+prepend-path LD_LIBRARY_PATH ${_MROOT}/lib
+prepend-path LIBRARY_PATH ${_MROOT}/lib
+prepend-path PYTHONPATH ${_MROOT}/lib/python3.9
+prepend-path PYTHONPATH ${_MROOT}/lib/python3.9/site-packages
+prepend-path CPATH ${_MROOT}/include
+prepend-path PATH ${_MROOT}/bin
+prepend-path MANPATH ${_MROOT}/share/man
+prepend-path PKG_CONFIG_PATH ${_LPATH}/pkgconfig

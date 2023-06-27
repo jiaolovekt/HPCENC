@@ -12,7 +12,7 @@ TMPDIR="$WORKINGDIR/tmp" # or /tmp
 OUTDIR="$WORKINGDIR/out"
 ASSFILE=
 AVSFILE=
-CONFIGDIR="$ENCROOT/config"
+CONFIGDIR="${ENCROOT}/config"
 . "$CONFIGDIR"/func
 #Env Part End
 
@@ -54,6 +54,9 @@ while getopts p:n:i:r:l:c:h OP ; do
 	l)
 		LANGG="$OPTARG"
 	;;
+	m)
+		EMODE="$OPTARG"
+	;;
 	c)
 		#TODO: Rework full struct
 		[[ "$OPTARG" =~ 264|avc|AVC ]] && X264_EN=1 && CODEC=264
@@ -61,7 +64,7 @@ while getopts p:n:i:r:l:c:h OP ; do
 		[ -z "$X264_EN" ] && [ -z "$X265_EN" ] && logg "wrong codec $OPTARG specified" err && exit 9
 	;;
 	*)
-		echo "Usage: encode [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265]" 1>&2
+		echo "Usage: encode [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -m AVS/VS ]" 1>&2
 	;;
 	esac
 done
@@ -81,6 +84,8 @@ if [ -n "$PROFILE" ] ; then
 elif [ -r "$CONFIGDIR"/"$PROJECT"_profile ] ; then
 	. "$CONFIGDIR"/"$PROJECT"_profile
 	logg "autoload profile ${CONFIGDIR}/${PROJECT}_profile" info
+	[ -n "$EMODE" ] && MODE="$EMODE"
+	logg "encoder: $CODEC input: $MODE" info
 else
 	logg "continue with default profile" debug
 fi
@@ -115,6 +120,7 @@ logg "Output name $OUTNAME"
 getwebsrc
 getwebsrcinfo
 
+
 #logs
 if [ "$Separatelogfile" = "1" ] ; then
 	X26x_logpara="--log-level warning --log-file-level info --log-file ${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_${CODEC}.log"
@@ -127,7 +133,7 @@ if [ "$X264_EN" = "1" ] ; then
 		 logg "Warning: Skip video encode, using existing $X264_TMP" warn 
 	else
 		#check avs exists
-		getwebavs 264
+		getwebscript "$CODEC" "$MODE"
 		#check bins
 		for f in "$X264_exec" "$FFMPEG_exec" "$MEDIAINFO_exec" ;do
 			if ! [ -x "$(which "$f")" ] ; then
@@ -138,11 +144,11 @@ if [ "$X264_EN" = "1" ] ; then
 		#video part
 		if [ "$DRYRUN" = 0 ] ; then
 		logg "starting X264 video encode" info
-		logg "$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o $X264_TMP $AVSFILE" debug
-		"$X264_exec" --level 5.1 --crf "$X264_crf" --tune "$X264_tune" --keyint "$X264_keyint" --min-keyint 1 --threads "$X264_threads" --bframes "$X264_bframes" --qpmin 0 --qpmax "$X264_qpmax"  --b-adapt "$X264_badapt" --ref "$X264_ref" --chroma-qp-offset -2 --vbv-bufsize "$X264_vbvbuf" --vbv-maxrate "$X264_vbvmaxrate" --qcomp 0.7 --rc-lookahead "$X264_lookahead" --aq-strength 0.9 --deblock 1:1  --direct auto  --merange "$X264_merange" --me "$X264_me" --subme "$X264_subme" --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode "$X264_aqmode" --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o "$X264_TMP" "$AVSFILE"
+		logg "$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o $X264_TMP $ISCRIPT" debug
+		"$X264_exec" --level 5.1 --crf "$X264_crf" --tune "$X264_tune" --keyint "$X264_keyint" --min-keyint 1 --threads "$X264_threads" --bframes "$X264_bframes" --qpmin 0 --qpmax "$X264_qpmax"  --b-adapt "$X264_badapt" --ref "$X264_ref" --chroma-qp-offset -2 --vbv-bufsize "$X264_vbvbuf" --vbv-maxrate "$X264_vbvmaxrate" --qcomp 0.7 --rc-lookahead "$X264_lookahead" --aq-strength 0.9 --deblock 1:1  --direct auto  --merange "$X264_merange" --me "$X264_me" --subme "$X264_subme" --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode "$X264_aqmode" --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o "$X264_TMP" "$ISCRIPT"
 		logg "X264 encode done" info
 		else
-		logg "$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o $X264_TMP $AVSFILE" info
+		logg "$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o $X264_TMP $ISCRIPT" info
 		fi
 	fi
 fi
@@ -154,7 +160,7 @@ if [ "$X265_EN" = "1" ] ; then
 		 logg "Warning: Skip video encode, using existing $X265_TMP" warn 
 	else
 		#check avs exists
-		getwebavs 265
+		getwebscript "$CODEC" "$MODE"
 		#check bins
 		for f in "$X265_exec" "$FFMPEG_exec" "$MEDIAINFO_exec" ;do
 			if ! [ -x "$(which "$f")" ] ; then
@@ -165,11 +171,11 @@ if [ "$X265_EN" = "1" ] ; then
 		#video part
 		if [ "$DRYRUN" = 0 ] ; then
 		logg "starting X265 video encode" info
-		logg "$X265_exec --preset $X265_preset --no-open-gop --profile $X265_profile --crf $X265_crf --deblock -1:-1 --ref $X265_ref --keyint $X265_keyint --min-keyint 1 --rd $X265_rd --ctu $X265_ctu --max-tu-size $X265_maxtu --no-amp --rdoq-level $X265_rdoq  --rdpenalty 1 --me $X265_me --subme $X265_subme --merange $X265_merange --temporal-mvp --weightp --weightb --b-adapt $X265_badapt --psy-rd 4.0  --psy-rdoq $X265_psyrdoq --aq-mode $X265_aqmode --aq-strength 1.0 --qg-size $X265_qgsize --cutree --qcomp 0.7 --colormatrix $X265_colormatx --allow-non-conformance --rc-lookahead $X265_lookahead --scenecut 40 --dither --no-sao $X265_custom ${X26x_logpara} --output $X265_TMP $AVSFILE" debug
-		"$X265_exec" --preset "$X265_preset" --no-open-gop --profile "$X265_profile" --crf "$X265_crf" --deblock -1:-1 --ref "$X265_ref" --keyint "$X265_keyint" --min-keyint 1 --rd "$X265_rd" --ctu "$X265_ctu" --max-tu-size "$X265_maxtu" --no-amp --rdoq-level "$X265_rdoq"  --rdpenalty 1 --me "$X265_me" --subme "$X265_subme" --merange "$X265_merange" --temporal-mvp --weightp --weightb --b-adapt "$X265_badapt" --psy-rd 4.0  --psy-rdoq "$X265_psyrdoq" --aq-mode "$X265_aqmode" --aq-strength 1.0 --qg-size "$X265_qgsize" --cutree --qcomp 0.7 --colormatrix "$X265_colormatx" --allow-non-conformance --rc-lookahead "$X265_lookahead" --scenecut 40 --dither --no-sao ${X265_custom} ${X26x_logpara} --output "$X265_TMP" "$AVSFILE"
+		logg "$X265_exec --preset $X265_preset --no-open-gop --profile $X265_profile --crf $X265_crf --deblock -1:-1 --ref $X265_ref --keyint $X265_keyint --min-keyint 1 --rd $X265_rd --ctu $X265_ctu --max-tu-size $X265_maxtu --no-amp --rdoq-level $X265_rdoq  --rdpenalty 1 --me $X265_me --subme $X265_subme --merange $X265_merange --temporal-mvp --weightp --weightb --b-adapt $X265_badapt --psy-rd 4.0  --psy-rdoq $X265_psyrdoq --aq-mode $X265_aqmode --aq-strength 1.0 --qg-size $X265_qgsize --cutree --qcomp 0.7 --colormatrix $X265_colormatx --allow-non-conformance --rc-lookahead $X265_lookahead --scenecut 40 --dither --no-sao $X265_custom ${X26x_logpara} --output $X265_TMP $ISCRIPT" debug
+		"$X265_exec" --preset "$X265_preset" --no-open-gop --profile "$X265_profile" --crf "$X265_crf" --deblock -1:-1 --ref "$X265_ref" --keyint "$X265_keyint" --min-keyint 1 --rd "$X265_rd" --ctu "$X265_ctu" --max-tu-size "$X265_maxtu" --no-amp --rdoq-level "$X265_rdoq"  --rdpenalty 1 --me "$X265_me" --subme "$X265_subme" --merange "$X265_merange" --temporal-mvp --weightp --weightb --b-adapt "$X265_badapt" --psy-rd 4.0  --psy-rdoq "$X265_psyrdoq" --aq-mode "$X265_aqmode" --aq-strength 1.0 --qg-size "$X265_qgsize" --cutree --qcomp 0.7 --colormatrix "$X265_colormatx" --allow-non-conformance --rc-lookahead "$X265_lookahead" --scenecut 40 --dither --no-sao ${X265_custom} ${X26x_logpara} --output "$X265_TMP" "$ISCRIPT"
 		logg "X265 encode done" info
 		else
-		logg "$X265_exec --preset $X265_preset --no-open-gop --profile $X265_profile --crf $X265_crf --deblock -1:-1 --ref $X265_ref --keyint $X265_keyint --min-keyint 1 --rd $X265_rd --ctu $X265_ctu --max-tu-size $X265_maxtu --no-amp --rdoq-level $X265_rdoq  --rdpenalty 1 --me $X265_me --subme $X265_subme --merange $X265_merange --temporal-mvp --weightp --weightb --b-adapt $X265_badapt --psy-rd 4.0  --psy-rdoq $X265_psyrdoq --aq-mode $X265_aqmode --aq-strength 1.0 --qg-size $X265_qgsize --cutree --qcomp 0.7 --colormatrix $X265_colormatx --allow-non-conformance --rc-lookahead $X265_lookahead --scenecut 40 --dither --no-sao ${X265_custom} ${X26x_logpara} --output $X265_TMP $AVSFILE" info
+		logg "$X265_exec --preset $X265_preset --no-open-gop --profile $X265_profile --crf $X265_crf --deblock -1:-1 --ref $X265_ref --keyint $X265_keyint --min-keyint 1 --rd $X265_rd --ctu $X265_ctu --max-tu-size $X265_maxtu --no-amp --rdoq-level $X265_rdoq  --rdpenalty 1 --me $X265_me --subme $X265_subme --merange $X265_merange --temporal-mvp --weightp --weightb --b-adapt $X265_badapt --psy-rd 4.0  --psy-rdoq $X265_psyrdoq --aq-mode $X265_aqmode --aq-strength 1.0 --qg-size $X265_qgsize --cutree --qcomp 0.7 --colormatrix $X265_colormatx --allow-non-conformance --rc-lookahead $X265_lookahead --scenecut 40 --dither --no-sao ${X265_custom} ${X26x_logpara} --output $X265_TMP $ISCRIPT" info
 		fi
 	fi
 fi
@@ -190,9 +196,9 @@ if [ "$X264_EN" = "1" ] && [ "$X264_AUD" = "AAC" ] ;then
 	else
 		#encode
 		if [ "$DRYRUN" = 0 ] ; then
-		"$FFMPEG_exec" -nostdin -i "$AVSFILE" -vn -c:a aac -q "$AAC_Q" "$X264_AUD_TMP" -y
+		"$FFMPEG_exec" -nostdin -i "$ISCRIPT" -vn -c:a aac -q "$AAC_Q" "$X264_AUD_TMP" -y
 		else
-		logg "$FFMPEG_exec -i $AVSFILE -vn -c:a aac -q $AAC_Q $X264_AUD_TMP -y" info
+		logg "$FFMPEG_exec -i $ISCRIPT -vn -c:a aac -q $AAC_Q $X264_AUD_TMP -y" info
 		fi
 	fi
 fi
@@ -213,9 +219,9 @@ if [ "$X265_EN" = "1" ] && [ "$X265_AUD" = "AAC" ] ;then
 	else
 		#encode
 		if [ "$DRYRUN" = 0 ] ; then
-		"$FFMPEG_exec" -nostdin -i "$AVSFILE" -vn -c:a aac -q "$AAC_Q" "$X265_AUD_TMP" -y
+		"$FFMPEG_exec" -nostdin -i "$ISCRIPT" -vn -c:a aac -q "$AAC_Q" "$X265_AUD_TMP" -y
 		else
-		logg "$FFMPEG_exec -i $AVSFILE -vn -c:a aac -q $AAC_Q $X265_AUD_TMP -y" info
+		logg "$FFMPEG_exec -i $ISCRIPT -vn -c:a aac -q $AAC_Q $X265_AUD_TMP -y" info
 		fi
 	fi
 fi

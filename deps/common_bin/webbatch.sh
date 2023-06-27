@@ -26,6 +26,9 @@ while getopts p:n:i:r:l:c:t:h OP ; do
         l)
                 LANGG="$OPTARG"
         ;;
+	m)
+		MODE="$OPTARG"
+	;;
         c)
                 [[ "$OPTARG" =~ 264|avc|AVC ]] && X264_EN=1 && CODEC=264
                 [[ "$OPTARG" =~ 265|hevc|HEVC ]] && X265_EN=1 && CODEC=265
@@ -35,14 +38,14 @@ while getopts p:n:i:r:l:c:t:h OP ; do
 		SLURM_TEMPLATE="$OPTARG"
 	;;
         *)
-                echo "Usage: webbatch [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -t job_template ]" 1>&2
+                echo "Usage: webbatch [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -t job_template ] [ -m avs/vs ]" 1>&2
 		exit 0
         ;;
         esac
 done
 
-[ -z "$SLURM_TEMPLATE" ] && SLURM_TEMPLATE="config/sub_web"
+[ -z "$SLURM_TEMPLATE" ] && SLURM_TEMPLATE="${ENCROOT}/config/sub_web"
 
-JNAME="${PROJECT}_${INDEX}_${LANGG}_${RESO}_${CODEC}"
+JNAME="${PROJECT}_${INDEX}_${LANGG}_${RESO}_${CODEC}.${MODE}"
 
-sbatch -o "$JNAME".log -e "$JNAME".log -J "$JNAME" --export=ALL,PROJECT="$PROJECT",INDEX="$INDEX",RESO="$RESO",LANGG="$LANGG",CODEC="$CODEC" "$SLURM_TEMPLATE"
+sbatch -o "$JNAME".log -e "$JNAME".log -J "$JNAME" --export=ALL,PROJECT="$PROJECT",INDEX="$INDEX",RESO="$RESO",LANGG="$LANGG",CODEC="$CODEC",MODE="$MODE" "$SLURM_TEMPLATE"
