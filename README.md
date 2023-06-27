@@ -88,10 +88,9 @@ The source file should contain "Ayakashi Triangle", like [SubsPlease] Ayakashi T
 The ass file like Ayakashi Triangle - 01_GB.ass or KAKT_01_GB.ass will be searched.
 The name template pattern can be changed as your wish but do not change the $varaible name.
 
-### Custom AVS template
-You can create your own avs template according to config/base_template.avs, using the following varaible for substitution.\
-check config/base_template.avs
-#### AVS template Variables
+### Custom AVS/VS template
+You can create your own avs template according to config/base_template.avs or config/base_template.vpy, using the following varaible for substitution.\
+#### AVS/VS template Variables
 |String|Usage|
 |-----------|----------|
 |\_\_ENCROOT\_\_|The HPCENC root dir|
