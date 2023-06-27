@@ -11,12 +11,14 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
 ## Content
  - Avisynth+ 3.7.2
  - avs plugins 
+ - vs plugins
  - ffmpeg
  - libass
  - lsmash
- - VS-r62
+ - VS r62
  - x264
  - x265
+ - Python 3.11
 ## Requirements
   The package almost include every binary files needed for encoding, even with a gcc.\
   So the only requirement is [environment modules](https://github.com/cea-hpc/modules)(to manage environment variables), and,
@@ -24,6 +26,8 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
 ## Scheduler support
   __Slurm Only__\
   Can be ported to pbs/toqrue by modifying batch scripts.
+## Heterogeneous support
+  Since it's difficult for some cluster to allocate CPUs and GPUs together, currently there'll be NO GPU support for plugins or encoders.
 ## Usage
 Just clone this project to your compute cluster.
 Initiate the environment by\
@@ -101,4 +105,11 @@ You can create your own avs template according to config/base_template.avs or co
 #### AVS template rules
  - If using automatic avs creation and 720p output, the template's last line should be __8bit__ final clip (e.g. Return V / Return Audiodub(V,A)) 
 
-
+## Current status
+ - [x] Webrip batch with avs
+ - [x] Webrip batch with vs (testing)
+ - [ ] BDMV preprocess
+ - [ ] BDMV batch with avs
+ - [ ] BDMV batch with vs
+ - [ ] Automatic job submission as daemon
+ - [ ] Automatic mktorrent and publsh
