@@ -57,11 +57,11 @@ For detailed information about cluster scheduler and job submitting, refer to ht
 #### Direct run
 webrip:
 ```sh
-srun -N 1 --ntasks-per-node 1 webencode.sh [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265]
+srun -N 1 --ntasks-per-node 1 webencode.sh [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -m avs/vs ]
 ```
 #### Submit job
 ```sh
-webbatch [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -t job_template ]
+webbatch [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -t job_template ] [ -m avs/vs ]
 #e.g.
 [root@f hpcenc]# webbatch.sh -n KAKT -i 01 -r 720 -l GB -c 264
 Submitted batch job 60796
