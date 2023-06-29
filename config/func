@@ -74,8 +74,40 @@ getwebavs()
 	fi
 }
 
+getwebscript()
+{
+	[ "$#" != "2" ] && logg "usage: getwebscript 264/265 AVS/VS"
+	local code="$1" #X264 or X265
+	[[ "$code" =~ 264 ]] && code=264
+	[[ "$code" =~ 265 ]] && code=265
+	local mode="$2" #AVS or VS
+	[[ "$mode" =~ vs|VS|vpy|VPY ]] && mode=vpy
+	[[ "$mode" =~ avs|AVS ]] && mode=avs
+	ISCRIPT="$(find "${SCDIR}" -name "${PROJECT}*${INDEX}*${LANGG}*${RESO}*${code}.${mode}"|tail -n 1)"
+        if [ -f "$ISCRIPT" ] ; then
+                logg "using $ISCRIPT" info
+        elif [ "$Automissingscript" = "1" ] ; then
+		case $mode in 
+		avs)
+		createavs
+		#createavs "$PROJECT" "${INDEX}" "${LANGG}" "${RESO}" ${code}
+		;;
+		vpy)
+		createvpy
+		;;
+		esac
+	else
+                logg "${PROJECT}_${INDEX}_${LANGG}_${RESO}_${code}.${mode} not exist" err
+                exit 7
+        fi
+	if [ "$code" = 265 ] && ! grep -q -e 'depth=10' -e 'bits=10' -e "[Dd]own10" "$ISCRIPT" ; then
+		logg "Warning: 10bit output not found in $ISCRIPT" warn
+	fi
+}
+
 getwebsrcinfo()
 {
+	#Potential parse error here
 	VideoFmt="$($MEDIAINFO_exec --Output="Video;%Format%" "${SRCFILE}")"
 	Videorate="$($MEDIAINFO_exec --Output="Video;%Bitrate%" "${SRCFILE}")"
 	Videorate="${Videorate:-$($MEDIAINFO_exec --Output="Video;%FromStats_BitRate%" "${SRCFILE}")}"
@@ -98,8 +130,8 @@ getwebsrc()
 
 createavs()
 {	
-	AVSFILE="${SCDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_${mode}.avs"
-	logg "create avs script for ${PROJECT} ${INDEX} ${LANGG} ${RESO} ${mode}" info
+	ISCRIPT="${SCDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_${code}.${mode}"
+	logg "create avs script for ${PROJECT} ${INDEX} ${LANGG} ${RESO} ${code} ${mode}" info
 	getwebass
 	local SRCFILE_s="${SRCFILE##*/}"
 	local FONTDIR_s="${FONTDIR##*/}"
@@ -108,22 +140,43 @@ createavs()
 	if [ "$X265_EN" = "1" ] ; then
 		[ -n "${AVS265TMPL}" ] && AVSTMPL="${AVS265TMPL}"
 	fi
-	sed "s|__ENCROOT__|${ENCROOT}|; s|__SRCFILE__|../src/${SRCFILE_s}|; s|__ASSFILE__|../ass/${ASSFILE_s}|; s|__FONTDIR__|../${FONTDIR_s}|" "${ENCROOT}/config/${AVSTMPL}" > "$AVSFILE"
-	if [ "$X265_EN" = "1" ] && ! grep -q 'output_depth=10' "$AVSFILE" && [ -z "$AVS265TMPL" ] && [ "$Automissingdepth" = "1" ] ; then
+	sed "s|__ENCROOT__|${ENCROOT}|; s|__SRCFILE__|../src/${SRCFILE_s}|; s|__ASSFILE__|../ass/${ASSFILE_s}|; s|__FONTDIR__|../${FONTDIR_s}|" "${ENCROOT}/config/${AVSTMPL}" > "$ISCRIPT"
+	if [ "$X265_EN" = "1" ] && ! grep -q 'output_depth=10' "$ISCRIPT" && [ -z "$AVS265TMPL" ] && [ "$Automissingdepth" = "1" ] ; then
 		#specified AVS265TMPL unconditionally skip this part
 		#Assume last line is Return
 		logg "Warning: x265 mode without 10bit out in script template?" warn
 	fi
-	if [[ "$RESO" =~ "720" ]] && ! grep -q '1280,720' "$AVSFILE" ; then
+	if [[ "$RESO" =~ 720 ]] && ! grep -q '1280,720' "$ISCRIPT" ; then
 		logg "Adding resize to 1280x720" info
-		sed -i '$s/$/.Spline36Resize(1280,720)/' "$AVSFILE"
+		sed -i '$s/$/.Spline36Resize(1280,720)/' "$ISCRIPT"
 	fi
+}
+
+createvpy()
+{	
+	ISCRIPT="${SCDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_${code}.${mode}"
+	logg "create avs script for ${PROJECT} ${INDEX} ${LANGG} ${RESO} ${code} ${mode}" info
+	getwebass
+	local SRCFILE_s="${SRCFILE##*/}"
+	local FONTDIR_s="${FONTDIR##*/}"
+	local ASSFILE_s="${ASSFILE##*/}"
+	logg "font dir is $FONTDIR , relative dir is $FONTDIR_s" debug
+	if [ "$X265_EN" = "1" ] ; then
+		[ -n "${VS265TMPL}" ] && VSTMPL="${VS265TMPL}"
+	fi
+	sed "s|__ENCROOT__|${ENCROOT}|; s|__SRCFILE__|../src/${SRCFILE_s}|; s|__ASSFILE__|../ass/${ASSFILE_s}|; s|__FONTDIR__|../${FONTDIR_s}|" "${ENCROOT}/config/${VSTMPL}" > "$ISCRIPT"
+	#TODO
+	#if [[ "$RESO" =~ 720 ]] && ! grep -q '1280,720' "$ISCRIPT" ; then
+	#	logg "Adding resize to 1280x720" info
+	#	sed -i '$s/$/.Spline36Resize(1280,720)/' "$ISCRIPT"
+	#fi
 }
 
 localtmp()
 {
 	sleep 1 #TODO /tmp
 }
+
 
 cleanuptmp()
 {
@@ -144,4 +197,11 @@ cleanuptmp()
 		[ "$X265_EN" = "1" ] && rmed="$X265_TMP $X265_AUD_TMP"
 		logg "rm -f $rmed" info
 	fi
+}
+
+updatevsconfig()
+{
+	logg "update vs config" debug
+	echo "UserPluginDir=$ENCROOT/deps/vs-plugins" > $VS_CONFIG
+	echo "SystemPluginDir=$ENCROOT/deps/vs-plugins" >> $VS_CONFIG
 }

@@ -32,12 +32,12 @@ fi
 
 #checkopt
 if [ "$#" -lt "4" ] ; then
-	echo "Usage: encode [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265]" 1>&2
+	echo "Usage: encode [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -m AVS/VS ]" 1>&2
 	exit 0
 fi
 
 #getopt
-while getopts p:n:i:r:l:c:h OP ; do
+while getopts p:n:i:r:l:m:c:h OP ; do
 	case "$OP" in
 	p)
 		PROFILE="$OPTARG"
@@ -84,11 +84,10 @@ if [ -n "$PROFILE" ] ; then
 elif [ -r "$CONFIGDIR"/"$PROJECT"_profile ] ; then
 	. "$CONFIGDIR"/"$PROJECT"_profile
 	logg "autoload profile ${CONFIGDIR}/${PROJECT}_profile" info
-	[ -n "$EMODE" ] && MODE="$EMODE"
-	logg "encoder: $CODEC input: $MODE" info
 else
 	logg "continue with default profile" debug
 fi
+[ -n "$EMODE" ] && MODE="$EMODE"
 #check path
 for D in '$WORKINGDIR' '$SRCDIR' '$ASSDIR' '$SCDIR' '$FONTDIR' '$TMPDIR' '$OUTDIR' ; do 
 	if [ -d "$(eval echo $D)" ] && [ -w "$(eval echo $D)" ] ; then
@@ -99,7 +98,7 @@ for D in '$WORKINGDIR' '$SRCDIR' '$ASSDIR' '$SCDIR' '$FONTDIR' '$TMPDIR' '$OUTDI
 	fi
 done
 #Namemap
-logg "Encode $PROJECT Eps $INDEX $RESO $LANGG"
+logg "Encode $PROJECT Eps $INDEX $RESO $LANGG Codec $CODEC input $MODE"
 [[ "$RESO" =~ 1080 ]] && RESO=1080p
 [[ "$RESO" =~ 720 ]] && RESO=720p
 [ "$LANGG" = GB ] && LANGG="$GBflag"	#GB by default
@@ -115,8 +114,7 @@ fi
 logg "Output name $OUTNAME"
 
 #Encode part
-#TODO: seperate logs?
-#check src
+#TODO maybe a full rework to mix altogether
 getwebsrc
 getwebsrcinfo
 
@@ -202,7 +200,6 @@ if [ "$X264_EN" = "1" ] && [ "$X264_AUD" = "AAC" ] ;then
 		fi
 	fi
 fi
-#TODO: wait for rework
 if [ "$X265_EN" = "1" ] && [ "$X265_AUD" = "AAC" ] ;then
 	X265_AUD_TMP="${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_265.aac"
 	# check previous tmp

@@ -2,7 +2,7 @@
 
 #checkopt
 if [ "$#" -lt "4" ] ; then
-        echo "Usage: webbatch [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -t job_template ]" 1>&2
+        echo "Usage: webbatch [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -t job_template ] [ -m avs/vs ]" 1>&2
         exit 0
 fi
 

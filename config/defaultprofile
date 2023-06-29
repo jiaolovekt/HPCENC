@@ -10,6 +10,9 @@ TMPDIR="$WORKINGDIR/tmp" # or /tmp
 OUTDIR="$WORKINGDIR/out"
 AVSTMPL="base_template.avs"	#template used to generate avs
 AVS265TMPL=""	#alt template for 265 scripts (10bit), left blank to use x264's
+VSTMPL="base_template.vpy"	#template used to generate vpy
+VS256TMPL=""
+MODE="avs"	# use avs input by default, overrided by cmdline input
 
 #Type
 Proj_start=01	# used for batch
@@ -78,6 +81,7 @@ AAC_Q=0.8
 MCOMMENT="Encoded by HPCENC"
 
 #procedure param
+VS_CONFIG="$ENCROOT/config/vapoursynth.conf"
 MEDIAINFO_exec=mediainfo
 
 GBflag=GB
@@ -85,12 +89,12 @@ B5flag=BIG5	#modify if needed
 #GBflag=GB_CN	# or
 #B5flag=JPN_CHT
 
-Automissingavs=1	#avs auto generation
+Automissingscript=1	#avs/vs auto generation when not found
 Automissingdepth=1	#auto append 8 to 10bit convert to scripts if no x265 script template specified
 Separatelogfile=1	#use separate log file for x26x and ffmpeg
 SkipEAudio=0	#skip exist tmp files, may cause problem
 SkipEVideo=1
 
 Cleartmp=1	#remove tmp files when complete
-Preferlocaltmp=1 #use local /tmp if storage/tmpfs have enoughspace
+Preferlocaltmp=1 #use local /tmp if local /tmp is tmpfs && have enoughspace, Not Implemented yet.
 
