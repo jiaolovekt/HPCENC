@@ -17,7 +17,7 @@ old_library='libvapoursynth.a'
 inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' -lpthread -L/root/src/hpcenc/deps/zimg-3.0.8/lib /root/src/hpcenc/deps/zimg-3.0.8/lib/libzimg.la /home/software/gcc/12.3/lib/gcc/x86_64-known-linux-gnu/12.3.0/libstdc++.la -ldl -lpython3.11 /home/software/gcc/12.3/lib/gcc/x86_64-known-linux-gnu/12.3.0/libstdc++.la'
+dependency_libs=' -lpthread -L/root/src/hpcenc/deps/zimg-3.0.8/lib /root/src/hpcenc/deps/zimg-3.0.8/lib/libzimg.la -ldl -lpython3.11 /home/software/gcc/12.3/lib/gcc/x86_64-known-linux-gnu/12.3.0/libstdc++.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
