@@ -1,4 +1,4 @@
-prefix=/root/src/hpcenc/deps/DevIL
+prefix=/home/src/HPCENC/hpcenc/deps/DevIL
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib

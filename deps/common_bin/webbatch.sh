@@ -49,9 +49,9 @@ while getopts P:p:n:i:r:l:m:c:t:h OP ; do
         ;;
         esac
 done
-
+[ -n "$PART" ] && PART="-p $PART"
 [ -z "$SLURM_TEMPLATE" ] && SLURM_TEMPLATE="${ENCROOT}/config/sub_web"
 
 JNAME="${PROJECT}_${INDEX}_${LANGG}_${RESO}_${CODEC}.${MODE}"
 
-sbatch -p "$PART" -o "$JNAME".log -e "$JNAME".log -J "$JNAME" --export=ALL,PROFILE="$PROFILE",PROJECT="$PROJECT",INDEX="$INDEX",RESO="$RESO",LANGG="$LANGG",CODEC="$CODEC",MODE="$MODE" "$SLURM_TEMPLATE"
+sbatch $PART -o "$JNAME".log -e "$JNAME".log -J "$JNAME" --export=ALL,PROFILE="$PROFILE",PROJECT="$PROJECT",INDEX="$INDEX",RESO="$RESO",LANGG="$LANGG",CODEC="$CODEC",MODE="$MODE" "$SLURM_TEMPLATE"

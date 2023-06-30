@@ -1,0 +1,11 @@
+prefix=/home/src/HPCENC/hpcenc/deps/x265-gcc12-broadwell
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: x265
+Description: H.265/HEVC video encoder
+Version: 
+Libs: -L${libdir} -lx265
+Libs.private: 
+Cflags: -I${includedir}
