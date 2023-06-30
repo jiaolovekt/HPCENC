@@ -16,6 +16,12 @@ CONFIGDIR="${ENCROOT}/config"
 . "$CONFIGDIR"/func
 #Env Part End
 
+usage()
+{
+	echo "Usage: encode [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -m AVS/VS ]" 1>&2
+	exit 0
+}
+
 #load default config
 if [ -r "$CONFIGDIR"/defaultprofile ] ; then
 	logg "load default config" debug
@@ -32,8 +38,7 @@ fi
 
 #checkopt
 if [ "$#" -lt "5" ] ; then
-	echo "Usage: encode [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -m AVS/VS ]" 1>&2
-	exit 0
+	usage
 fi
 
 #getopt
@@ -64,7 +69,7 @@ while getopts p:n:i:r:l:m:c:h OP ; do
 		[ -z "$X264_EN" ] && [ -z "$X265_EN" ] && logg "wrong codec $OPTARG specified" err && exit 9
 	;;
 	*)
-		echo "Usage: encode [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -m AVS/VS ]" 1>&2
+		usage
 	;;
 	esac
 done
