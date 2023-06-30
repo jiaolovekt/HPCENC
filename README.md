@@ -25,9 +25,12 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
   this is a very fundamental part of supercomputers so every HPC cluster should have this.
 ## Scheduler support
   __Slurm Only__\
-  Can be ported to pbs/toqrue by modifying batch scripts.
+  Can be ported to pbs/toqrue/LSF by modifying batch scripts.
+  default batch script is config/sub_web. Can be replaced with webbatch -t.
 ## Heterogeneous support
   Since it's difficult for some cluster to allocate CPUs and GPUs together, currently there'll be NO GPU support for plugins or encoders.
+## Softsub support
+  Currently not scheduled.
 ## Usage
 Just clone this project to your compute cluster.
 Initiate the environment by\
@@ -93,7 +96,7 @@ The ass file like Ayakashi Triangle - 01_GB.ass or KAKT_01_GB.ass will be search
 The name template pattern can be changed as your wish but do not change the $varaible name.
 
 ### Custom AVS/VS template
-You can create your own avs template according to config/base_template.avs or config/base_template.vpy, using the following varaible for substitution.\
+You can create your own avs template according to config/base_template.avs or config/base_template.vpy, using the following varaible for substitution.
 #### AVS/VS template Variables
 |String|Usage|
 |-----------|----------|
