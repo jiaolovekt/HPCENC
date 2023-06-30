@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #checkopt
-if [ "$#" -lt "4" ] ; then
+if [ "$#" -lt "5" ] ; then
         echo "Usage: webbatch [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -t job_template ] [ -m avs/vs ]" 1>&2
         exit 0
 fi
@@ -9,8 +9,11 @@ fi
 SLURM_TEMPLATE=
 
 #getopt
-while getopts p:n:i:r:l:c:t:h OP ; do
+while getopts P:p:n:i:r:l:c:t:h OP ; do
         case "$OP" in
+	P)
+		PART="$OPTARG"
+	;;
         p)
                 PROFILE="$OPTARG"
         ;;
@@ -48,4 +51,4 @@ done
 
 JNAME="${PROJECT}_${INDEX}_${LANGG}_${RESO}_${CODEC}.${MODE}"
 
-sbatch -o "$JNAME".log -e "$JNAME".log -J "$JNAME" --export=ALL,PROJECT="$PROJECT",INDEX="$INDEX",RESO="$RESO",LANGG="$LANGG",CODEC="$CODEC",MODE="$MODE" "$SLURM_TEMPLATE"
+sbatch -p "$PART" -o "$JNAME".log -e "$JNAME".log -J "$JNAME" --export=ALL,PROFILE="$PROFILE",PROJECT="$PROJECT",INDEX="$INDEX",RESO="$RESO",LANGG="$LANGG",CODEC="$CODEC",MODE="$MODE" "$SLURM_TEMPLATE"

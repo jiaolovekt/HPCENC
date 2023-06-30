@@ -31,7 +31,7 @@ if ! [ -r "$CONFIGDIR"/namemap ] ; then
 fi
 
 #checkopt
-if [ "$#" -lt "4" ] ; then
+if [ "$#" -lt "5" ] ; then
 	echo "Usage: encode [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -m AVS/VS ]" 1>&2
 	exit 0
 fi
@@ -127,6 +127,7 @@ logg "Output name $OUTNAME"
 getwebsrc
 getwebsrcinfo
 
+getwebscript "$CODEC" "$MODE"
 
 #logs
 if [ "$Separatelogfile" = "1" ] ; then
@@ -140,7 +141,6 @@ if [ "$X264_EN" = "1" ] ; then
 		 logg "Warning: Skip video encode, using existing $X264_TMP" warn 
 	else
 		#check avs exists
-		getwebscript "$CODEC" "$MODE"
 		#check bins
 		for f in "$X264_exec" "$FFMPEG_exec" "$MEDIAINFO_exec" ;do
 			if ! [ -x "$(which "$f")" ] ; then
@@ -173,7 +173,6 @@ if [ "$X265_EN" = "1" ] ; then
 		 logg "Warning: Skip video encode, using existing $X265_TMP" warn 
 	else
 		#check avs exists
-		getwebscript "$CODEC" "$MODE"
 		#check bins
 		for f in "$X265_exec" "$FFMPEG_exec" "$MEDIAINFO_exec" ;do
 			if ! [ -x "$(which "$f")" ] ; then

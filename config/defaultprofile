@@ -61,7 +61,7 @@ X265_merange=24
 X265_badapt=2
 X265_psyrdoq=6.0
 X265_aqmode=1
-X265_qgsize=32
+X265_qgsize=16
 X265_colormatx=bt709
 X265_lookahead=80
 X265_custom="" 	#custom x265 params here
@@ -93,7 +93,7 @@ Automissingscript=1	#avs/vs auto generation when not found
 Automissingdepth=1	#auto append 8 to 10bit convert to scripts if no x265 script template specified
 Separatelogfile=1	#use separate log file for x26x and ffmpeg
 SkipEAudio=0	#skip exist tmp files, may cause problem
-SkipEVideo=1
+SkipEVideo=0
 
 Cleartmp=1	#remove tmp files when complete
 Preferlocaltmp=1 #use local /tmp if local /tmp is tmpfs && have enoughspace, Not Implemented yet.

@@ -54,7 +54,7 @@ X265_custom="" 	#custom x265 params here
 FFMPEG_exec=ffmpeg
 
 #AACparam
-AudDirectmux=1			#Will use source file for mux, trims in avs/vs WILL BE IGNORED
+AudDirectmux=0			#Will use source file for mux, trims in avs/vs WILL BE IGNORED
 AudDirectmuxthreshold=160000	#if audio bitrate lower than (bits), direct mux rather than reencode
 AAC_Q=0.8
 
@@ -75,7 +75,7 @@ B5flag=BIG5	#modify if needed
 Automissingavs=1
 Separatelogfile=1	#use separate log file for x26x and ffmpeg
 SkipEAudio=0	#skip exist tmp files, may cause problem
-SkipEVideo=0
+SkipEVideo=1
 
 Cleartmp=0	#remove tmp files when complete
 Preferlocaltmp=1 #use local /tmp if storage/tmpfs have enoughspace
