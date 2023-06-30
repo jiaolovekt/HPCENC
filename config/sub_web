@@ -7,4 +7,7 @@ echo Webrip job $PROJECT $INDEX $RESO $LANGG $CODEC $MODE
 echo running on $HOSTNAME at $PWD
 . ${ENCROOT}/init.sh
 
-srun -n 1 webencode.sh -n $PROJECT -i $INDEX -r $RESO -l $LANGG -c $CODEC -m $MODE
+[ -n "$MODE" ] && MODE="-m $MODE"
+[ -n "$PROFILE" ] && MODE="-p $PROFILE"
+
+srun -n 1 webencode.sh -n $PROJECT -i $INDEX -r $RESO -l $LANGG -c $CODEC $MODE $PROFILE
