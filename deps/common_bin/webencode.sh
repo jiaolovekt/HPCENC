@@ -116,7 +116,6 @@ else
 	logg "wrong mode specifiled, should be avs/vs" err
 	exit 10
 fi
-		logg "$cmdl" info
 logg "Encode $PROJECT Eps $INDEX $RESO $LANGG Codec $CODEC input $MODE" info
 nmmap=$(grep "$PROJECT" "$CONFIGDIR"/namemap | grep -v ^# )
 if [ -z "$nmmap" ] ; then 
@@ -164,7 +163,6 @@ if [ "$X264_EN" = "1" ] ; then
 		if [ "$DRYRUN" = 0 ] ; then
 		logg "starting X264 video encode" info
 		eval $cmdl
-		#$X264_exec --level 5.1 --crf "$X264_crf" --tune "$X264_tune" --keyint "$X264_keyint" --min-keyint 1 --threads "$X264_threads" --bframes "$X264_bframes" --qpmin 0 --qpmax "$X264_qpmax"  --b-adapt "$X264_badapt" --ref "$X264_ref" --chroma-qp-offset -2 --vbv-bufsize "$X264_vbvbuf" --vbv-maxrate "$X264_vbvmaxrate" --qcomp 0.7 --rc-lookahead "$X264_lookahead" --aq-strength 0.9 --deblock 1:1  --direct auto  --merange "$X264_merange" --me "$X264_me" --subme "$X264_subme" --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode "$X264_aqmode" --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o "$X264_TMP" "$ISCRIPT"
 		logg "X264 encode done" info
 		fi
 	fi
