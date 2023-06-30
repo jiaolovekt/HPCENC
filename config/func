@@ -80,9 +80,7 @@ getwebscript()
 	local code="$1" #X264 or X265
 	[[ "$code" =~ 264 ]] && code=264
 	[[ "$code" =~ 265 ]] && code=265
-	local mode="$2" #AVS or VS
-	[[ "$mode" =~ vs|VS|vpy|VPY ]] && mode=vpy
-	[[ "$mode" =~ avs|AVS ]] && mode=avs
+	local mode="$2" #avs or vpy
 	ISCRIPT="$(find "${SCDIR}" -name "${PROJECT}*${INDEX}*${LANGG}*${RESO}*${code}.${mode}"|tail -n 1)"
         if [ -f "$ISCRIPT" ] ; then
                 logg "using $ISCRIPT" info
@@ -166,10 +164,10 @@ createvpy()
 	fi
 	sed "s|__ENCROOT__|${ENCROOT}|; s|__SRCFILE__|../src/${SRCFILE_s}|; s|__ASSFILE__|../ass/${ASSFILE_s}|; s|__FONTDIR__|../${FONTDIR_s}|" "${ENCROOT}/config/${VSTMPL}" > "$ISCRIPT"
 	#TODO
-	#if [[ "$RESO" =~ 720 ]] && ! grep -q '1280,720' "$ISCRIPT" ; then
-	#	logg "Adding resize to 1280x720" info
-	#	sed -i '$s/$/.Spline36Resize(1280,720)/' "$ISCRIPT"
-	#fi
+	if [[ "$RESO" =~ 720 ]] && ! grep -q '720' "$ISCRIPT" ; then
+		logg "Adding resize to 1280x720" info
+		sed -i '$s/set_output()/resize.Spline64(1280,720).set_output()/' "$ISCRIPT"
+	fi
 }
 
 localtmp()

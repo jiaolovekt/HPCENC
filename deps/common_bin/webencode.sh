@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 DEBUG=1 #Verbose logging
 DRYRUN=0 #dryrun
 
@@ -98,12 +98,21 @@ for D in '$WORKINGDIR' '$SRCDIR' '$ASSDIR' '$SCDIR' '$FONTDIR' '$TMPDIR' '$OUTDI
 	fi
 done
 #Namemap
-logg "Encode $PROJECT Eps $INDEX $RESO $LANGG Codec $CODEC input $MODE"
+logg "Encode $PROJECT Eps $INDEX $RESO $LANGG Codec $CODEC input $MODE" info
 [[ "$RESO" =~ 1080 ]] && RESO=1080p
 [[ "$RESO" =~ 720 ]] && RESO=720p
 [ "$LANGG" = GB ] && LANGG="$GBflag"	#GB by default
 [ "$LANGG" = B5 ] || [ "$LANGG" = "BIG5" ] && LANGG="$B5flag"	#BIG5 by default
-
+if [[ "$MODE" =~ avs|AVS ]] ; then
+	 MODE=avs 
+elif [[ "$MODE" =~ vs|VS|vpy|VPY ]] ; then
+	 MODE=vpy
+else
+	logg "wrong mode specifiled, should be avs/vs" err
+	exit 10
+fi
+		logg "$cmdl" info
+logg "Encode $PROJECT Eps $INDEX $RESO $LANGG Codec $CODEC input $MODE" info
 nmmap=$(grep "$PROJECT" "$CONFIGDIR"/namemap | grep -v ^# )
 if [ -z "$nmmap" ] ; then 
 	logg "No project namemap defined" err
@@ -140,15 +149,21 @@ if [ "$X264_EN" = "1" ] ; then
 			fi
 		done
 		#video part
+	if [ $MODE = vpy ] ; then
+		O_ISCRIPT="$ISCRIPT"
+		X264_exec="vspipe -c y4m \"$ISCRIPT\" - | $X264_exec"
+		ISCRIPT="--demuxer y4m -"
+	fi
+		cmdl="$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o \"$X264_TMP\" $ISCRIPT"
+		logg "$cmdl" info
 		if [ "$DRYRUN" = 0 ] ; then
 		logg "starting X264 video encode" info
-		logg "$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o $X264_TMP $ISCRIPT" debug
-		"$X264_exec" --level 5.1 --crf "$X264_crf" --tune "$X264_tune" --keyint "$X264_keyint" --min-keyint 1 --threads "$X264_threads" --bframes "$X264_bframes" --qpmin 0 --qpmax "$X264_qpmax"  --b-adapt "$X264_badapt" --ref "$X264_ref" --chroma-qp-offset -2 --vbv-bufsize "$X264_vbvbuf" --vbv-maxrate "$X264_vbvmaxrate" --qcomp 0.7 --rc-lookahead "$X264_lookahead" --aq-strength 0.9 --deblock 1:1  --direct auto  --merange "$X264_merange" --me "$X264_me" --subme "$X264_subme" --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode "$X264_aqmode" --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o "$X264_TMP" "$ISCRIPT"
+		eval $cmdl
+		#$X264_exec --level 5.1 --crf "$X264_crf" --tune "$X264_tune" --keyint "$X264_keyint" --min-keyint 1 --threads "$X264_threads" --bframes "$X264_bframes" --qpmin 0 --qpmax "$X264_qpmax"  --b-adapt "$X264_badapt" --ref "$X264_ref" --chroma-qp-offset -2 --vbv-bufsize "$X264_vbvbuf" --vbv-maxrate "$X264_vbvmaxrate" --qcomp 0.7 --rc-lookahead "$X264_lookahead" --aq-strength 0.9 --deblock 1:1  --direct auto  --merange "$X264_merange" --me "$X264_me" --subme "$X264_subme" --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode "$X264_aqmode" --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o "$X264_TMP" "$ISCRIPT"
 		logg "X264 encode done" info
-		else
-		logg "$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o $X264_TMP $ISCRIPT" info
 		fi
 	fi
+	[ -n "$O_ISCRIPT" ] && ISCRIPT="$O_ISCRIPT"
 fi
 #X265 part
 if [ "$X265_EN" = "1" ] ; then
