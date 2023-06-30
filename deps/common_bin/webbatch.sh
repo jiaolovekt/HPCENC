@@ -2,7 +2,7 @@
 
 usage()
 {
-	echo "Usage: webbatch [ -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -t job_template ] [ -m avs/vs ]" 1>&2
+	echo "Usage: webbatch [ -P partition -p profile ] -n projectname -i index -r [1080/720] -l [GB/B5] -c [264/265] [ -t job_template ] [ -m avs/vs ]" 1>&2
 	exit 0
 }
 #checkopt
@@ -13,7 +13,7 @@ fi
 SLURM_TEMPLATE=
 
 #getopt
-while getopts P:p:n:i:r:l:c:t:h OP ; do
+while getopts P:p:n:i:r:l:m:c:t:h OP ; do
         case "$OP" in
 	P)
 		PART="$OPTARG"
