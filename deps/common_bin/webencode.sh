@@ -189,18 +189,15 @@ if [ "$X265_EN" = "1" ] ; then
 			fi
 		done
 		#video part
-		if [ "$DRYRUN" = 0 ] ; then
 		logg "starting X265 video encode" info
 		cmdline="$X265_exec --preset $X265_preset --no-open-gop --profile $X265_profile --crf $X265_crf --deblock -1:-1 --ref $X265_ref --keyint $X265_keyint --min-keyint 1 --rd $X265_rd --ctu $X265_ctu --max-tu-size $X265_maxtu --no-amp --rdoq-level $X265_rdoq  --rdpenalty 1 --me $X265_me --subme $X265_subme --merange $X265_merange --temporal-mvp --weightp --weightb --b-adapt $X265_badapt --psy-rd 4.0  --psy-rdoq $X265_psyrdoq --aq-mode $X265_aqmode --aq-strength 1.0 --qg-size $X265_qgsize --cutree --qcomp 0.7 --colormatrix $X265_colormatx --allow-non-conformance --rc-lookahead $X265_lookahead --scenecut 40 --dither --no-sao $X265_custom ${X26x_logpara} --output \"$X265_TMP\" \"$ISCRIPT\""
                 if [ "$DRYRUN" = 0 ] ; then
 			logg "$cmdline" debug
 			eval "$cmdline"
+			logg "X265 encode done" info
                 else
 			logg "$cmdline" info
                 fi
-		logg "X265 encode done" info
-		else
-		fi
 	fi
 fi
 #New AAC part
