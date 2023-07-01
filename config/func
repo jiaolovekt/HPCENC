@@ -172,9 +172,71 @@ createvpy()
 		echo "aud=core.bs.AudioSource(\'../src/${SRCFILE_s}\')" >> "$ISCRIPT"
 		echo "aud.set_output(1)" >> "$ISCRIPT"
 	fi
-	if [[ "$RESO" =~ 720 ]] && ! grep -q '720' "$ISCRIPT" ; then
+	#auto resize to 720 if not in template
+	if [[ "$RESO" =~ 720 ]] && ! grep -q '"out.*1280.*720"' "$ISCRIPT" ; then
 		logg "Adding resize to 1280x720" info
 		sed -i 's/set_output(0*)/resize.Spline64(1280,720).set_output(0)/' "$ISCRIPT"
+	fi
+}
+
+getvpyinfo()
+{
+	logg "get vpy info" info
+	if ! [ -x "$(which vspipe)" ] ; then
+		logg "vspipe not found or no exec perm" err
+		exit 8
+	fi
+	# get stream 0 
+	if vspipe --info "$ISCRIPT" -o 0 > ${ISCRIPT}.vinfo ; then
+		while read l ; do
+			set -- $l
+			case "$1" in
+			Width:)
+				VPY_RESO="${2}x"
+			;;
+			Height:)
+				#W x H
+				VPY_RESO="${VPY_RESO}${2}"
+			;;
+			Frames:)
+				VPY_FC="$2"
+			;;
+			FPS:)
+				VPY_FPS="$2"
+			;;
+			Format)
+				VPY_FMT="$3"
+			;;
+			Bits:)
+				VPY_BIT="$2"
+			;;
+			esac
+		done < "${ISCRIPT}.vinfo"
+		logg "${ISCRIPT}: Reso $VPY_RESO Frames $VPY_FC at $VPY_FPS Format $VPY_FMT Depth $VPY_BIT" info
+			
+	else
+		logg "cannot get $ISCRIPT stream 0 info " err
+		exit 11
+	fi
+	if vspipe --info "$ISCRIPT" -o 1 > ${ISCRIPT}.ainfo ; then
+		while read l ; do
+			set -- $l
+			case "$1" in
+			Samples:)
+				VPY_ASMP="$2"
+			Sample)
+				VPY_ASRT="$3"
+			Format)
+				VPY_AFMT="$3"
+			Bits:)
+				VPY_ABIT="$2"
+			Channels:)
+				VPY_ACHN="$2"
+			esac
+		done < "${ISCRIPT}.vinfo"
+	else
+		logg "Cannot get audio from $ISCRIPT stream 1, try fallback to source file" err
+		VPY_AFallback=1
 	fi
 }
 

@@ -26,7 +26,8 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
 ### Scheduler support
   __Slurm Only__\
   Can be ported to pbs/toqrue/LSF by modifying batch scripts.
-  default batch template is config/sub_web. Can be replaced with webbatch -t.
+  default batch template is config/sub_web.\
+  Can be replaced with webbatch -t.
 ### Heterogeneous support
   Since it's difficult for some cluster to allocate CPUs and GPUs together, currently there'll be NO GPU support for plugins or encoders.
 ### Softsub support
@@ -111,6 +112,8 @@ You can create your own avs template according to config/base_template.avs or co
 
 #### AVS template rules
  - If using automatic avs creation and 720p output, the template's last line should be __8bit__ final clip (e.g. Return V / Return Audiodub(V,A)) 
+#### VS template rules
+ - Video stream should be output stream 0, and audio stream 1. 
 
 ## Current status
  - [x] Webrip batch with avs
