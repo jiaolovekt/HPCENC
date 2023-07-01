@@ -23,14 +23,18 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
   The package almost include every binary files needed for encoding, even with a gcc.\
   So the only requirement is [environment modules](https://github.com/cea-hpc/modules)(to manage environment variables), and,
   this is a very fundamental part of supercomputers so every HPC cluster should have this.
-## Scheduler support
+### Scheduler support
   __Slurm Only__\
   Can be ported to pbs/toqrue/LSF by modifying batch scripts.
-  default batch script is config/sub_web. Can be replaced with webbatch -t.
-## Heterogeneous support
+  default batch template is config/sub_web. Can be replaced with webbatch -t.
+### Heterogeneous support
   Since it's difficult for some cluster to allocate CPUs and GPUs together, currently there'll be NO GPU support for plugins or encoders.
-## Softsub support
+### Softsub support
   Currently not scheduled.
+### AVS/VS Plugins support
+  see deps/avsp3.7.2/lib/avisynth and deps/vs-plugins
+### Architecture support
+  Currently Broadwell(E5v4) and later Intel CPUs. May add EPYC2 support if I get a cluster to test.
 ## Usage
 Just clone this project to your compute cluster.
 Initiate the environment by\
