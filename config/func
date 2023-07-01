@@ -101,6 +101,9 @@ getwebscript()
 	if [ "$code" = 265 ] && ! grep -q -e 'depth=10' -e 'bits=10' -e "[Dd]own10" "$ISCRIPT" ; then
 		logg "Warning: 10bit output not found in $ISCRIPT" warn
 	fi
+	if [ "$MODE" = vpy ] && ! grep -q -e 'set_ouput(1)' ; then
+		logg "Warning: vpy seems do not have an audio ouput at stream 1" warn
+	fi
 }
 
 getwebsrcinfo()
@@ -163,10 +166,15 @@ createvpy()
 		[ -n "${VS265TMPL}" ] && VSTMPL="${VS265TMPL}"
 	fi
 	sed "s|__ENCROOT__|${ENCROOT}|; s|__SRCFILE__|../src/${SRCFILE_s}|; s|__ASSFILE__|../ass/${ASSFILE_s}|; s|__FONTDIR__|../${FONTDIR_s}|" "${ENCROOT}/config/${VSTMPL}" > "$ISCRIPT"
-	#TODO
+	#output0 -> v ouput1 -> a
+	if ! grep -iq 'AudioSource' ; then
+		logg "Adding audio part to vpy as output 1" info
+		echo "aud=core.bs.AudioSource(\'../src/${SRCFILE_s}\')" >> "$ISCRIPT"
+		echo "aud.set_output(1)" >> "$ISCRIPT"
+	fi
 	if [[ "$RESO" =~ 720 ]] && ! grep -q '720' "$ISCRIPT" ; then
 		logg "Adding resize to 1280x720" info
-		sed -i '$s/set_output()/resize.Spline64(1280,720).set_output()/' "$ISCRIPT"
+		sed -i 's/set_output(0*)/resize.Spline64(1280,720).set_output(0)/' "$ISCRIPT"
 	fi
 }
 
