@@ -101,7 +101,7 @@ getwebscript()
 	if [ "$code" = 265 ] && ! grep -q -e 'depth=10' -e 'bits=10' -e "[Dd]own10" "$ISCRIPT" ; then
 		logg "Warning: 10bit output not found in $ISCRIPT" warn
 	fi
-	if [ "$MODE" = vpy ] && ! grep -q -e 'set_ouput(1)' ; then
+	if [ "$MODE" = vpy ] && ! grep -q -e 'set_ouput(1)' "$ISCRIPT" ; then
 		logg "Warning: vpy seems do not have an audio ouput at stream 1" warn
 	fi
 }
@@ -167,7 +167,7 @@ createvpy()
 	fi
 	sed "s|__ENCROOT__|${ENCROOT}|; s|__SRCFILE__|../src/${SRCFILE_s}|; s|__ASSFILE__|../ass/${ASSFILE_s}|; s|__FONTDIR__|../${FONTDIR_s}|" "${ENCROOT}/config/${VSTMPL}" > "$ISCRIPT"
 	#output0 -> v ouput1 -> a
-	if ! grep -iq 'AudioSource' ; then
+	if ! grep -iq 'AudioSource' "$ISCRIPT" ; then
 		logg "Adding audio part to vpy as output 1" info
 		echo "aud=core.bs.AudioSource(\'../src/${SRCFILE_s}\')" >> "$ISCRIPT"
 		echo "aud.set_output(1)" >> "$ISCRIPT"
