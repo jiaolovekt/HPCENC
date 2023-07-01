@@ -133,6 +133,10 @@ getwebsrcinfo
 
 getwebscript "$CODEC" "$MODE"
 
+if [ "$MODE" = vpy ] ; then
+	getvpyinfo
+fi
+
 #logs
 if [ "$Separatelogfile" = "1" ] ; then
 	X26x_logpara="--log-level warning --log-file-level info --log-file ${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_${CODEC}.log"
@@ -159,11 +163,12 @@ if [ "$X264_EN" = "1" ] ; then
 		ISCRIPT="--demuxer y4m -"
 	fi
 		cmdl="$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o \"$X264_TMP\" $ISCRIPT"
-		logg "$cmdl" info
 		if [ "$DRYRUN" = 0 ] ; then
-		logg "starting X264 video encode" info
-		eval $cmdl
-		logg "X264 encode done" info
+			logg "starting X264 video encode" info
+			logg "$cmdl" debug
+			eval $cmdl && logg "X264 encode done" info
+		else
+			logg "$cmdl" info
 		fi
 	fi
 	[ -n "$O_ISCRIPT" ] && ISCRIPT="$O_ISCRIPT"
@@ -194,6 +199,60 @@ if [ "$X265_EN" = "1" ] ; then
 		fi
 	fi
 fi
+#New AAC part
+if [ "$X264_AUD" = "AAC" ] || [ "$X265_AUD" = "AAC" ] ; then
+	X26x_AUD_TMP="${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_${CODEC}.aac"
+	if [ -f "$X26x_AUD_TMP" ] && [ "$SkipEAudio" != "0" ] ; then
+                logg "Warning Skip Audio encode, using existing $X26x_AUD_TMP" warn
+	elif [ "$AudDirectmux" != "0" ] && [ "$Audiorate" -le "$AudDirectmuxthreshold" ] && [[ "$AudioFmt" =~ AAC|aac ]]; then
+		#acopy
+                logg "Audio bit rate $Audiorate lower than $AudDirectmuxthreshold, direct mux" info
+                cmdline="$FFMPEG_exec -nostdin -i \"${SRCFILE}\" -vn -c:a copy \"$X26x_AUD_TMP\" -y"
+                if [ "$DRYRUN" = 0 ] ; then
+			logg "$cmdline" debug
+			eval "$cmdline"
+                else
+			logg "$cmdline" info
+                fi
+	elif [ "$VPY_AFallback" = "1" ] ; then
+		#vpy has no audio, fallback to src
+		logg "vpy audio fallback, using $SRCFILE" warn
+                cmdline="$FFMPEG_exec -nostdin -i \"${SRCFILE}\" -vn -c:a copy \"$X26x_AUD_TMP\" -y"
+                if [ "$DRYRUN" = 0 ] ; then
+			logg "$cmdline" debug
+			eval "$cmdline"
+                else
+			logg "$cmdline" info
+                fi
+	else
+		#encode
+		logg "Start audio encode" info
+		case "$MODE" in
+		avs)
+		cmdline="$FFMPEG_exec -nostdin -i \"$ISCRIPT\" -vn -c:a aac -q $AAC_Q \"$X264_AUD_TMP\" -y"
+		if [ "$DRYRUN" = 0 ] ; then
+			logg "$cmdline" debug
+			eval "$cmdline"
+		else
+			logg "$cmdline" info
+		fi
+		;;
+		vpy)
+		cmdline="vspipe -c wav \"$ISCRIPT\" -o 1 | $FFMPEG_exec -nostdin -i \"$ISCRIPT\" -vn -c:a aac -q $AAC_Q \"$X264_AUD_TMP\" -y"
+		if [ "$DRYRUN" = 0 ] ; then
+			logg "$cmdline" debug
+			eval "$cmdline"
+		else
+			logg "$cmdline" info
+		fi
+		;;
+		*)
+		;;
+		esac
+	fi
+fi
+oldaac()
+{
 #AAC part 
 if [ "$X264_EN" = "1" ] && [ "$X264_AUD" = "AAC" ] ;then
 	X264_AUD_TMP="${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_264.aac"
@@ -239,7 +298,7 @@ if [ "$X265_EN" = "1" ] && [ "$X265_AUD" = "AAC" ] ;then
 		fi
 	fi
 fi
-
+}
 #FLAC part - X265 only
 #currently not available. Use FLAC for WEBrip??
 
