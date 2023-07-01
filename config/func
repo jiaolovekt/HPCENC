@@ -224,16 +224,22 @@ getvpyinfo()
 			case "$1" in
 			Samples:)
 				VPY_ASMP="$2"
+			;;
 			Sample)
 				VPY_ASRT="$3"
+			;;
 			Format)
 				VPY_AFMT="$3"
+			;;
 			Bits:)
 				VPY_ABIT="$2"
+			;;
 			Channels:)
 				VPY_ACHN="$2"
+			;;
 			esac
 		done < "${ISCRIPT}.vinfo"
+		logg "${ISCRIPT}:Audio Samples $VPY_ASMP at $VPY_ASRT Format $VPY_AFMT Bits $VPY_ABIT Channel $VPY_ACHN"
 	else
 		logg "Cannot get audio from $ISCRIPT stream 1, try fallback to source file" err
 		VPY_AFallback=1
