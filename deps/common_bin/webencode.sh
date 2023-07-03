@@ -230,7 +230,7 @@ if [ "$X264_AUD" = "AAC" ] || [ "$X265_AUD" = "AAC" ] ; then
 		logg "Start audio encode" info
 		case "$MODE" in
 		avs)
-		cmdline="$FFMPEG_exec -nostdin -i \"$ISCRIPT\" -vn -c:a aac -q $AAC_Q \"$X264_AUD_TMP\" -y"
+		cmdline="$FFMPEG_exec -nostdin -i \"$ISCRIPT\" -vn -c:a aac -q $AAC_Q \"$X26x_AUD_TMP\" -y"
 		if [ "$DRYRUN" = 0 ] ; then
 			logg "$cmdline" debug
 			eval "$cmdline"
@@ -239,7 +239,7 @@ if [ "$X264_AUD" = "AAC" ] || [ "$X265_AUD" = "AAC" ] ; then
 		fi
 		;;
 		vpy)
-		cmdline="vspipe -c wav \"$ISCRIPT\" -o 1 | $FFMPEG_exec -nostdin -i - -vn -c:a aac -q $AAC_Q \"$X264_AUD_TMP\" -y"
+		cmdline="vspipe -c wav \"$ISCRIPT\" -o 1 - | $FFMPEG_exec -nostdin -i - -vn -c:a aac -q $AAC_Q \"$X26x_AUD_TMP\" -y"
 		if [ "$DRYRUN" = 0 ] ; then
 			logg "$cmdline" debug
 			eval "$cmdline"
@@ -252,7 +252,6 @@ if [ "$X264_AUD" = "AAC" ] || [ "$X265_AUD" = "AAC" ] ; then
 		esac
 	fi
 fi
-
 
 #AAC part - deprecated
 oldaac()
@@ -306,18 +305,19 @@ fi
 #currently not available. Use FLAC for WEBrip??
 
 #mux part
+
 if [ "$X264_EN" = "1" ] ; then
 	if [ "$DRYRUN" = 0 ] ; then
-	"$FFMPEG_exec" -nostdin -i "$X264_TMP" -i "$X264_AUD_TMP" -c:v copy -c:a copy -metadata comment="$MCOMMENT" -map 0:v -map 1:a "${OUTDIR}/${OUTNAME}.${X264_MUX}" -y
+	"$FFMPEG_exec" -nostdin -i "$X264_TMP" -i "$X26x_AUD_TMP" -c:v copy -c:a copy -metadata comment="$MCOMMENT" -map 0:v -map 1:a "${OUTDIR}/${OUTNAME}.${X264_MUX}" -y
 	else
-	logg "$FFMPEG_exec -i $X264_TMP -i $X264_AUD_TMP -c:v copy -c:a copy -metadata comment=$MCOMMENT -map 0:v -map 1:a ${OUTDIR}/${OUTNAME}.${X264_MUX} -y" info
+	logg "$FFMPEG_exec -i $X264_TMP -i $X26x_AUD_TMP -c:v copy -c:a copy -metadata comment=$MCOMMENT -map 0:v -map 1:a ${OUTDIR}/${OUTNAME}.${X264_MUX} -y" info
 	fi
 fi
 if [ "$X265_EN" = "1" ] ; then
 	if [ "$DRYRUN" = 0 ] ; then
-	"$FFMPEG_exec" -nostdin -i "$X265_TMP" -i "$X265_AUD_TMP" -c:v copy -c:a copy -metadata comment="$MCOMMENT" -map 0:v -map 1:a "${OUTDIR}/${OUTNAME}.${X265_MUX}" -y
+	"$FFMPEG_exec" -nostdin -i "$X265_TMP" -i "$X26x_AUD_TMP" -c:v copy -c:a copy -metadata comment="$MCOMMENT" -map 0:v -map 1:a "${OUTDIR}/${OUTNAME}.${X265_MUX}" -y
 	else
-	logg "$FFMPEG_exec -i $X265_TMP -i $X265_AUD_TMP -c:v copy -c:a copy -metadata comment=$MCOMMENT -map 0:v -map 1:a ${OUTDIR}/${OUTNAME}.${X265_MUX} -y" info
+	logg "$FFMPEG_exec -i $X265_TMP -i $X26x_AUD_TMP -c:v copy -c:a copy -metadata comment=$MCOMMENT -map 0:v -map 1:a ${OUTDIR}/${OUTNAME}.${X265_MUX} -y" info
 	fi
 fi
 

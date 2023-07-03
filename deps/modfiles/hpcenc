@@ -9,5 +9,5 @@ if { [ module-info mode load ] } {
 	}
 puts stderr "ENCROOT at ${__encroot}"
 }
-prepend-path LD_LIBRARY_PATH /home/src/HPCENC/hpcenc/deps/common_lib
+apppend-path LD_LIBRARY_PATH /home/src/HPCENC/hpcenc/deps/common_lib
 prepend-path PATH /home/src/HPCENC/hpcenc/deps/common_bin
