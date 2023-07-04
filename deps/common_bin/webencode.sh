@@ -141,9 +141,10 @@ fi
 if [ "$Separatelogfile" = "1" ] ; then
 	X26x_logpara="--log-level warning --log-file-level info --log-file ${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_${CODEC}.log"
 fi
+
+X26x_TMP="${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}.${CODEC}"
 #X264 part
 if [ "$X264_EN" = "1" ] ; then
-	X264_TMP="${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}.264"
 	#check previous tmp
 	if [ -f "$X264_TMP" ] && [ "$SkipEVideo" != "0" ] ; then
 		 logg "Warning: Skip video encode, using existing $X264_TMP" warn 
@@ -162,7 +163,7 @@ if [ "$X264_EN" = "1" ] ; then
 		X264_exec="vspipe -c y4m \"$ISCRIPT\" - | $X264_exec"
 		ISCRIPT="--demuxer y4m -"
 	fi
-		cmdline="$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o \"$X264_TMP\" $ISCRIPT"
+		cmdline="$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o \"$X26x_TMP\" $ISCRIPT"
 		if [ "$DRYRUN" = 0 ] ; then
 			logg "starting X264 video encode" info
 			logg "$cmdline" debug
@@ -175,7 +176,6 @@ if [ "$X264_EN" = "1" ] ; then
 fi
 #X265 part
 if [ "$X265_EN" = "1" ] ; then
-	X265_TMP="${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}.265"
 	#check previous tmp
 	if [ -f "$X265_TMP" ] && [ "$SkipEVideo" != "0" ] ; then
 		 logg "Warning: Skip video encode, using existing $X265_TMP" warn 
@@ -190,7 +190,7 @@ if [ "$X265_EN" = "1" ] ; then
 		done
 		#video part
 		logg "starting X265 video encode" info
-		cmdline="$X265_exec --preset $X265_preset --no-open-gop --profile $X265_profile --crf $X265_crf --deblock -1:-1 --ref $X265_ref --keyint $X265_keyint --min-keyint 1 --rd $X265_rd --ctu $X265_ctu --max-tu-size $X265_maxtu --no-amp --rdoq-level $X265_rdoq  --rdpenalty 1 --me $X265_me --subme $X265_subme --merange $X265_merange --temporal-mvp --weightp --weightb --b-adapt $X265_badapt --psy-rd 4.0  --psy-rdoq $X265_psyrdoq --aq-mode $X265_aqmode --aq-strength 1.0 --qg-size $X265_qgsize --cutree --qcomp 0.7 --colormatrix $X265_colormatx --allow-non-conformance --rc-lookahead $X265_lookahead --scenecut 40 --dither --no-sao $X265_custom ${X26x_logpara} --output \"$X265_TMP\" \"$ISCRIPT\""
+		cmdline="$X265_exec --preset $X265_preset --no-open-gop --profile $X265_profile --crf $X265_crf --deblock -1:-1 --ref $X265_ref --keyint $X265_keyint --min-keyint 1 --rd $X265_rd --ctu $X265_ctu --max-tu-size $X265_maxtu --no-amp --rdoq-level $X265_rdoq  --rdpenalty 1 --me $X265_me --subme $X265_subme --merange $X265_merange --temporal-mvp --weightp --weightb --b-adapt $X265_badapt --psy-rd 4.0  --psy-rdoq $X265_psyrdoq --aq-mode $X265_aqmode --aq-strength 1.0 --qg-size $X265_qgsize --cutree --qcomp 0.7 --colormatrix $X265_colormatx --allow-non-conformance --rc-lookahead $X265_lookahead --scenecut 40 --dither --no-sao $X265_custom ${X26x_logpara} --output \"$X26x_TMP\" \"$ISCRIPT\""
                 if [ "$DRYRUN" = 0 ] ; then
 			logg "$cmdline" debug
 			eval "$cmdline"
@@ -304,8 +304,39 @@ fi
 #FLAC part - X265 only
 #currently not available. Use FLAC for WEBrip??
 
-#mux part
+#New mux part
+logg "mux $X26x_TMP $X26x_AUD_TMP" info
+case "$CODEC" in 
+	264)
+	MUX="$X264_MUX"
+	;;
+	265)
+	MUX="$X265_MUX"
+	;;
+esac
 
+case "$MUX" in
+	mp4)
+	[ "$MCOMMENTCPU" = 1 ] && commentcpu
+	[ "$MCOMMENTCPU" = 1 ] && MCOMMENT="$MCOMMENT on $CPUCNT x $CPUID"
+	cmdline="$FFMPEG_exec -nostdin -i \"$X26x_TMP\" -i \"$X26x_AUD_TMP\" -c:v copy -c:a copy -metadata comment=$MCOMMENT -map 0:v -map 1:a \"${OUTDIR}/${OUTNAME}.${MUX}\" -y"
+	;;
+	mkv)
+	cmdline="mkvmerge -o \"${OUTDIR}/${OUTNAME}.${MUX}\" -v \"$X26x_TMP\" --language 0:jpn \"$X26x_AUD_TMP\" --global-tags \"$MKVCOMMENT\""
+	;;
+	*)
+	;;
+esac
+if [ "$DRYRUN" = 0 ] ; then
+	logg "$cmdline" debug
+	eval "$cmdline"
+else
+	logg "$cmdline" info
+fi
+
+#mux part - deprecated
+oldmux()
+{
 if [ "$X264_EN" = "1" ] ; then
 	if [ "$DRYRUN" = 0 ] ; then
 	"$FFMPEG_exec" -nostdin -i "$X264_TMP" -i "$X26x_AUD_TMP" -c:v copy -c:a copy -metadata comment="$MCOMMENT" -map 0:v -map 1:a "${OUTDIR}/${OUTNAME}.${X264_MUX}" -y
@@ -320,7 +351,7 @@ if [ "$X265_EN" = "1" ] ; then
 	logg "$FFMPEG_exec -i $X265_TMP -i $X26x_AUD_TMP -c:v copy -c:a copy -metadata comment=$MCOMMENT -map 0:v -map 1:a ${OUTDIR}/${OUTNAME}.${X265_MUX} -y" info
 	fi
 fi
-
+}
 #Postprocess
 cleanuptmp
 #may call sth
