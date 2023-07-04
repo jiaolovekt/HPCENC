@@ -139,7 +139,7 @@ fi
 
 #logs
 if [ "$Separatelogfile" = "1" ] ; then
-	X26x_logpara="--log-level warning --log-file-level info --log-file ${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_${CODEC}.log"
+	X26x_logpara="--log-level info --log-file-level full --log-file ${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}_${CODEC}.log"
 fi
 
 X26x_TMP="${TMPDIR}/${PROJECT}_${INDEX}_${LANGG}_${RESO}.${CODEC}"

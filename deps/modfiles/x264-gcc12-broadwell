@@ -1,7 +1,7 @@
 #%Module1.0
 
 module load hpcenc
-module load ffmpeg5-gcc12 lsmash-2.14.5
+module load lsmash-2.14.5
 set __encroot [getenv ENCROOT]
 set _MROOT ${__encroot}/deps/x264-gcc12-broadwell
 set _LPATH ${_MROOT}/lib
