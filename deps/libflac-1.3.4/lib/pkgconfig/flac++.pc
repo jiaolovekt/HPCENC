@@ -1,0 +1,11 @@
+prefix=/home/src/HPCENC/hpcenc/deps/libflac-1.3.4
+exec_prefix=/home/src/HPCENC/hpcenc/deps/libflac-1.3.4
+libdir=/home/src/HPCENC/hpcenc/deps/libflac-1.3.4/lib
+includedir=/home/src/HPCENC/hpcenc/deps/libflac-1.3.4/include
+
+Name: FLAC++
+Description: Free Lossless Audio Codec Library (C++ API)
+Version: 1.3.4
+Requires: flac
+Libs: -L${libdir} -lFLAC++
+Cflags: -I${includedir}

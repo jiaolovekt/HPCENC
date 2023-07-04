@@ -79,6 +79,9 @@ AAC_Q=0.8
 
 #Muxparam
 MCOMMENT="Encoded by HPCENC"
+MCOMMENTCPU=1
+#mkvparam
+MKVCOMMENT="$ENCROOT/config/defaulttag"
 
 #procedure param
 VS_CONFIG="$ENCROOT/config/vapoursynth.conf"
