@@ -187,7 +187,7 @@ getvpyinfo()
 		exit 8
 	fi
 	# get stream 0 
-	if vspipe --info "$ISCRIPT" -o 0 > ${ISCRIPT}.vinfo ; then
+	if vspipe --info "$ISCRIPT" -o 0 > "${ISCRIPT}.vinfo" ; then
 		while read l ; do
 			set -- $l
 			case "$1" in
@@ -218,7 +218,7 @@ getvpyinfo()
 		logg "cannot get $ISCRIPT stream 0 info " err
 		exit 11
 	fi
-	if vspipe --info "$ISCRIPT" -o 1 > ${ISCRIPT}.ainfo ; then
+	if vspipe --info "$ISCRIPT" -o 1 > "${ISCRIPT}.ainfo" ; then
 		while read l ; do
 			set -- $l
 			case "$1" in
@@ -276,6 +276,21 @@ cleanuptmp()
 updatevsconfig()
 {
 	logg "update vs config" debug
-	echo "UserPluginDir=$ENCROOT/deps/vs-plugins" > $VS_CONFIG
-	echo "SystemPluginDir=$ENCROOT/deps/vs-plugins" >> $VS_CONFIG
+	if grep -q "UserPluginDir=$ENCROOT/deps/vs-plugins" "$VS_CONFIG" ; then
+		return 0
+	fi
+	echo "UserPluginDir=$ENCROOT/deps/vs-plugins" > "$VS_CONFIG"
+	echo "SystemPluginDir=$ENCROOT/deps/vs-plugins" >> "$VS_CONFIG"
 }
+
+commentcpu()
+{
+	CPUID="$(grep model\ name /proc/cpuinfo | head -n 1 | cut -d ':' -f 2)"
+	CPUCNT="$(grep physical\ id /proc/cpuinfo | tail -n 1 | cut -d ':' -f 2)"
+	if [ -z "$CPUID" ] || [ -z "CPUCNT" ] ; then
+		logg "no cpuinfo" err
+		MCOMMENTCPU=0
+		return 0
+	fi
+	((CPUCNT++))
+}	
