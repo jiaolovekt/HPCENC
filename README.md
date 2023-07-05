@@ -60,11 +60,12 @@ Copy sources, fonts, ass, and scripts(optional) into respective files.
 |--------|-----|
 |ass|ass files here|
 |font|fonts here|
+|src|source files here|
 |out|final output dir|
 |scripts|copy avs scripts here(or automatically created here)|
 |tmp|intermediate files here(.264 .265 .aac)|
 
-A symlink can be used for "font" dir
+A symlink can be used for "font" dir across different projects, or modify the project's profile.
 ### Submit encode jobs
 For detailed information about cluster scheduler and job submitting, refer to https://slurm.schedmd.com/quickstart.html
 #### Direct run
@@ -86,6 +87,22 @@ Submitted batch job 60797
  60796      oooo   KAKT_01_GB_720_264         root  R       4:27     1 y7
  60795      oooo                 test         root  R       8:38     1 y2
 ```
+```
+[root@f hpcenc]# squeue |grep root
+ 62783      oooo KKSC_07_B5_1080_264.         root  R       6:34     1 y8
+ 62782      oooo KKSC_08_B5_1080_264.         root  R       6:37     1 y13
+ 62781      oooo KKSC_09_B5_1080_264.         root  R       6:40     1 y1
+ 62789     ooood KKSC_10_B5_1080_264.         root  R       6:10     1 b26
+ 62788     ooood KKSC_06_B5_1080_264.         root  R       6:13     1 b25
+ 62787     ooood KKSC_05_B5_1080_264.         root  R       6:16     1 b24
+ 62791     oooof KKSC_12_B5_1080_264.         root  R       5:52     1 w3
+ 62790     oooof KKSC_11_B5_1080_264.         root  R       5:55     1 w3
+ 62786     oooof KKSC_04_B5_1080_264.         root  R       6:28     1 w2
+ 62784     oooof KKSC_02_B5_1080_264.         root  R       6:31     1 w1
+ 62785     oooof KKSC_03_B5_1080_264.         root  R       6:31     1 w2
+ 62772     oooof KKSC_01_B5_1080_264.         root  R       8:42     1 w1
+```
+
 #### And get your output file int the "out" dir
 
 ### File name map
