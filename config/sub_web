@@ -1,6 +1,6 @@
 #!/bin/sh
 #SBATCH -N 1
-#SBATCH -n 40
+#SBATCH -n 36
 
 #Default web submit job template
 echo Webrip job $PROJECT $INDEX $RESO $LANGG $CODEC $MODE

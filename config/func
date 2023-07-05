@@ -187,8 +187,10 @@ getvpyinfo()
 		logg "vspipe not found or no exec perm" err
 		exit 8
 	fi
-	# get stream 0 
-	if vspipe --info "$ISCRIPT" -o 0 > "${ISCRIPT}.vinfo" ; then
+	# get stream 0
+	VPY_VINFO="${TMPDIR}/${ISCRIPT##*/}.vinfo"
+	VPY_AINFO="${TMPDIR}/${ISCRIPT##*/}.ainfo"
+	if vspipe --info "$ISCRIPT" -o 0 > "$VPY_VINFO" ; then
 		while read l ; do
 			set -- $l
 			case "$1" in
@@ -212,14 +214,14 @@ getvpyinfo()
 				VPY_BIT="$2"
 			;;
 			esac
-		done < "${ISCRIPT}.vinfo"
+		done < "$VPY_VINFO"
 		logg "${ISCRIPT}: Reso $VPY_RESO Frames $VPY_FC at $VPY_FPS Format $VPY_FMT Depth $VPY_BIT" info
 			
 	else
 		logg "cannot get $ISCRIPT stream 0 info " err
 		exit 11
 	fi
-	if vspipe --info "$ISCRIPT" -o 1 > "${ISCRIPT}.ainfo" ; then
+	if vspipe --info "$ISCRIPT" -o 1 > "$VPY_AINFO" ; then
 		while read l ; do
 			set -- $l
 			case "$1" in
@@ -239,7 +241,7 @@ getvpyinfo()
 				VPY_ACHN="$2"
 			;;
 			esac
-		done < "${ISCRIPT}.ainfo"
+		done < "$VPY_AINFO"
 		logg "${ISCRIPT}:Audio Samples $VPY_ASMP at $VPY_ASRT Format $VPY_AFMT Bits $VPY_ABIT Channel $VPY_ACHN"
 	else
 		logg "Cannot get audio from $ISCRIPT stream 1, try fallback to source file" err
@@ -262,14 +264,12 @@ cleanuptmp()
 		return 0
 	fi
 	local rmed=""
+	rmed="$X26x_TMP $X26x_AUD_TMP"
 	if [ "$DRYRUN" = 0 ] ; then
-		[ "$X264_EN" = "1" ] && rmed="$X264_TMP $X264_AUD_TMP" && rm -f "$X264_TMP" "$X264_AUD_TMP"
-		[ "$X265_EN" = "1" ] && rmed="$X265_TMP $X265_AUD_TMP" && rm -f "$X265_TMP" "$X265_AUD_TMP"
-		rm -f "$rmed"
+		rm -f "$X26x_TMP" "$X26x_AUD_TMP"
+		[ -n "$VPY_VINFO" ] && rm -f "$VPY_VINFO" "$VPY_AINFO"
 		logg "rm -f $rmed" info
 	else 
-		[ "$X264_EN" = "1" ] && rmed="$X264_TMP $X264_AUD_TMP"
-		[ "$X265_EN" = "1" ] && rmed="$X265_TMP $X265_AUD_TMP"
 		logg "rm -f $rmed" info
 	fi
 }

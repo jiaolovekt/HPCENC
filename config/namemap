@@ -6,4 +6,4 @@
 #[SubsPlease] Ayakashi Triangle - 01 (1080p).mkv KAKT_01_GB.ass/KAKT_01_BIG5.ass will be used
 
 OUTNAME=[KTXP][Ayakashi_Triangle][$INDEX][$LANGG][$RESO]; SRC="Ayakashi Triangle" ; ASS=KAKT # KAKT
-OUTNAME=[KTXP][Too_Cute_Crisis][$INDEX][$LANGG][$RESO]; SRC="Kawaisugi Crisis" ; ASS=Cute # KKSC
+OUTNAME=[KTXP][Too_Cute_Crisis][$INDEX][$LANGG][$RESO]; SRC="Kawaisugi Crisis" ; ASS=KKSC # KKSC

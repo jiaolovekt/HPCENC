@@ -106,8 +106,8 @@ done
 logg "Encode $PROJECT Eps $INDEX $RESO $LANGG Codec $CODEC input $MODE" info
 [[ "$RESO" =~ 1080 ]] && RESO=1080p
 [[ "$RESO" =~ 720 ]] && RESO=720p
-[ "$LANGG" = GB ] && LANGG="$GBflag"	#GB by default
-[ "$LANGG" = B5 ] || [ "$LANGG" = "BIG5" ] && LANGG="$B5flag"	#BIG5 by default
+[[ "$LANGG" =~ GB|gb ]] && LANGG="$GBflag"	#GB by default
+[[ "$LANGG" =~ B5|b5|BIG5|big5 ]]  && LANGG="$B5flag"	#BIG5 by default
 if [[ "$MODE" =~ avs|AVS ]] ; then
 	 MODE=avs 
 elif [[ "$MODE" =~ vs|VS|vpy|VPY ]] ; then
