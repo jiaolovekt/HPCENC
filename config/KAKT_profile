@@ -29,7 +29,7 @@ X264_aqmode=3
 X264_custom="" 	#custom x264 params here
 
 #X265param
-X265_exec=x265-x64-v3.5+131-aMod-gcc12.3.0
+X265_exec=x265
 X265_preset=slow
 X265_profile=main10
 X265_crf=23

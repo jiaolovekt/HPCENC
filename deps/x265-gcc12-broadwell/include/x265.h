@@ -204,9 +204,6 @@ typedef struct x265_analysis_distortion_data
 }x265_analysis_distortion_data;
 
 #define MAX_NUM_REF 16
-#define EDGE_BINS 2
-#define MAX_HIST_BINS 1024
-
 /* Stores all analysis data for a single frame */
 typedef struct x265_analysis_data
 {
@@ -217,8 +214,6 @@ typedef struct x265_analysis_data
     uint32_t                          numCUsInFrame;
     uint32_t                          numPartitions;
     uint32_t                          depthBytes;
-    int32_t                           edgeHist[EDGE_BINS];
-    int32_t                           yuvHist[3][MAX_HIST_BINS];
     int                               bScenecut;
     x265_weight_param*                wt;
     x265_analysis_inter_data*         interData;
@@ -310,7 +305,6 @@ typedef struct x265_frame_stats
     double           totalFrameTime;
     double           vmafFrameScore;
     double           bufferFillFinal;
-    double           unclippedBufferFillFinal;
 } x265_frame_stats;
 
 typedef struct x265_ctu_info_t
@@ -581,7 +575,6 @@ typedef enum
 #define X265_AQ_AUTO_VARIANCE        2
 #define X265_AQ_AUTO_VARIANCE_BIASED 3
 #define X265_AQ_EDGE                 4
-#define X265_AQ_EDGE_BIASED          5
 #define x265_ADAPT_RD_STRENGTH   4
 #define X265_REFINE_INTER_LEVELS 3
 /* NOTE! For this release only X265_CSP_I420 and X265_CSP_I444 are supported */
@@ -607,13 +600,6 @@ typedef enum
 #define X265_ANALYSIS_OFF  0
 #define X265_ANALYSIS_SAVE 1
 #define X265_ANALYSIS_LOAD 2
-
-#define FORWARD                 1
-#define BACKWARD                2
-#define BI_DIRECTIONAL          3
-#define SLICE_TYPE_DELTA        0.3 /* The offset decremented or incremented for P-frames or b-frames respectively*/
-#define BACKWARD_WINDOW         1 /* Scenecut window before a scenecut */
-#define FORWARD_WINDOW          2 /* Scenecut window after a scenecut */
 
 typedef struct x265_cli_csp
 {
@@ -854,6 +840,12 @@ typedef struct x265_param
     /* The level of logging detail emitted by the encoder. X265_LOG_NONE to
      * X265_LOG_FULL, default is X265_LOG_INFO */
     int       logLevel;
+
+    /* filename of general log */
+    char*     logfn;
+
+    /* level of general log */
+    int       logfLevel;
 
     /* Level of csv logging. 0 is summary, 1 is frame level logging,
      * 2 is frame level logging with performance statistics */
@@ -1270,9 +1262,9 @@ typedef struct x265_param
      * skip blocks. Default is disabled */
     int       bEnableEarlySkip;
 
-    /* Enable early CU size decisions to avoid recursing to higher depths.
+    /* Enable early CU size decisions to avoid recursing to higher depths. 
      * Default is enabled */
-    int       recursionSkipMode;
+    int bEnableRecursionSkip;
 
     /* Use a faster search method to find the best intra mode. Default is 0 */
     int       bEnableFastIntra;
@@ -1356,6 +1348,10 @@ typedef struct x265_param
 	 * */
 	int       pictureStructure;	
 
+    int opts;
+
+    bool bStylish;
+
     struct
     {
         /* Explicit mode of rate-control, necessary for API users. It must
@@ -1405,9 +1401,6 @@ typedef struct x265_param
         /* Sets the strength of AQ bias towards low detail CTUs. Valid only if
          * AQ is enabled. Default value: 1.0. Acceptable values between 0.0 and 3.0 */
         double    aqStrength;
-
-        /* Sets the bias towards dark scenes in AQ modes 3 and 5. */
-        double    aqBiasStrength;
 
         /* Delta QP range by QP adaptation based on a psycho-visual model.
          * Acceptable values between 1.0 to 6.0 */
@@ -1854,33 +1847,28 @@ typedef struct x265_param
       Default 1 (Enabled). API only. */
     int       bResetZoneConfig;
 
-    /* It reduces the bits spent on the inter-frames within the scenecutWindow before and / or after a scenecut
-     * by increasing their QP in ratecontrol pass2 algorithm without any deterioration in visual quality.
-     * 0 - Disabled (default).
-     * 1 - Forward masking.
-     * 2 - Backward masking.
-     * 3 - Bi-directional masking. */
+    /* Enables a ratecontrol algorithm for reducing the bits spent on the inter-frames
+     * within the scenecutWindow after a scenecut by increasing their QP without
+     * any deterioration in visual quality. It also increases the quality of scenecut I-Frames by reducing their QP.
+     * Default is disabled. */
     int       bEnableSceneCutAwareQp;
 
     /* The duration(in milliseconds) for which there is a reduction in the bits spent on the inter-frames after a scenecut
-     * by increasing their QP, when bEnableSceneCutAwareQp is 1 or 3. Default is 500ms.*/
-    int       fwdScenecutWindow;
+     * by increasing their QP, when bEnableSceneCutAwareQp is set. Default is 500ms.*/
+    int       scenecutWindow;
 
-    /* The offset by which QP is incremented for inter-frames after a scenecut when bEnableSceneCutAwareQp is 1 or 3.
+    /* The offset by which QP is incremented for inter-frames when bEnableSceneCutAwareQp is set.
      * Default is +5. */
-    double    fwdRefQpDelta;
-
-    /* The offset by which QP is incremented for non-referenced inter-frames after a scenecut when bEnableSceneCutAwareQp is 1 or 3. */
-    double    fwdNonRefQpDelta;
+    int       maxQpDelta;
 
     /* A genuine threshold used for histogram based scene cut detection.
      * This threshold determines whether a frame is a scenecut or not
      * when compared against the edge and chroma histogram sad values.
-     * Default 0.03. Range: Real number in the interval (0,1). */
+     * Default 0.01. Range: Real number in the interval (0,2). */
     double    edgeTransitionThreshold;
 
     /* Enables histogram based scenecut detection algorithm to detect scenecuts. Default disabled */
-    int       bHistBasedSceneCut;
+    int      bHistBasedSceneCut;
 
     /* Enable HME search ranges for L0, L1 and L2 respectively. */
     int       hmeRange[3];
@@ -1897,7 +1885,7 @@ typedef struct x265_param
     * analysis information stored in analysis-save. Higher the refine level higher
     * the information stored. Default is 5 */
     int       analysisSaveReuseLevel;
-
+    
     /* A value between 1 and 10 (both inclusive) determines the level of
     * analysis information reused in analysis-load. Higher the refine level higher
     * the information reused. Default is 5 */
@@ -1924,34 +1912,6 @@ typedef struct x265_param
     * info is available from the corresponding analysis-save. */
 
     int      confWinBottomOffset;
-
-    /* Edge variance threshold for quad tree establishment. */
-    float    edgeVarThreshold;
-
-    /* Maxrate that could be signaled to the decoder. Default 0. API only. */
-    int      decoderVbvMaxRate;
-
-    /*Enables Qp tuning with respect to real time VBV buffer fullness in rate
-    control 2 pass. Experimental.Default is disabled*/
-    int      bliveVBV2pass;
-
-    /* Minimum VBV fullness to be maintained. Default 50. Keep the buffer
-     * at least 50% full */
-    double   minVbvFullness;
-
-    /* Maximum VBV fullness to be maintained. Default 80. Keep the buffer
-    * at max 80% full */
-    double   maxVbvFullness;
-
-    /* The duration(in milliseconds) for which there is a reduction in the bits spent on the inter-frames before a scenecut
-     * by increasing their QP, when bEnableSceneCutAwareQp is 2 or 3. Default is 100ms.*/
-    int       bwdScenecutWindow;
-
-    /* The offset by which QP is incremented for inter-frames before a scenecut when bEnableSceneCutAwareQp is 2 or 3. */
-    double    bwdRefQpDelta;
-
-    /* The offset by which QP is incremented for non-referenced inter-frames before a scenecut when bEnableSceneCutAwareQp is 2 or 3. */
-    double    bwdNonRefQpDelta;
 } x265_param;
 
 /* x265_param_alloc:
@@ -2032,7 +1992,7 @@ static const char * const x265_preset_names[] = { "ultrafast", "superfast", "ver
  *      100 times faster than placebo!
  *
  *      Currently available tunings are: */
-static const char * const x265_tune_names[] = { "psnr", "ssim", "grain", "zerolatency", "fastdecode", "animation", 0 };
+static const char * const x265_tune_names[] = { "psnr", "ssim", "grain", "zerolatency", "fastdecode", "animation", "littlepox", "vcb-s", 0 };
 
 /*      returns 0 on success, negative on failure (e.g. invalid preset/tune name). */
 int x265_param_default_preset(x265_param *, const char *preset, const char *tune);

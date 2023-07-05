@@ -151,7 +151,7 @@ if [ "$X264_EN" = "1" ] ; then
 	else
 		#check avs exists
 		#check bins
-		for f in "$X264_exec" "$FFMPEG_exec" "$MEDIAINFO_exec" ;do
+		for f in "$X264_exec" "$FFMPEG_exec" "$MEDIAINFO_exec" "vspipe" ;do
 			if ! [ -x "$(which "$f")" ] ; then
 				logg "$f not found or no exec perm" err
 				exit 8
@@ -182,15 +182,20 @@ if [ "$X265_EN" = "1" ] ; then
 	else
 		#check avs exists
 		#check bins
-		for f in "$X265_exec" "$FFMPEG_exec" "$MEDIAINFO_exec" ;do
+		for f in "$X265_exec" "$FFMPEG_exec" "$MEDIAINFO_exec" "vspipe" ;do
 			if ! [ -x "$(which "$f")" ] ; then
 				logg "$f not found or no exec perm" err
 				exit 8
 			fi
 		done
 		#video part
+		if [ $MODE = vpy ] ; then
+			O_ISCRIPT="$ISCRIPT"
+			X265_exec="vspipe -c y4m \"$ISCRIPT\" - | $X265_exec"
+			ISCRIPT="--y4m -"
+		fi
 		logg "starting X265 video encode" info
-		cmdline="$X265_exec --preset $X265_preset --no-open-gop --profile $X265_profile --crf $X265_crf --deblock -1:-1 --ref $X265_ref --keyint $X265_keyint --min-keyint 1 --rd $X265_rd --ctu $X265_ctu --max-tu-size $X265_maxtu --no-amp --rdoq-level $X265_rdoq  --rdpenalty 1 --me $X265_me --subme $X265_subme --merange $X265_merange --temporal-mvp --weightp --weightb --b-adapt $X265_badapt --psy-rd 4.0  --psy-rdoq $X265_psyrdoq --aq-mode $X265_aqmode --aq-strength 1.0 --qg-size $X265_qgsize --cutree --qcomp 0.7 --colormatrix $X265_colormatx --allow-non-conformance --rc-lookahead $X265_lookahead --scenecut 40 --dither --no-sao $X265_custom ${X26x_logpara} --output \"$X26x_TMP\" \"$ISCRIPT\""
+		cmdline="$X265_exec --preset $X265_preset --no-open-gop --profile $X265_profile --crf $X265_crf --deblock -1:-1 --ref $X265_ref --keyint $X265_keyint --min-keyint 1 --rd $X265_rd --ctu $X265_ctu --max-tu-size $X265_maxtu --no-amp --rdoq-level $X265_rdoq  --rdpenalty 1 --me $X265_me --subme $X265_subme --merange $X265_merange --temporal-mvp --weightp --weightb --b-adapt $X265_badapt --psy-rd 4.0  --psy-rdoq $X265_psyrdoq --aq-mode $X265_aqmode --aq-strength 1.0 --qg-size $X265_qgsize --cutree --qcomp 0.7 --colormatrix $X265_colormatx --allow-non-conformance --rc-lookahead $X265_lookahead --scenecut 40 --dither --no-sao $X265_custom ${X26x_logpara} --output \"$X26x_TMP\" $ISCRIPT"
                 if [ "$DRYRUN" = 0 ] ; then
 			logg "$cmdline" debug
 			eval "$cmdline"
@@ -199,6 +204,7 @@ if [ "$X265_EN" = "1" ] ; then
 			logg "$cmdline" info
                 fi
 	fi
+	[ -n "$O_ISCRIPT" ] && ISCRIPT="$O_ISCRIPT"
 fi
 #New AAC part
 if [ "$X264_AUD" = "AAC" ] || [ "$X265_AUD" = "AAC" ] ; then
