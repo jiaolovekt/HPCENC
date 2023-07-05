@@ -325,7 +325,7 @@ case "$MUX" in
 	mp4)
 	[ "$MCOMMENTCPU" = 1 ] && commentcpu
 	[ "$MCOMMENTCPU" = 1 ] && MCOMMENT="$MCOMMENT on $CPUCNT x $CPUID"
-	cmdline="$FFMPEG_exec -nostdin -i \"$X26x_TMP\" -i \"$X26x_AUD_TMP\" -c:v copy -c:a copy -metadata comment=$MCOMMENT -map 0:v -map 1:a \"${OUTDIR}/${OUTNAME}.${MUX}\" -y"
+	cmdline="$FFMPEG_exec -nostdin -i \"$X26x_TMP\" -i \"$X26x_AUD_TMP\" -c:v copy -c:a copy -metadata comment=\"$MCOMMENT\" -map 0:v -map 1:a \"${OUTDIR}/${OUTNAME}.${MUX}\" -y"
 	;;
 	mkv)
 	cmdline="mkvmerge -o \"${OUTDIR}/${OUTNAME}.${MUX}\" -v \"$X26x_TMP\" --language 0:jpn \"$X26x_AUD_TMP\" --global-tags \"$MKVCOMMENT\""
