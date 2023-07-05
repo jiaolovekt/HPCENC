@@ -98,7 +98,7 @@ for D in '$WORKINGDIR' '$SRCDIR' '$ASSDIR' '$SCDIR' '$FONTDIR' '$TMPDIR' '$OUTDI
 	if [ -d "$(eval echo $D)" ] && [ -w "$(eval echo $D)" ] ; then
 		logg "$(eval echo "$D") exists and writeable" debug
 	else
-		logg "$D not exist or not writeable" err
+		logg "$(eval echo $D) not exist or not writeable" err
 		exit 4
 	fi
 done
