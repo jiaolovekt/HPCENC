@@ -45,7 +45,7 @@ getwebass()
 {	
 	logg "getting ass file" debug
 	ASSFILE="$(find "${ASSDIR}" -name "${SRC}*${INDEX}*${LANGG}.ass")"
-	ASSFILE="${ASSFILE:-"$(find "${ASSDIR}" -name "${ASS}*${INDEX}*${LANGG}.ass")"}"
+	[ -n "$ASS" ] && ASSFILE="${ASSFILE:-"$(find "${ASSDIR}" -name "${ASS}*${INDEX}*${LANGG}.ass")"}"
 	ASSFILE="${ASSFILE:-"$(find "${ASSDIR}" -name "${PROJECT}*${INDEX}*${LANGG}.ass")"}"
 	if [ -z "$ASSFILE" ] ; then
 		logg "cannot find assfile $SRC / $PROJECT / ${ASS} $INDEX $LANGG " err
@@ -121,7 +121,7 @@ getwebsrcinfo()
 
 getwebsrc()
 {
-        SRCFILE="$(find "${SRCDIR}" -name "*${SRC}*${INDEX}*"|grep -v lwi|head -n 1)"
+        SRCFILE="$(find "${SRCDIR}" -name "*${SRC}*\ ${INDEX}\ *"|grep -v lwi|head -n 1)"
         if [ -n "$SRCFILE" ] ; then
                 logg "find src file ${SRCFILE}" info
         else
