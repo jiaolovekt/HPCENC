@@ -20,7 +20,7 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
  - x265
  - Python 3.11
  - mkvtoolnix-r78
- - mktorrent
+ - mktorrent v1.0
 ## Requirements
   The package almost include every binary files needed for encoding, even with a gcc.\
   So the only requirement is [environment modules](https://github.com/cea-hpc/modules)(to manage environment variables), and,
@@ -140,5 +140,8 @@ You can create your own avs template according to config/base_template.avs or co
  - [ ] BDMV preprocess
  - [ ] BDMV batch with avs
  - [ ] BDMV batch with vs
+ - [x] mktorrent
+ - [x] update tracker list
  - [ ] Automatic job submission as daemon
- - [ ] Automatic mktorrent and publsh
+ - [ ] Automatic mktorrent
+ - [ ] Automatic publsh

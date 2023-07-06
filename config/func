@@ -334,9 +334,34 @@ mtorrent()
 		logg "cannot cd to ${f_path}" err
 		return 5
 	fi
-	# mktorrent
+	# mktorrent v1.0
 	[ -n "$comment" ] && comment="-c \"$comment\""
 	[ -f "${f_file}.torrent" ] && rm -f "${f_file}.torrent"
 	mktorrent -a "$t_list" "$comment" "$f_file"
 	[ "${f_file}" = "${f_path}" ] || cd -
+}
+
+update_trlist()
+{
+	# update trackers from https://github.com/ngosang/trackerslist
+	[ -z "$CONFIGDIR" ] && logg "HPCENC CONFIGDIR not set" err && return 1
+	for link in https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt https://ngosang.github.io/trackerslist/trackers_all.txt https://cdn.jsdelivr.net/gh/ngosang/trackerslist@master/trackers_all.txt ; do
+		logg "try download $link" info
+		if timeout 15 wget "$link" ; then
+			logg "downloaded $link" info
+			break
+		fi
+		logg "download $link failed" warn
+	done
+	sed -i '/^&/d' trackers_all.txt
+	if [ $(wc -l trackers_all.txt | cut -d ' ' -f 1) -gt 100 ] ; then
+		logg "verified trackerlist" info
+		if mv trackers_all.txt "$CONFIGDIR/trackers.txt" ; then
+			logg "moved to $CONFIGDIR/trackers.txt" info
+		else
+			logg "cannot move to $CONFIGDIR/trackers.txt" err
+		fi 
+	else
+		logg "download may not be complete" err
+	fi
 }
