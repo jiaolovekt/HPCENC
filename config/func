@@ -294,4 +294,48 @@ commentcpu()
 		return 0
 	fi
 	((CPUCNT++))
-}	
+}
+
+mtorrent()
+{
+	if [ $# -le 2 ] || [ $# -gt 4 ] ; then
+		logg "usage: mtorrent PATH/FILE trackers.txt comment"
+		return 0
+	fi
+	local f_path="$1"
+	local t_path="$2"
+	local comment="$3"
+	local f_file="${f_path##*/}"
+	local f_path="${f_path%/*}"
+	if ! which mktorrent >/dev/null 2>&1 ; then
+		logg "no mktorrent bin found" err
+		return 1
+	fi
+	if ! [ -r "$f_path" ] ; then
+		logg "$f_path not readable" err
+		return 2
+	fi
+	if ! [ -r "$t_path" ] ; then
+		logg "cannot open $t_path, ENOENT" err
+		return 3
+	fi
+	if [ "$(wc -l "$t_path" | cut -d ' ' -f 1)" -le 0 ] ; then
+		logg "$t_path empty" err
+		return 4
+	fi
+	if ! [ "${f_file}" = "${f_path}" ] && ! cd "${f_path}" ; then
+		logg "cannot cd to ${f_path}" err
+		return 5
+	fi
+	# read trackers
+	logg "using trackers from $t_path" info
+	local t_list=""
+	while read l ; do
+		[ -z "$t_list" ] && t_list="$l" && continue
+		t_list="$t_list,$l"
+	done < "$t_path"
+	# mktorrent
+	[ -n "$comment" ] && comment="-c \"$comment\""
+	mktorrent -x -f -a "$t_list" "$comment" "$f_file"
+	[ "${f_file}" = "${f_path}" ] || cd -
+}

@@ -110,7 +110,7 @@ if a project's name is KAKT, the file's naming rules will be following:
 
 namemap:
 ```
-OUTNAME=[KTXP][Ayakashi_Triangle][$INDEX][$LANGG][$RESO]; SRC="Ayakashi Triangle" # KAKT
+OUTNAME=[KTXP][Ayakashi_Triangle][$INDEX][$LANGG][$RESO]; SRC="Ayakashi Triangle"; ASS=KAKT # KAKT
 ```
 
 Defines the output name, the SRC name is also used to search source file and ass file. \
