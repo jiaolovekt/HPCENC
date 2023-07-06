@@ -1,6 +1,5 @@
 #!/bin/sh
 #SBATCH -N 1
-#SBATCH -n 36
 
 #Default web submit job template
 echo Webrip job $PROJECT $INDEX $RESO $LANGG $CODEC $MODE
@@ -10,4 +9,4 @@ echo running on $HOSTNAME at $PWD
 [ -n "$MODE" ] && MODE="-m $MODE"
 [ -n "$PROFILE" ] && MODE="-p $PROFILE"
 
-srun -n 1 webencode.sh -n $PROJECT -i $INDEX -r $RESO -l $LANGG -c $CODEC $MODE $PROFILE
+srun -n 1 --cpu-bind=sockets webencode.sh -n $PROJECT -i $INDEX -r $RESO -l $LANGG -c $CODEC $MODE $PROFILE

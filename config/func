@@ -347,7 +347,7 @@ update_trlist()
 	[ -z "$CONFIGDIR" ] && logg "HPCENC CONFIGDIR not set" err && return 1
 	for link in https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt https://ngosang.github.io/trackerslist/trackers_all.txt https://cdn.jsdelivr.net/gh/ngosang/trackerslist@master/trackers_all.txt ; do
 		logg "try download $link" info
-		if timeout 15 wget "$link" ; then
+		if timeout 10 wget "$link" ; then
 			logg "downloaded $link" info
 			break
 		fi
