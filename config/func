@@ -323,10 +323,6 @@ mtorrent()
 		logg "$t_path empty" err
 		return 4
 	fi
-	if ! [ "${f_file}" = "${f_path}" ] && ! cd "${f_path}" ; then
-		logg "cannot cd to ${f_path}" err
-		return 5
-	fi
 	# read trackers
 	logg "using trackers from $t_path" info
 	local t_list=""
@@ -334,8 +330,13 @@ mtorrent()
 		[ -z "$t_list" ] && t_list="$l" && continue
 		t_list="$t_list,$l"
 	done < "$t_path"
+	if ! [ "${f_file}" = "${f_path}" ] && ! cd "${f_path}" ; then
+		logg "cannot cd to ${f_path}" err
+		return 5
+	fi
 	# mktorrent
 	[ -n "$comment" ] && comment="-c \"$comment\""
-	mktorrent -x -f -a "$t_list" "$comment" "$f_file"
+	[ -f "${f_file}.torrent" ] && rm -f "${f_file}.torrent"
+	mktorrent -a "$t_list" "$comment" "$f_file"
 	[ "${f_file}" = "${f_path}" ] || cd -
 }

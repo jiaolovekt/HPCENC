@@ -20,6 +20,7 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
  - x265
  - Python 3.11
  - mkvtoolnix-r78
+ - mktorrent
 ## Requirements
   The package almost include every binary files needed for encoding, even with a gcc.\
   So the only requirement is [environment modules](https://github.com/cea-hpc/modules)(to manage environment variables), and,
