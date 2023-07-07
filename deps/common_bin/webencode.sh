@@ -92,6 +92,7 @@ elif [ -r "$CONFIGDIR"/"$PROJECT"_profile ] ; then
 else
 	logg "continue with default profile" debug
 fi
+#script override
 [ -n "$EMODE" ] && MODE="$EMODE"
 #check path
 for D in '$WORKINGDIR' '$SRCDIR' '$ASSDIR' '$SCDIR' '$FONTDIR' '$TMPDIR' '$OUTDIR' ; do 
@@ -333,6 +334,7 @@ case "$MUX" in
 	*)
 	;;
 esac
+OUTFILE="${OUTDIR}/${OUTNAME}.${MUX}"
 if [ "$DRYRUN" = 0 ] ; then
 	logg "$cmdline" debug
 	eval "$cmdline"
@@ -361,3 +363,7 @@ fi
 #Postprocess
 cleanuptmp
 #may call sth
+if [ "$Automktorrent" != 0 ] ; then
+	mktor "$OUTFILE"
+fi
+

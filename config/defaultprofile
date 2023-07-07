@@ -21,7 +21,7 @@ Proj_add="07.5 08.5"	# used for irregular episodes
 X264_AUD=AAC #Use if X264 enabled
 X264_MUX=mp4 #Currently unused
 X265_AUD=AAC
-X265_MUX=mkv
+X265_MUX=mkv #Currently mkv only
 
 #DO NOT MODIFY BELOW UNLESS HAVE A CLEAR UNDERSTAND OF THIS CODE
 
@@ -101,3 +101,5 @@ SkipEVideo=0
 Cleartmp=1	#remove tmp files when complete
 Preferlocaltmp=1 #use local /tmp if local /tmp is tmpfs && have enoughspace, Not Implemented yet.
 
+Automktorrent=1	#create torrent automatically
+TCOMMENT=""	#torrent comment
