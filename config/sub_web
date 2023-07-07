@@ -3,10 +3,9 @@
 
 #Default web submit job template
 echo Webrip job $PROJECT $INDEX $RESO $LANGG $CODEC $MODE
-echo running on $HOSTNAME at $PWD
+echo running on $HOSTNAME at $PWD using $SLURM_NPROCS threads
 . ${ENCROOT}/init.sh
 
 [ -n "$MODE" ] && MODE="-m $MODE"
 [ -n "$PROFILE" ] && MODE="-p $PROFILE"
-
-srun -n 1 --cpu-bind=sockets webencode.sh -n $PROJECT -i $INDEX -r $RESO -l $LANGG -c $CODEC $MODE $PROFILE
+srun --cpus-per-task $SLURM_NPROCS -n 1 webencode.sh -n $PROJECT -i $INDEX -r $RESO -l $LANGG -c $CODEC $MODE $PROFILE
