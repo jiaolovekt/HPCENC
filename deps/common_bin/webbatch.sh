@@ -55,7 +55,7 @@ done
 #State=UP TotalCPUs=16000 TotalNodes=400 SelectTypeParameters=NONE
 #Adaptive thread control
 if [ -z "$NTHREADS" ] ; then
-	if ! [ -x $(which scontrol) ] ; then
+	if ! [ -x "$(which scontrol)" ] ; then
 		echo "scontrol not found, need specify -N manually"
 	fi
 	NTHREADS=0

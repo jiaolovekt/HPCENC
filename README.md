@@ -38,6 +38,8 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
   see deps/avsp3.7.2/lib/avisynth and deps/vs-plugins
 ### Architecture support
   Currently Broadwell(E5v4) and later Intel CPUs. May add EPYC2 support if I get a cluster to test.
+### Numa support
+  Will try to bind x264 process to 1 socket on DP/MP platforms.
 ## Usage
 Just clone this project to your compute cluster.
 Initiate the environment by\

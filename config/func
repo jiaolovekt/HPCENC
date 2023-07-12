@@ -346,6 +346,7 @@ mktor()
 	#temporary usage
 	local file="$1"
 	local msg="[Created by HPCENC](https://github.com/jiaolovekt/HPCENC)"
+	[ -n "$TCOMMENT" ] && msg="$TCOMMENT"
 	if [ -z "$CONFIGDIR" ] ; then
 		[ -d "${ENCROOT}/config" ] && CONFIGDIR="${ENCROOT}/config" #try
 	fi
@@ -385,3 +386,59 @@ update_trlist()
 		logg "download may not be complete" err
 	fi
 }
+
+#Wine part
+wine_configure()
+{
+	#check wine exec
+	[ -x "$(which wine64)" ] && WINE_EXEC=wine64 && W_AVSPIPE="$(which avs2pipemod64.exe)"
+	[ -x "$(which wine)" ] && WINE_EXEC=wine && W_AVSPIPE="$(which avs2pipemod.exe)"
+	if [ -n "$WINE_EXEC" ] ; then
+		logg "wine exec is $WINE_EXEC" info
+	else
+		logg "no wine exec found" err
+		exit 14
+	fi
+	if ! grep -Fq "$WINEAVSDIR" "${WINEPREFIX}/system.reg" ; then
+		logg "need update wine avs reg" info
+		update_wine_avs_reg
+	fi
+}
+
+update_wine_avs_reg()
+{
+	[ -z "$CONFIGDIR" ] && logg "HPCENC CONFIGDIR not set" err && return 1
+	if [ -x "$(which wine64)" ] ; then
+		if ! [ -f "$CONFIGDIR"/wine_avs64.reg ] ; then
+			logg "wine_avs reg template not found" err
+			return 1
+		else
+			local winereg="${CONFIGDIR}/wine_avs64.reg"
+		fi
+		logg "update wine avs64 reg" info
+		sed "s|__WINE64_AVS_PATH__|$WINEAVSDIR|;s|__WINE64_AVS_PLUGIN_PATH__|$WINEAVSPLGNDIR|" "$winereg" > "${TMPDIR}/avs64.reg"
+		if wine64 regedit "${TMPDIR}/avs64.reg" > /dev/null 2>&1 ; then
+			logg "updated avs64 reg" info
+		else
+			logg "update avs64 reg failed" err
+		fi
+	elif [ -x "$(which wine)" ] ; then
+		if ! [ -f "$CONFIGDIR"/wine_avs32.reg ] ; then
+                        logg "wine_avs reg template not found" err
+                        return 1
+                else
+                        local winereg="${CONFIGDIR}/wine_avs32.reg"
+                fi
+                logg "update wine avs32 reg" info
+                sed "s|__WINE_AVS_PATH__|$WINEAVSDIR|;s|__WINE_AVS_PLUGIN_PATH__|$WINEAVSPLGNDIR|" "$winereg" > "${TMPDIR}/avs32.reg"
+                if wine64 regedit "${TMPDIR}/avs64.reg" > /dev/null 2>&1 ; then
+                        logg "updated avs32 reg" info
+                else
+                        logg "update avs32 reg failed" err
+                fi
+	else
+		logg "neither wine64 nor wine32 found" err
+		exit 13
+	fi
+}
+

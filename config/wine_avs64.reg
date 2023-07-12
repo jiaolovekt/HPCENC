@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\AviSynth]
+@="Z:__WINE64_AVS_PATH__"
+"plugindir2_5"="Z:__WINE64_AVS_PLUGIN_PATH__"
+"plugindir+"="Z:__WINE64_AVS_PLUGIN_PATH__"

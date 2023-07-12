@@ -128,15 +128,23 @@ fi
 logg "Output name $OUTNAME"
 
 #Encode part
-#TODO maybe a full rework to mix altogether
 getwebsrc
-getwebsrcinfo
+getwebsrcinfo #mediainfo
 
 getwebscript "$CODEC" "$MODE"
+
+#VSFM dct only avs mode
+if [ "$MODE" = avs ] && grep -Fq TextSubMod "${ISCRIPT}" ; then
+	logg "VSFM use detected in ${ISCRIPT}, switch to wine" info
+	wine_configure
+	use_wine=1
+fi
 
 if [ "$MODE" = vpy ] ; then
 	getvpyinfo
 fi
+
+
 
 #logs
 if [ "$Separatelogfile" = "1" ] ; then
@@ -159,9 +167,13 @@ if [ "$X264_EN" = "1" ] ; then
 			fi
 		done
 		#video part
-	if [ $MODE = vpy ] ; then
+	if [ "$MODE" = vpy ] ; then
 		O_ISCRIPT="$ISCRIPT"
 		X264_exec="vspipe -c y4m \"$ISCRIPT\" - | $X264_exec"
+		ISCRIPT="--demuxer y4m -"
+	elif [ "$use_wine" = 1 ] ; then
+		O_ISCRIPT="$ISCRIPT"
+		X264_exec="$WINE_EXEC $W_AVSPIPE -y4mp \"$ISCRIPT\" | $X264_exec"
 		ISCRIPT="--demuxer y4m -"
 	fi
 		cmdline="$X264_exec --level 5.1 --crf $X264_crf --tune $X264_tune --keyint $X264_keyint --min-keyint 1 --threads $X264_threads --bframes $X264_bframes --qpmin 0 --qpmax $X264_qpmax  --b-adapt $X264_badapt --ref $X264_ref --chroma-qp-offset -2 --vbv-bufsize $X264_vbvbuf --vbv-maxrate $X264_vbvmaxrate --qcomp 0.7 --rc-lookahead $X264_lookahead --aq-strength 0.9 --deblock 1:1  --direct auto  --merange $X264_merange --me $X264_me --subme $X264_subme --trellis 2 --psy-rd 0.6:0.10 --no-fast-pskip --stylish --aq-mode $X264_aqmode --fgo 4 --partitions all --opts 0  --fade-compensate 0.10 ${X264_custom} ${X26x_logpara} -o \"$X26x_TMP\" $ISCRIPT"
@@ -193,6 +205,10 @@ if [ "$X265_EN" = "1" ] ; then
 		if [ $MODE = vpy ] ; then
 			O_ISCRIPT="$ISCRIPT"
 			X265_exec="vspipe -c y4m \"$ISCRIPT\" - | $X265_exec"
+			ISCRIPT="--y4m -"
+		elif [ "$use_wine" = 1 ] ; then
+			O_ISCRIPT="$ISCRIPT"
+			X265_exec="$WINE_EXEC $W_AVSPIPE -y4mp \"$ISCRIPT\" | $X265_exec"
 			ISCRIPT="--y4m -"
 		fi
 		logg "starting X265 video encode" info
@@ -237,6 +253,11 @@ if [ "$X264_AUD" = "AAC" ] || [ "$X265_AUD" = "AAC" ] ; then
 		logg "Start audio encode" info
 		case "$MODE" in
 		avs)
+		if [ "$use_wine" = 1 ] ; then
+			O_ISCRIPT="$ISCRIPT"
+			FFMPEG_exec="$WINE_EXEC $W_AVSPIPE -wav \"$ISCRIPT\" | $FFMPEG_exec"
+			ISCRIPT="-"
+		fi
 		cmdline="$FFMPEG_exec -nostdin -i \"$ISCRIPT\" -vn -c:a aac -q $AAC_Q \"$X26x_AUD_TMP\" -y"
 		if [ "$DRYRUN" = 0 ] ; then
 			logg "$cmdline" debug
@@ -244,6 +265,7 @@ if [ "$X264_AUD" = "AAC" ] || [ "$X265_AUD" = "AAC" ] ; then
 		else
 			logg "$cmdline" info
 		fi
+		[ -n "$O_ISCRIPT" ] && ISCRIPT="$O_ISCRIPT"
 		;;
 		vpy)
 		cmdline="vspipe -c wav \"$ISCRIPT\" -o 1 - | $FFMPEG_exec -nostdin -i - -vn -c:a aac -q $AAC_Q \"$X26x_AUD_TMP\" -y"
