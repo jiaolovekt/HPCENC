@@ -21,7 +21,10 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
  - Python 3.11
  - mkvtoolnix-r78
  - mktorrent v1.0
-## Requirements
+ - Wine64-8.0.1
+ - Avisynth+ 3.7.1 Windows x64
+ - VSFilterMod
+## Requirements and limitations
   The package almost include every binary files needed for encoding, even with a gcc.\
   So the only requirement is [environment modules](https://github.com/cea-hpc/modules)(to manage environment variables), and,
   this is a very fundamental part of supercomputers so every HPC cluster should have this.
@@ -40,6 +43,10 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
   Currently Broadwell(E5v4) and later Intel CPUs. May add EPYC2 support if I get a cluster to test.
 ### Numa support
   Will try to bind x264 process to 1 socket on DP/MP platforms.
+### VSFilterMod support
+  Supported by wine, currently only x64 version with avisynth windows x64,\
+  filter only contains LSM and VSFM, will add other filters later.\
+  May include a 32bit version later for better plugin compatibility
 ## Usage
 Just clone this project to your compute cluster.
 Initiate the environment by\
@@ -142,6 +149,7 @@ You can create your own avs template according to config/base_template.avs or co
  - [ ] BDMV preprocess
  - [ ] BDMV batch with avs
  - [ ] BDMV batch with vs
+ - [x] VSFM support
  - [x] mktorrent
  - [x] update tracker list
  - [ ] Automatic job submission as daemon
