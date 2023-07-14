@@ -392,7 +392,7 @@ wine_configure()
 {
 	#check wine exec
 	[ -x "$(which wine64)" ] && WINE_EXEC=wine64 && W_AVSPIPE="$(which avs2pipemod64.exe)"
-	[ -x "$(which wine)" ] && WINE_EXEC=wine && W_AVSPIPE="$(which avs2pipemod.exe)"
+	[ -x "$(which wine)" ] && WINE_EXEC=wine && W_AVSPIPE="$(which avs2pipemod.exe) -dll avisynth32"
 	if [ -n "$WINE_EXEC" ] ; then
 		logg "wine exec is $WINE_EXEC" info
 	else

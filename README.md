@@ -22,9 +22,9 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
  - mkvtoolnix-r78
  - mktorrent v1.0
  - Wine64-8.0.1
- - Avisynth+ 3.7.2 Windows i386
+ - Avisynth+ 3.7.2 Windows i686
  - Avisynth+ 3.7.2 Windows x64
- - VSFilterMod i386
+ - VSFilterMod i686
  - VSFilterMod x64
 ## Requirements and limitations
   The package almost include every binary files needed for encoding, even with a gcc.\
@@ -51,9 +51,9 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
   Put x64 plugin dlls in deps/wine/avs64/plugins
 ### AVS Plugins support (Win32)
   Currently only Lsmashsource and VSFilterMod\
-  Put i386 plugin dlls in deps/wine/avs32/plugins
+  Put i686 plugin dlls in deps/wine/avs32/plugins
 ### VSFilterMod support
-  Supported by wine, i386 and x64 versions available
+  Supported by wine, i686 and x64 versions available
 ## Usage
 Just clone this project to your compute cluster.
 Initiate the environment by\
@@ -160,7 +160,7 @@ You can create your own avs template according to config/base_template.avs or co
  - [ ] BDMV preprocess
  - [ ] BDMV batch with avs
  - [ ] BDMV batch with vs
- - [x] VSFM support (i386 and x64)
+ - [x] VSFM support (i686 and x64)
  - [x] mktorrent
  - [x] update tracker list
  - [ ] Automatic job submission as daemon

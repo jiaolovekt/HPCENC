@@ -97,8 +97,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ee301a4
 @="inifile"
 
-[Software\\Classes\\.its] 1689246993
-#time=1d9b57b7b0d63a8
+[Software\\Classes\\.its] 1689332957
+#time=1d9b643a189f2b2
 @="ITS File"
 
 [Software\\Classes\\.jfif] 1689246999
@@ -121,8 +121,8 @@ WINE REGISTRY Version 2
 @="jpegfile"
 "Content Type"="image/jpeg"
 
-[Software\\Classes\\.js] 1689246995
-#time=1d9b57b7c248758
+[Software\\Classes\\.js] 1689332958
+#time=1d9b643a24f1e16
 @="JSFile"
 
 [Software\\Classes\\.lnk] 1689246999
@@ -206,12 +206,12 @@ WINE REGISTRY Version 2
 @="txtfile"
 "Content Type"="text/plain"
 
-[Software\\Classes\\.url] 1689246993
-#time=1d9b57b7afbf15e
+[Software\\Classes\\.url] 1689332957
+#time=1d9b643a17df610
 @="InternetShortcut"
 
-[Software\\Classes\\.vbs] 1689246995
-#time=1d9b57b7c248b54
+[Software\\Classes\\.vbs] 1689332958
+#time=1d9b643a24f2f14
 @="VBSFile"
 
 [Software\\Classes\\.wav] 1689246999
@@ -453,12 +453,12 @@ WINE REGISTRY Version 2
 #time=1d9b57b7b5412da
 @="Microsoft Common Language Runtime Host V2"
 
-[Software\\Classes\\CLRMetaData.CLRRuntimeHost\\CLSID] 1689246999
-#time=1d9b57b7e889c8c
+[Software\\Classes\\CLRMetaData.CLRRuntimeHost\\CLSID] 1689332961
+#time=1d9b643a3d8ddda
 @="{90F1A06E-7712-4762-86B5-7A5EBA6BDB02}"
 
-[Software\\Classes\\CLRMetaData.CLRRuntimeHost\\CurVer] 1689246999
-#time=1d9b57b7e88a038
+[Software\\Classes\\CLRMetaData.CLRRuntimeHost\\CurVer] 1689332961
+#time=1d9b643a3d8e316
 @="CLRMetaData.CLRRuntimeHost.2"
 
 [Software\\Classes\\CLRMetaData.CLRRuntimeHost.1] 1689246993
@@ -2649,8 +2649,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3bfc64
 @="SearchAssistantOC"
 
-[Software\\Classes\\CLSID\\{2E71FD0F-AAB1-42C0-9146-6D2C4EDCF07D}\\InprocServer32] 1689246993
-#time=1d9b57b7afb0b22
+[Software\\Classes\\CLSID\\{2E71FD0F-AAB1-42C0-9146-6D2C4EDCF07D}\\InprocServer32] 1689332957
+#time=1d9b643a17c5fda
 @="C:\\windows\\system32\\ieframe.dll"
 "ThreadingModel"="Apartment"
 
@@ -2674,8 +2674,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3be490
 @="Shell Name Space"
 
-[Software\\Classes\\CLSID\\{2F2F1F96-2BC1-4B1C-BE28-EA3774F4676A}\\InprocServer32] 1689246993
-#time=1d9b57b7afae7e6
+[Software\\Classes\\CLSID\\{2F2F1F96-2BC1-4B1C-BE28-EA3774F4676A}\\InprocServer32] 1689332957
+#time=1d9b643a17c1e26
 @="C:\\windows\\system32\\ieframe.dll"
 "ThreadingModel"="Apartment"
 
@@ -4156,8 +4156,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3bf0a2
 @="Shell Name Space"
 
-[Software\\Classes\\CLSID\\{55136805-B2DE-11D1-B9F2-00A0C98BC547}\\InprocServer32] 1689246993
-#time=1d9b57b7afaf9a2
+[Software\\Classes\\CLSID\\{55136805-B2DE-11D1-B9F2-00A0C98BC547}\\InprocServer32] 1689332957
+#time=1d9b643a17c3f00
 @="C:\\windows\\system32\\ieframe.dll"
 "ThreadingModel"="Apartment"
 
@@ -4337,8 +4337,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7b0d251e
 @="MSITFS"
 
-[Software\\Classes\\CLSID\\{607FD4E8-0A03-11D1-AB1D-00C04FC9B304}] 1689246999
-#time=1d9b57b7e8f4a96
+[Software\\Classes\\CLSID\\{607FD4E8-0A03-11D1-AB1D-00C04FC9B304}] 1689332961
+#time=1d9b643a3e102bc
 @="CoICOFilter Class"
 
 [Software\\Classes\\CLSID\\{607FD4E8-0A03-11D1-AB1D-00C04FC9B304}\\InprocServer32] 1689246993
@@ -4346,12 +4346,12 @@ WINE REGISTRY Version 2
 @="C:\\windows\\system32\\mshtml.dll"
 "ThreadingModel"="Apartment"
 
-[Software\\Classes\\CLSID\\{607FD4E8-0A03-11D1-AB1D-00C04FC9B304}\\ProgId] 1689246999
-#time=1d9b57b7e8f522a
+[Software\\Classes\\CLSID\\{607FD4E8-0A03-11D1-AB1D-00C04FC9B304}\\ProgId] 1689332961
+#time=1d9b643a3e10d3e
 @="ICOFilter.CoICOFilter.1"
 
-[Software\\Classes\\CLSID\\{607FD4E8-0A03-11D1-AB1D-00C04FC9B304}\\VersionIndependentProgId] 1689246999
-#time=1d9b57b7e8f5608
+[Software\\Classes\\CLSID\\{607FD4E8-0A03-11D1-AB1D-00C04FC9B304}\\VersionIndependentProgId] 1689332961
+#time=1d9b643a3e11248
 @="ICOFilter.CoICOFilter"
 
 [Software\\Classes\\CLSID\\{629CF0DE-3ECC-41E7-9926-F7E43EEBEC51}] 1689246997
@@ -4411,8 +4411,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3bd914
 @="Microsoft Shell UI Helper"
 
-[Software\\Classes\\CLSID\\{64AB4BB7-111E-11D1-8F79-00C04FC2FBE1}\\InprocServer32] 1689246993
-#time=1d9b57b7afad670
+[Software\\Classes\\CLSID\\{64AB4BB7-111E-11D1-8F79-00C04FC2FBE1}\\InprocServer32] 1689332957
+#time=1d9b643a17bfd38
 @="C:\\windows\\system32\\ieframe.dll"
 "ThreadingModel"="Apartment"
 
@@ -5578,8 +5578,8 @@ WINE REGISTRY Version 2
 [Software\\Classes\\CLSID\\{8856F961-340A-11D0-A96B-00C04FD705A2}\\Control] 1689246993
 #time=1d9b57b7afbdce6
 
-[Software\\Classes\\CLSID\\{8856F961-340A-11D0-A96B-00C04FD705A2}\\InprocServer32] 1689246993
-#time=1d9b57b7afaa9b6
+[Software\\Classes\\CLSID\\{8856F961-340A-11D0-A96B-00C04FD705A2}\\InprocServer32] 1689332957
+#time=1d9b643a17bab44
 @="C:\\windows\\system32\\ieframe.dll"
 "ThreadingModel"="Apartment"
 
@@ -6447,8 +6447,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3bcd7a
 @="ShellWindows"
 
-[Software\\Classes\\CLSID\\{9BA05972-F6A8-11CF-A442-00A0C90A8F39}\\InprocServer32] 1689246993
-#time=1d9b57b7afaca0e
+[Software\\Classes\\CLSID\\{9BA05972-F6A8-11CF-A442-00A0C90A8F39}\\InprocServer32] 1689332957
+#time=1d9b643a17be65e
 @="C:\\windows\\system32\\ieframe.dll"
 "ThreadingModel"="Apartment"
 
@@ -7140,8 +7140,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3c0844
 @="SearchAssistantOC"
 
-[Software\\Classes\\CLSID\\{B45FF030-4447-11D2-85DE-00C04FA35C89}\\InprocServer32] 1689246993
-#time=1d9b57b7afb1cf2
+[Software\\Classes\\CLSID\\{B45FF030-4447-11D2-85DE-00C04FA35C89}\\InprocServer32] 1689332957
+#time=1d9b643a17c8082
 @="C:\\windows\\system32\\ieframe.dll"
 "ThreadingModel"="Apartment"
 
@@ -8810,8 +8810,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3bb0ba
 @="Microsoft Web Browser Version 1"
 
-[Software\\Classes\\CLSID\\{EAB22AC3-30C1-11CF-A7EB-0000C05BAE0B}\\InprocServer32] 1689246993
-#time=1d9b57b7afa9750
+[Software\\Classes\\CLSID\\{EAB22AC3-30C1-11CF-A7EB-0000C05BAE0B}\\InprocServer32] 1689332957
+#time=1d9b643a17b8a1a
 @="C:\\windows\\system32\\ieframe.dll"
 "ThreadingModel"="Apartment"
 
@@ -9899,20 +9899,20 @@ WINE REGISTRY Version 2
 @="C:\\windows\\system32\\dsound.dll"
 "ThreadingModel"="Both"
 
-[Software\\Classes\\Component Categories\\{0aee2a92-bcbb-11d0-8c72-00c04fc2b085}] 1689246993
-#time=1d9b57b7b11869a
+[Software\\Classes\\Component Categories\\{0aee2a92-bcbb-11d0-8c72-00c04fc2b085}] 1689332957
+#time=1d9b643a18ff054
 "409"="Active Scripting Engine with Authoring"
 
-[Software\\Classes\\Component Categories\\{f0b7a1a1-9847-11cf-8f20-00805f2cd064}] 1689246993
-#time=1d9b57b7b117ab0
+[Software\\Classes\\Component Categories\\{f0b7a1a1-9847-11cf-8f20-00805f2cd064}] 1689332957
+#time=1d9b643a18fbe40
 "409"="Active Scripting Engine"
 
-[Software\\Classes\\Component Categories\\{f0b7a1a2-9847-11cf-8f20-00805f2cd064}] 1689246993
-#time=1d9b57b7b117e84
+[Software\\Classes\\Component Categories\\{f0b7a1a2-9847-11cf-8f20-00805f2cd064}] 1689332957
+#time=1d9b643a18fcf20
 "409"="Active Scripting Engine with Parsing"
 
-[Software\\Classes\\Component Categories\\{f0b7a1a3-9847-11cf-8f20-00805f2cd064}] 1689246993
-#time=1d9b57b7b11828a
+[Software\\Classes\\Component Categories\\{f0b7a1a3-9847-11cf-8f20-00805f2cd064}] 1689332957
+#time=1d9b643a18fdf9c
 "409"="Active Scripting Engine with Encoding"
 
 [Software\\Classes\\cplfile] 1689246999
@@ -9963,12 +9963,12 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aabd516
 @="{4315D437-5B8C-11D0-BD3B-00A0C911CE86}"
 
-[Software\\Classes\\DHTMLEdit.DHTMLEdit] 1689246992
-#time=1d9b57b7aaff38a
+[Software\\Classes\\DHTMLEdit.DHTMLEdit] 1689332956
+#time=1d9b643a13ad81c
 @="DHTML Control for IE5"
 
-[Software\\Classes\\DHTMLEdit.DHTMLEdit\\CLSID] 1689246992
-#time=1d9b57b7aaff56a
+[Software\\Classes\\DHTMLEdit.DHTMLEdit\\CLSID] 1689332956
+#time=1d9b643a13adb5a
 @="{2d360200-fff5-11d1-8d03-00a0c959bc0a}"
 
 [Software\\Classes\\DHTMLEdit.DHTMLEdit\\CurVer] 1689246992
@@ -10380,8 +10380,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ea0f62e
 @="rundll32.exe mshtml.dll,PrintHTML \"%1\" \"%2\" \"%3\" \"%4\""
 
-[Software\\Classes\\htmlfile_FullWindowEmbed] 1689246999
-#time=1d9b57b7ea1093e
+[Software\\Classes\\htmlfile_FullWindowEmbed] 1689332961
+#time=1d9b643a3f6b2ba
 @="HTML Plugin Document"
 
 [Software\\Classes\\htmlfile_FullWindowEmbed\\BrowseInPlace] 1689246999
@@ -10607,8 +10607,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd1c694
 @="4"
 
-[Software\\Classes\\Interface\\{0000002E-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd3d3e4
+[Software\\Classes\\Interface\\{0000002E-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a222d70c
 @="{00020420-0000-0000-C000-000000000046}"
 
 [Software\\Classes\\Interface\\{00000030-0000-0000-C000-000000000046}] 1689246994
@@ -11629,8 +11629,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd3d8c6
 @="{00020420-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{00020400-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd3dbaa
+[Software\\Classes\\Interface\\{00020400-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a222e4b8
 @="{00020420-0000-0000-C000-000000000046}"
 
 [Software\\Classes\\Interface\\{00020401-0000-0000-C000-000000000046}] 1689246994
@@ -11645,8 +11645,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd3e08c
 @="{00020422-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{00020401-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd3e366
+[Software\\Classes\\Interface\\{00020401-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a222f1f6
 @="{00020422-0000-0000-C000-000000000046}"
 
 [Software\\Classes\\Interface\\{00020402-0000-0000-C000-000000000046}] 1689246994
@@ -11661,8 +11661,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd3e848
 @="{00020423-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{00020402-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd3eb54
+[Software\\Classes\\Interface\\{00020402-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a222ff3e
 @="{00020423-0000-0000-C000-000000000046}"
 
 [Software\\Classes\\Interface\\{00020403-0000-0000-C000-000000000046}] 1689246994
@@ -11677,8 +11677,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd3f02c
 @="{00020425-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{00020403-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd3f306
+[Software\\Classes\\Interface\\{00020403-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a2230cd6
 @="{00020425-0000-0000-C000-000000000046}"
 
 [Software\\Classes\\Interface\\{00020404-0000-0000-C000-000000000046}] 1689246994
@@ -11693,8 +11693,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd3f806
 @="{00020421-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{00020404-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd3fae0
+[Software\\Classes\\Interface\\{00020404-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a2231a14
 @="{00020421-0000-0000-C000-000000000046}"
 
 [Software\\Classes\\Interface\\{00020411-0000-0000-C000-000000000046}] 1689246994
@@ -11705,8 +11705,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd1a240
 @="17"
 
-[Software\\Classes\\Interface\\{00020411-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd3ffb8
+[Software\\Classes\\Interface\\{00020411-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a2232270
 @="{00020420-0000-0000-C000-000000000046}"
 
 [Software\\Classes\\Interface\\{00020412-0000-0000-C000-000000000046}] 1689246994
@@ -11717,8 +11717,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd18fe4
 @="37"
 
-[Software\\Classes\\Interface\\{00020412-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd40486
+[Software\\Classes\\Interface\\{00020412-0000-0000-C000-000000000046}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a2232b12
 @="{00020420-0000-0000-C000-000000000046}"
 
 [Software\\Classes\\Interface\\{000214E2-0000-0000-C000-000000000046}] 1689246992
@@ -12288,8 +12288,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd016fa
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{03022430-ABC4-11D0-BDE2-00AA001A1953}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd03f9a
+[Software\\Classes\\Interface\\{03022430-ABC4-11D0-BDE2-00AA001A1953}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a21e0272
 @="{03022430-ABC4-11D0-BDE2-00AA001A1953}"
 
 [Software\\Classes\\Interface\\{03022430-ABC4-11D0-BDE2-00AA001A1953}\\TypeLib] 1689246994
@@ -12309,8 +12309,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2db76c
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{032AAC35-8C0E-4D9D-979F-E3B702935576}\\TypeLib] 1689246992
-#time=1d9b57b7a38b73e
+[Software\\Classes\\Interface\\{032AAC35-8C0E-4D9D-979F-E3B702935576}\\TypeLib] 1689332955
+#time=1d9b643a0b20b72
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -12493,8 +12493,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2da6d2
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{0C05D096-F45B-4ACA-AD1A-AA0BC25518DC}\\TypeLib] 1689246992
-#time=1d9b57b7a37b71c
+[Software\\Classes\\Interface\\{0C05D096-F45B-4ACA-AD1A-AA0BC25518DC}\\TypeLib] 1689332955
+#time=1d9b643a0b0124a
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13012,8 +13012,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2d7d2e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{10DC0586-132B-4CAC-8BB3-DB00AC8B7EE0}\\TypeLib] 1689246992
-#time=1d9b57b7a37c73e
+[Software\\Classes\\Interface\\{10DC0586-132B-4CAC-8BB3-DB00AC8B7EE0}\\TypeLib] 1689332955
+#time=1d9b643a0b03874
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13070,8 +13070,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2dc7e8
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{1299EB1B-5B88-433E-82DE-82CA75AD4E04}\\TypeLib] 1689246992
-#time=1d9b57b7a37effc
+[Software\\Classes\\Interface\\{1299EB1B-5B88-433E-82DE-82CA75AD4E04}\\TypeLib] 1689332955
+#time=1d9b643a0b08aae
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13128,8 +13128,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aae81e4
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{163BB1E0-6E00-11CF-837A-48DC04C10000}\\TypeLib] 1689246994
-#time=1d9b57b7b66cb64
+[Software\\Classes\\Interface\\{163BB1E0-6E00-11CF-837A-48DC04C10000}\\TypeLib] 1689332957
+#time=1d9b643a1d7e4ea
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -13490,8 +13490,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2d9ea8
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{24FB3297-302D-4620-BA39-3A732D850558}\\TypeLib] 1689246992
-#time=1d9b57b7a37d77e
+[Software\\Classes\\Interface\\{24FB3297-302D-4620-BA39-3A732D850558}\\TypeLib] 1689332955
+#time=1d9b643a0b0593a
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13667,8 +13667,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28b44c
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF80-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a377694
+[Software\\Classes\\Interface\\{2933BF80-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0af73f8
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13684,8 +13684,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28ab28
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF81-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a376eba
+[Software\\Classes\\Interface\\{2933BF81-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0af6106
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13701,8 +13701,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28336e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF82-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a36ffe8
+[Software\\Classes\\Interface\\{2933BF82-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0ae441a
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13718,8 +13718,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a283d00
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF83-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a370812
+[Software\\Classes\\Interface\\{2933BF83-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0ae55e0
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13735,8 +13735,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a286b04
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF84-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a3737a6
+[Software\\Classes\\Interface\\{2933BF84-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0aede66
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13752,8 +13752,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a284f52
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF85-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a371fb4
+[Software\\Classes\\Interface\\{2933BF85-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0ae9c44
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13769,8 +13769,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a285876
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF86-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a37278e
+[Software\\Classes\\Interface\\{2933BF86-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0aeb828
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13786,8 +13786,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a287428
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF87-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a373f80
+[Software\\Classes\\Interface\\{2933BF87-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0aef0a4
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13803,8 +13803,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a287d42
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF88-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a37475a
+[Software\\Classes\\Interface\\{2933BF88-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0af035a
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13820,8 +13820,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a288f9e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF89-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a375754
+[Software\\Classes\\Interface\\{2933BF89-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0af2844
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13837,8 +13837,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a288684
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF8A-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a374f34
+[Software\\Classes\\Interface\\{2933BF8A-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0af15a2
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13854,8 +13854,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28462e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF8B-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a370fec
+[Software\\Classes\\Interface\\{2933BF8B-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0ae7124
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13871,8 +13871,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28bd70
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF8C-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a377eb4
+[Software\\Classes\\Interface\\{2933BF8C-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0af869a
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13888,8 +13888,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28c694
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF8D-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a3786c0
+[Software\\Classes\\Interface\\{2933BF8D-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0af9928
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13905,8 +13905,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2898b8
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF8E-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a375f24
+[Software\\Classes\\Interface\\{2933BF8E-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0af3b04
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13922,8 +13922,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a282a18
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF8F-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a3717c6
+[Software\\Classes\\Interface\\{2933BF8F-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0ae8588
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13939,8 +13939,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2ac124
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF92-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a38d868
+[Software\\Classes\\Interface\\{2933BF92-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0b244d4
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13956,8 +13956,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2aca02
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF93-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a38e0ce
+[Software\\Classes\\Interface\\{2933BF93-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0b25348
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13973,8 +13973,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2a9d84
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF95-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a388d5e
+[Software\\Classes\\Interface\\{2933BF95-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0b1c3ce
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -13990,8 +13990,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e6f5e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2933BF96-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689246992
-#time=1d9b57b7a3895b0
+[Software\\Classes\\Interface\\{2933BF96-7B36-11D2-B20E-00C04F983E60}\\TypeLib] 1689332955
+#time=1d9b643a0b1d224
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -14099,8 +14099,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2ea320
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2E01311B-C322-4B0A-BD77-B90CFDC8DCE7}\\TypeLib] 1689246992
-#time=1d9b57b7a38f9b0
+[Software\\Classes\\Interface\\{2E01311B-C322-4B0A-BD77-B90CFDC8DCE7}\\TypeLib] 1689332955
+#time=1d9b643a0b27e68
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -14116,8 +14116,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e9a56
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2E9196BF-13BA-4DD4-91CA-6C571F281495}\\TypeLib] 1689246992
-#time=1d9b57b7a38f168
+[Software\\Classes\\Interface\\{2E9196BF-13BA-4DD4-91CA-6C571F281495}\\TypeLib] 1689332955
+#time=1d9b643a0b27030
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -14145,8 +14145,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2d8e18
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{2ED7290A-4DD5-4B46-BB26-4E4155E77FAA}\\TypeLib] 1689246992
-#time=1d9b57b7a37cf5e
+[Software\\Classes\\Interface\\{2ED7290A-4DD5-4B46-BB26-4E4155E77FAA}\\TypeLib] 1689332955
+#time=1d9b643a0b048be
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -14242,8 +14242,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaefd72
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F1F7-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b67bd76
+[Software\\Classes\\Interface\\{3050F1F7-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d9b810
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14259,8 +14259,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aae5d04
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F1FF-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b6743be
+[Software\\Classes\\Interface\\{3050F1FF-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d8cfa4
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14344,8 +14344,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaf0a06
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F211-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b67c9ce
+[Software\\Classes\\Interface\\{3050F211-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d9cec2
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14378,8 +14378,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aae384c
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F21F-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b671fd8
+[Software\\Classes\\Interface\\{3050F21F-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d8892c
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14480,8 +14480,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aae8e14
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F240-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b66b372
+[Software\\Classes\\Interface\\{3050F240-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d7b650
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14531,8 +14531,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aae6920
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F25A-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b674fee
+[Software\\Classes\\Interface\\{3050F25A-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d8e76e
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14548,8 +14548,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aae445e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F25E-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b672be0
+[Software\\Classes\\Interface\\{3050F25E-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d8a0ba
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14701,8 +14701,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaf6186
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F2E3-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b678c34
+[Software\\Classes\\Interface\\{3050F2E3-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d95d70
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14718,8 +14718,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaf5506
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F2E5-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b678018
+[Software\\Classes\\Interface\\{3050F2E5-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d945ec
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14820,8 +14820,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaee42c
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F32D-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b67a4e4
+[Software\\Classes\\Interface\\{3050F32D-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d98afc
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14888,8 +14888,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaf489a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F357-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b6773fc
+[Software\\Classes\\Interface\\{3050F357-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d92e72
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14905,8 +14905,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaef08e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F35C-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b67b114
+[Software\\Classes\\Interface\\{3050F35C-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d9a190
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -14992,8 +14992,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaf2f9a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F37E-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b675bec
+[Software\\Classes\\Interface\\{3050F37E-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d8ff2e
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -15009,8 +15009,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaf1668
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F38C-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b67d61c
+[Software\\Classes\\Interface\\{3050F38C-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d9e542
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -15026,8 +15026,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aae9a58
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F38E-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b66bf70
+[Software\\Classes\\Interface\\{3050F38E-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d7cdc0
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -15043,8 +15043,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaf3bf2
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F3CF-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b6767e0
+[Software\\Classes\\Interface\\{3050F3CF-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d916b2
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -15094,8 +15094,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aae507a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F3EE-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b6737d4
+[Software\\Classes\\Interface\\{3050F3EE-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d8b83e
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -15128,8 +15128,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaeb2ea
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F3FC-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b66e39c
+[Software\\Classes\\Interface\\{3050F3FC-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d8137a
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -15145,8 +15145,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaebf2e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F3FD-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b66ef7c
+[Software\\Classes\\Interface\\{3050F3FD-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d82aae
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -15162,8 +15162,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaecbb8
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3050F401-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689246994
-#time=1d9b57b7b66fbc0
+[Software\\Classes\\Interface\\{3050F401-98B5-11CF-BB82-00AA00BDCE0B}\\TypeLib] 1689332957
+#time=1d9b643a1d8420a
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -18994,8 +18994,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bcca0a6
 @="{00000320-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{310AFA62-0575-11D2-9CA9-0060B0EC3D39}] 1689246991
-#time=1d9b57b7a2e7d78
+[Software\\Classes\\Interface\\{310AFA62-0575-11D2-9CA9-0060B0EC3D39}] 1689332955
+#time=1d9b643a0a06a66
 @="IDSOControl"
 
 [Software\\Classes\\Interface\\{310AFA62-0575-11D2-9CA9-0060B0EC3D39}\\ProxyStubClsid] 1689246991
@@ -19006,8 +19006,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28e246
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{310AFA62-0575-11D2-9CA9-0060B0EC3D39}\\TypeLib] 1689246991
-#time=1d9b57b7a2e8368
+[Software\\Classes\\Interface\\{310AFA62-0575-11D2-9CA9-0060B0EC3D39}\\TypeLib] 1689332955
+#time=1d9b643a0a075c4
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="3.0"
 
@@ -19069,8 +19069,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaf6e24
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{332C4425-26CB-11D0-B483-00C04FD90119}\\TypeLib] 1689246994
-#time=1d9b57b7b6798b4
+[Software\\Classes\\Interface\\{332C4425-26CB-11D0-B483-00C04FD90119}\\TypeLib] 1689332957
+#time=1d9b643a1d97472
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -19086,8 +19086,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aae755a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{332C4426-26CB-11D0-B483-00C04FD90119}\\TypeLib] 1689246994
-#time=1d9b57b7b66a74c
+[Software\\Classes\\Interface\\{332C4426-26CB-11D0-B483-00C04FD90119}\\TypeLib] 1689332957
+#time=1d9b643a1d79ef4
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -19103,8 +19103,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaf234c
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{332C4427-26CB-11D0-B483-00C04FD90119}\\TypeLib] 1689246994
-#time=1d9b57b7b67e260
+[Software\\Classes\\Interface\\{332C4427-26CB-11D0-B483-00C04FD90119}\\TypeLib] 1689332957
+#time=1d9b643a1d9fbd6
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -19267,8 +19267,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2a946a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{373984C8-B845-449B-91E7-45AC83036ADE}\\TypeLib] 1689246992
-#time=1d9b57b7a388502
+[Software\\Classes\\Interface\\{373984C8-B845-449B-91E7-45AC83036ADE}\\TypeLib] 1689332955
+#time=1d9b643a0b1b424
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20029,8 +20029,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2861d6
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3EFAA413-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689246992
-#time=1d9b57b7a372fa4
+[Software\\Classes\\Interface\\{3EFAA413-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689332955
+#time=1d9b643a0aecbb0
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20046,8 +20046,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2ab83c
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3EFAA425-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689246992
-#time=1d9b57b7a37a718
+[Software\\Classes\\Interface\\{3EFAA425-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689332955
+#time=1d9b643a0afec7a
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20063,8 +20063,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28a1dc
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3EFAA426-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689246992
-#time=1d9b57b7a3766f4
+[Software\\Classes\\Interface\\{3EFAA426-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689332955
+#time=1d9b643a0af4e14
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20080,8 +20080,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28cfb8
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3EFAA427-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689246992
-#time=1d9b57b7a37af1a
+[Software\\Classes\\Interface\\{3EFAA427-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689332955
+#time=1d9b643a0afff58
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20097,8 +20097,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2d533a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3EFAA428-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689246992
-#time=1d9b57b7a379700
+[Software\\Classes\\Interface\\{3EFAA428-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689332955
+#time=1d9b643a0afc66e
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20114,8 +20114,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2d5bbe
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3EFAA429-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689246992
-#time=1d9b57b7a378ee0
+[Software\\Classes\\Interface\\{3EFAA429-272F-11D2-836F-0000F87A7782}\\TypeLib] 1689332955
+#time=1d9b643a0afb2fa
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20131,8 +20131,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c98bd12
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3F4DACA0-160D-11D2-A8E9-00104B365C9F}\\TypeLib] 1689246996
-#time=1d9b57b7c98fd5e
+[Software\\Classes\\Interface\\{3F4DACA0-160D-11D2-A8E9-00104B365C9F}\\TypeLib] 1689332959
+#time=1d9b643a290863a
 @="{3F4DACA7-160D-11D2-A8E9-00104B365C9F}"
 "Version"="5.5"
 
@@ -20148,8 +20148,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c98cad2
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3F4DACA1-160D-11D2-A8E9-00104B365C9F}\\TypeLib] 1689246996
-#time=1d9b57b7c991730
+[Software\\Classes\\Interface\\{3F4DACA1-160D-11D2-A8E9-00104B365C9F}\\TypeLib] 1689332959
+#time=1d9b643a290b39e
 @="{3F4DACA7-160D-11D2-A8E9-00104B365C9F}"
 "Version"="5.5"
 
@@ -20165,8 +20165,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c98d7b6
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{3F4DACA2-160D-11D2-A8E9-00104B365C9F}\\TypeLib] 1689246996
-#time=1d9b57b7c9930e4
+[Software\\Classes\\Interface\\{3F4DACA2-160D-11D2-A8E9-00104B365C9F}\\TypeLib] 1689332959
+#time=1d9b643a290e12a
 @="{3F4DACA7-160D-11D2-A8E9-00104B365C9F}"
 "Version"="5.5"
 
@@ -20540,8 +20540,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2de0de
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{4D7FF4BA-1565-4EA8-94E1-6E724A46F98D}\\TypeLib] 1689246992
-#time=1d9b57b7a38a668
+[Software\\Classes\\Interface\\{4D7FF4BA-1565-4EA8-94E1-6E724A46F98D}\\TypeLib] 1689332955
+#time=1d9b643a0b1ef0c
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20581,8 +20581,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7b57f0e4
 @="{B5F8FB3B-393F-4F7C-84CB-504924C2705A}"
 
-[Software\\Classes\\Interface\\{4EF6100A-AF88-11D0-9846-00C04FC29993}] 1689246995
-#time=1d9b57b7c5a825e
+[Software\\Classes\\Interface\\{4EF6100A-AF88-11D0-9846-00C04FC29993}] 1689332958
+#time=1d9b643a26e2d56
 @="FontEvents"
 
 [Software\\Classes\\Interface\\{4EF6100A-AF88-11D0-9846-00C04FC29993}\\NumMethods] 1689246994
@@ -20593,8 +20593,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c5a7d68
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{4EF6100A-AF88-11D0-9846-00C04FC29993}\\ProxyStubClsid32] 1689246995
-#time=1d9b57b7c5a8074
+[Software\\Classes\\Interface\\{4EF6100A-AF88-11D0-9846-00C04FC29993}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a26e3616
 @="{00020424-0000-0000-C000-000000000046}"
 
 [Software\\Classes\\Interface\\{4EF6100A-AF88-11D0-9846-00C04FC29993}\\TypeLib] 1689246995
@@ -20701,8 +20701,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e0a46
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08B0-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a389e02
+[Software\\Classes\\Interface\\{50EA08B0-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b1e048
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20718,8 +20718,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2df150
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08B1-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a38080c
+[Software\\Classes\\Interface\\{50EA08B1-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b0bbf0
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20735,8 +20735,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2de926
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08B2-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a38000a
+[Software\\Classes\\Interface\\{50EA08B2-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b0ab7e
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20752,8 +20752,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e01b8
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08B3-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a38189c
+[Software\\Classes\\Interface\\{50EA08B3-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b0dc7a
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20769,8 +20769,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2df98e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08B4-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a381018
+[Software\\Classes\\Interface\\{50EA08B4-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b0cc12
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20786,8 +20786,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e127a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08B5-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a3820d0
+[Software\\Classes\\Interface\\{50EA08B5-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b0ecba
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20803,8 +20803,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e3c3c
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08B6-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a3862e8
+[Software\\Classes\\Interface\\{50EA08B6-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b1718a
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20820,8 +20820,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e4484
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08B7-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a384a4c
+[Software\\Classes\\Interface\\{50EA08B7-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b13fc6
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20837,8 +20837,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e1ab8
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08B8-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a382904
+[Software\\Classes\\Interface\\{50EA08B8-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b0fd7c
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20854,8 +20854,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e33fe
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08B9-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a384218
+[Software\\Classes\\Interface\\{50EA08B9-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b12ec8
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20871,8 +20871,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e4ca4
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08BA-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a386b4e
+[Software\\Classes\\Interface\\{50EA08BA-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b18224
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20888,8 +20888,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e2ba2
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08BB-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a3839a8
+[Software\\Classes\\Interface\\{50EA08BB-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b11e24
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20905,8 +20905,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e231e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08BC-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a383160
+[Software\\Classes\\Interface\\{50EA08BC-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b10dee
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20922,8 +20922,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e5550
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08BD-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a3873a0
+[Software\\Classes\\Interface\\{50EA08BD-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b192e6
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20939,8 +20939,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2e5e1a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{50EA08BE-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689246992
-#time=1d9b57b7a387ca6
+[Software\\Classes\\Interface\\{50EA08BE-DD1B-4664-9A50-C2F40F4BD79A}\\TypeLib] 1689332955
+#time=1d9b643a0b1a3b2
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -20968,8 +20968,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c23d538
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{53BAD8C1-E718-11CF-893D-00A0C9054228}\\TypeLib] 1689246997
-#time=1d9b57b7d31e7bc
+[Software\\Classes\\Interface\\{53BAD8C1-E718-11CF-893D-00A0C9054228}\\TypeLib] 1689332959
+#time=1d9b643a2d53104
 @="{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}"
 "Version"="1.0"
 
@@ -21677,8 +21677,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd00a7a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{618736E0-3C3D-11CF-810C-00AA00389B71}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd0373e
+[Software\\Classes\\Interface\\{618736E0-3C3D-11CF-810C-00AA00389B71}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a21df458
 @="{03022430-ABC4-11D0-BDE2-00AA001A1953}"
 
 [Software\\Classes\\Interface\\{618736E0-3C3D-11CF-810C-00AA00389B71}\\TypeLib] 1689246994
@@ -21732,8 +21732,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aae2bb8
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{626FC520-A41E-11CF-A731-00A0C9082637}\\TypeLib] 1689246994
-#time=1d9b57b7b67139e
+[Software\\Classes\\Interface\\{626FC520-A41E-11CF-A731-00A0C9082637}\\TypeLib] 1689332957
+#time=1d9b643a1d87162
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -21841,8 +21841,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28eb74
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{65725580-9B5D-11D0-9BFE-00C04FC99C8E}\\TypeLib] 1689246991
-#time=1d9b57b7a2e695a
+[Software\\Classes\\Interface\\{65725580-9B5D-11D0-9BFE-00C04FC99C8E}\\TypeLib] 1689332955
+#time=1d9b643a0a042a2
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="3.0"
 
@@ -22649,8 +22649,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2d8594
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{796E7AC5-5AA2-4EFF-ACAD-3FAAF01A3288}\\TypeLib] 1689246992
-#time=1d9b57b7a37bf1e
+[Software\\Classes\\Interface\\{796E7AC5-5AA2-4EFF-ACAD-3FAAF01A3288}\\TypeLib] 1689332955
+#time=1d9b643a0b02514
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -22890,8 +22890,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd2113a
 @="{B196B286-BAB4-101A-B69C-00AA00341D07}"
 
-[Software\\Classes\\Interface\\{7BF80981-BF32-101A-8BBB-00AA00300CAB}] 1689246994
-#time=1d9b57b7bd9afc6
+[Software\\Classes\\Interface\\{7BF80981-BF32-101A-8BBB-00AA00300CAB}] 1689332958
+#time=1d9b643a225e636
 @="Picture"
 
 [Software\\Classes\\Interface\\{7BF80981-BF32-101A-8BBB-00AA00300CAB}\\NumMethods] 1689246994
@@ -22902,12 +22902,12 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd9ab2a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{7BF80981-BF32-101A-8BBB-00AA00300CAB}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd9adf0
+[Software\\Classes\\Interface\\{7BF80981-BF32-101A-8BBB-00AA00300CAB}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a225ef00
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{7BF80981-BF32-101A-8BBB-00AA00300CAB}\\TypeLib] 1689246995
-#time=1d9b57b7c5a766a
+[Software\\Classes\\Interface\\{7BF80981-BF32-101A-8BBB-00AA00300CAB}\\TypeLib] 1689332958
+#time=1d9b643a26e2478
 @="{00020430-0000-0000-C000-000000000046}"
 "Version"="2.0"
 
@@ -23029,8 +23029,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2dd882
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{808F4E35-8D5A-4FBE-8466-33A41279ED30}\\TypeLib] 1689246992
-#time=1d9b57b7a37f7fe
+[Software\\Classes\\Interface\\{808F4E35-8D5A-4FBE-8466-33A41279ED30}\\TypeLib] 1689332955
+#time=1d9b643a0b09ada
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -23421,8 +23421,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2dbfbe
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{8C033CAA-6CD6-4F73-B728-4531AF74945F}\\TypeLib] 1689246992
-#time=1d9b57b7a37e7be
+[Software\\Classes\\Interface\\{8C033CAA-6CD6-4F73-B728-4531AF74945F}\\TypeLib] 1689332955
+#time=1d9b643a0b07a6e
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -24438,8 +24438,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2ad31c
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{AA634FC7-5888-44A7-A257-3A47150D3A0E}\\TypeLib] 1689246992
-#time=1d9b57b7a379f0c
+[Software\\Classes\\Interface\\{AA634FC7-5888-44A7-A257-3A47150D3A0E}\\TypeLib] 1689332955
+#time=1d9b643a0afd96a
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -25538,8 +25538,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd1f574
 @="{B196B286-BAB4-101A-B69C-00AA00341D07}"
 
-[Software\\Classes\\Interface\\{BEF6E003-A874-101A-8BBA-00AA00300CAB}] 1689246994
-#time=1d9b57b7bd9a36e
+[Software\\Classes\\Interface\\{BEF6E003-A874-101A-8BBA-00AA00300CAB}] 1689332958
+#time=1d9b643a225cf3e
 @="Font"
 
 [Software\\Classes\\Interface\\{BEF6E003-A874-101A-8BBA-00AA00300CAB}\\NumMethods] 1689246994
@@ -25550,12 +25550,12 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd99ec8
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{BEF6E003-A874-101A-8BBA-00AA00300CAB}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd9a198
+[Software\\Classes\\Interface\\{BEF6E003-A874-101A-8BBA-00AA00300CAB}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a225d7fe
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{BEF6E003-A874-101A-8BBA-00AA00300CAB}\\TypeLib] 1689246995
-#time=1d9b57b7c5a69e0
+[Software\\Classes\\Interface\\{BEF6E003-A874-101A-8BBA-00AA00300CAB}\\TypeLib] 1689332958
+#time=1d9b643a26e0d3a
 @="{00020430-0000-0000-C000-000000000046}"
 "Version"="2.0"
 
@@ -25769,8 +25769,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c23bbc0
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{C7C3F5A0-88A3-11D0-ABCB-00A0C90FFFC0}\\TypeLib] 1689246997
-#time=1d9b57b7d31ce9e
+[Software\\Classes\\Interface\\{C7C3F5A0-88A3-11D0-ABCB-00A0C90FFFC0}\\TypeLib] 1689332959
+#time=1d9b643a2d50382
 @="{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}"
 "Version"="1.0"
 
@@ -25803,8 +25803,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c23fb8a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{C7C3F5A2-88A3-11D0-ABCB-00A0C90FFFC0}\\TypeLib] 1689246997
-#time=1d9b57b7d320d6e
+[Software\\Classes\\Interface\\{C7C3F5A2-88A3-11D0-ABCB-00A0C90FFFC0}\\TypeLib] 1689332959
+#time=1d9b643a2d57542
 @="{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}"
 "Version"="1.0"
 
@@ -25820,8 +25820,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c23c890
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{C7C3F5A3-88A3-11D0-ABCB-00A0C90FFFC0}\\TypeLib] 1689246997
-#time=1d9b57b7d31db32
+[Software\\Classes\\Interface\\{C7C3F5A3-88A3-11D0-ABCB-00A0C90FFFC0}\\TypeLib] 1689332959
+#time=1d9b643a2d51a66
 @="{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}"
 "Version"="1.0"
 
@@ -25837,8 +25837,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c23e21c
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{C7C3F5A4-88A3-11D0-ABCB-00A0C90FFFC0}\\TypeLib] 1689246997
-#time=1d9b57b7d31f482
+[Software\\Classes\\Interface\\{C7C3F5A4-88A3-11D0-ABCB-00A0C90FFFC0}\\TypeLib] 1689332959
+#time=1d9b643a2d54806
 @="{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}"
 "Version"="1.0"
 
@@ -25854,8 +25854,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c23eee2
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{C7C3F5A5-88A3-11D0-ABCB-00A0C90FFFC0}\\TypeLib] 1689246997
-#time=1d9b57b7d3200f8
+[Software\\Classes\\Interface\\{C7C3F5A5-88A3-11D0-ABCB-00A0C90FFFC0}\\TypeLib] 1689332959
+#time=1d9b643a2d55e72
 @="{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}"
 "Version"="1.0"
 
@@ -25895,8 +25895,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2eb46e
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{C90352F4-643C-4FBC-BB23-E996EB2D51FD}\\TypeLib] 1689246992
-#time=1d9b57b7a38bf7c
+[Software\\Classes\\Interface\\{C90352F4-643C-4FBC-BB23-E996EB2D51FD}\\TypeLib] 1689332955
+#time=1d9b643a0b21996
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -25912,8 +25912,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2ebd06
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{C90352F5-643C-4FBC-BB23-E996EB2D51FD}\\TypeLib] 1689246992
-#time=1d9b57b7a38c7c4
+[Software\\Classes\\Interface\\{C90352F5-643C-4FBC-BB23-E996EB2D51FD}\\TypeLib] 1689332955
+#time=1d9b643a0b227ba
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -25929,8 +25929,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2ec5ee
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{C90352F7-643C-4FBC-BB23-E996EB2D51FD}\\TypeLib] 1689246992
-#time=1d9b57b7a385aaa
+[Software\\Classes\\Interface\\{C90352F7-643C-4FBC-BB23-E996EB2D51FD}\\TypeLib] 1689332955
+#time=1d9b643a0b16122
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -26570,8 +26570,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2daf1a
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{D963D3FE-173C-4862-9095-B92F66995F52}\\TypeLib] 1689246992
-#time=1d9b57b7a37df9e
+[Software\\Classes\\Interface\\{D963D3FE-173C-4862-9095-B92F66995F52}\\TypeLib] 1689332955
+#time=1d9b643a0b06a38
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -26692,8 +26692,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7bd1bcf8
 @="4"
 
-[Software\\Classes\\Interface\\{DF0B3D60-548F-101B-8E65-08002B2BD119}\\ProxyStubClsid32] 1689246994
-#time=1d9b57b7bd4095e
+[Software\\Classes\\Interface\\{DF0B3D60-548F-101B-8E65-08002B2BD119}\\ProxyStubClsid32] 1689332958
+#time=1d9b643a2233332
 @="{DF0B3D60-548F-101B-8E65-08002B2BD119}"
 
 [Software\\Classes\\Interface\\{DFD3B6B5-C10C-4BE9-85F6-A66969F402F6}] 1689246992
@@ -26877,8 +26877,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2d9674
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{E8917260-7579-4BE1-B5DD-7AFBFA6F077B}\\TypeLib] 1689246992
-#time=1d9b57b7a38aec4
+[Software\\Classes\\Interface\\{E8917260-7579-4BE1-B5DD-7AFBFA6F077B}\\TypeLib] 1689332955
+#time=1d9b643a0b1fd30
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -27056,8 +27056,8 @@ WINE REGISTRY Version 2
 @="{C866CA3A-32F7-11D2-9602-00C04F8EE628}"
 "Version"="5.4"
 
-[Software\\Classes\\Interface\\{ED8C108D-4349-11D2-91A4-00C04F7969E8}] 1689246991
-#time=1d9b57b7a2ae15e
+[Software\\Classes\\Interface\\{ED8C108D-4349-11D2-91A4-00C04F7969E8}] 1689332955
+#time=1d9b643a09a063a
 @="IXMLHTTPRequest"
 
 [Software\\Classes\\Interface\\{ED8C108D-4349-11D2-91A4-00C04F7969E8}\\ProxyStubClsid] 1689246991
@@ -27068,8 +27068,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a28d918
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{ED8C108D-4349-11D2-91A4-00C04F7969E8}\\TypeLib] 1689246992
-#time=1d9b57b7a38e920
+[Software\\Classes\\Interface\\{ED8C108D-4349-11D2-91A4-00C04F7969E8}\\TypeLib] 1689332955
+#time=1d9b643a0b261f8
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -27211,8 +27211,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2dd044
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{F10D27CC-3EC0-415C-8ED8-77AB1C5E7262}\\TypeLib] 1689246992
-#time=1d9b57b7a38d002
+[Software\\Classes\\Interface\\{F10D27CC-3EC0-415C-8ED8-77AB1C5E7262}\\TypeLib] 1689332955
+#time=1d9b643a0b23656
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -27441,8 +27441,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a2eabe0
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{FA4BB38C-FAF9-4CCA-9302-D1DD0FE520DB}\\TypeLib] 1689246992
-#time=1d9b57b7a385280
+[Software\\Classes\\Interface\\{FA4BB38C-FAF9-4CCA-9302-D1DD0FE520DB}\\TypeLib] 1689332955
+#time=1d9b643a0b150ba
 @="{F5078F18-C551-11D3-89B9-0000F81FE221}"
 "Version"="6.0"
 
@@ -27569,8 +27569,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaea6a6
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{FECEAAA2-8405-11CF-8BA1-00AA00476DA6}\\TypeLib] 1689246994
-#time=1d9b57b7b66d7b2
+[Software\\Classes\\Interface\\{FECEAAA2-8405-11CF-8BA1-00AA00476DA6}\\TypeLib] 1689332957
+#time=1d9b643a1d7fc5a
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -27586,8 +27586,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aaed7f2
 @="{00020424-0000-0000-C000-000000000046}"
 
-[Software\\Classes\\Interface\\{FECEAAA5-8405-11CF-8BA1-00AA00476DA6}\\TypeLib] 1689246994
-#time=1d9b57b7b6707b4
+[Software\\Classes\\Interface\\{FECEAAA5-8405-11CF-8BA1-00AA00476DA6}\\TypeLib] 1689332957
+#time=1d9b643a1d85970
 @="{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}"
 "Version"="4.0"
 
@@ -27595,8 +27595,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aed6b5c
 @="HHCtrl Object"
 
-[Software\\Classes\\Internet.HHCtrl\\CLSID] 1689246993
-#time=1d9b57b7aed85e2
+[Software\\Classes\\Internet.HHCtrl\\CLSID] 1689332957
+#time=1d9b643a16e91fc
 @="{52A2AAAE-085D-4187-97EA-8C30DB990436}"
 
 [Software\\Classes\\Internet.HHCtrl\\CurVer] 1689246993
@@ -27607,8 +27607,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7aed62c4
 @="HHCtrl Object"
 
-[Software\\Classes\\Internet.HHCtrl.1\\CLSID] 1689246993
-#time=1d9b57b7aed8010
+[Software\\Classes\\Internet.HHCtrl.1\\CLSID] 1689332957
+#time=1d9b643a16e87ac
 @="{52A2AAAE-085D-4187-97EA-8C30DB990436}"
 
 [Software\\Classes\\InternetExplorer.Application] 1689246992
@@ -27658,24 +27658,24 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ea0e210
 @="rundll32.exe mshtml.dll,PrintHTML \"%1\" \"%2\" \"%3\" \"%4\""
 
-[Software\\Classes\\ITS FILE] 1689246993
-#time=1d9b57b7b0d68a8
+[Software\\Classes\\ITS FILE] 1689332957
+#time=1d9b643a18a12ba
 @="Internet Document Set"
 
-[Software\\Classes\\ITS FILE\\DefaultIcon] 1689246993
-#time=1d9b57b7b0d6998
+[Software\\Classes\\ITS FILE\\DefaultIcon] 1689332957
+#time=1d9b643a18a1486
 @="C:\\windows\\system32\\itss.dll,0"
 
-[Software\\Classes\\ITSProtocol] 1689246993
-#time=1d9b57b7b0d7b72
+[Software\\Classes\\ITSProtocol] 1689332957
+#time=1d9b643a18a7d90
 @="Microsoft InfoTech Protocols for IE 4.0"
 
-[Software\\Classes\\ITSProtocol\\CLSID] 1689246993
-#time=1d9b57b7b0d799c
+[Software\\Classes\\ITSProtocol\\CLSID] 1689332957
+#time=1d9b643a18a7a0c
 @="{9D148291-B9C8-11D0-A4CC-0000F80149F6}"
 
-[Software\\Classes\\ITSProtocol\\CurVer] 1689246993
-#time=1d9b57b7b0d7c58
+[Software\\Classes\\ITSProtocol\\CurVer] 1689332957
+#time=1d9b643a18a7f48
 @="ITSProtocol1.0"
 
 [Software\\Classes\\JavaScript] 1689246993
@@ -27832,12 +27832,12 @@ WINE REGISTRY Version 2
 [Software\\Classes\\JScript.Encode\\OLEScript] 1689246993
 #time=1d9b57b7b11db68
 
-[Software\\Classes\\JSFile] 1689246993
-#time=1d9b57b7b11e0e0
+[Software\\Classes\\JSFile] 1689332957
+#time=1d9b643a190b0f2
 @="JScript Script File"
 
-[Software\\Classes\\JSFile\\ScriptEngine] 1689246993
-#time=1d9b57b7b11e1c6
+[Software\\Classes\\JSFile\\ScriptEngine] 1689332957
+#time=1d9b643a190b2aa
 @="JScript"
 
 [Software\\Classes\\LDAP] 1689246992
@@ -30508,16 +30508,16 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a4d46ae
 @="{C8B522CD-5CF3-11CE-ADE5-00AA0044773D}"
 
-[Software\\Classes\\MSFSStore] 1689246993
-#time=1d9b57b7b0d84a0
+[Software\\Classes\\MSFSStore] 1689332957
+#time=1d9b643a18ab3a0
 @="Microsoft InfoTech IStorage for Win32 Files"
 
-[Software\\Classes\\MSFSStore\\CLSID] 1689246993
-#time=1d9b57b7b0d82ca
+[Software\\Classes\\MSFSStore\\CLSID] 1689332957
+#time=1d9b643a18aaffe
 @="{D54EEE56-AAAB-11D0-9E1D-00A0C922E6EC}"
 
-[Software\\Classes\\MSFSStore\\CurVer] 1689246993
-#time=1d9b57b7b0d8586
+[Software\\Classes\\MSFSStore\\CurVer] 1689332957
+#time=1d9b643a18ab562
 @="MSFSStore1.0"
 
 [Software\\Classes\\Msi.Package] 1689246999
@@ -30552,36 +30552,36 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ee42b10
 @="C:\\windows\\system32\\msiexec.exe /p \"%1\""
 
-[Software\\Classes\\MSITFS] 1689246993
-#time=1d9b57b7b0d593a
+[Software\\Classes\\MSITFS] 1689332957
+#time=1d9b643a189d638
 @="Microsoft InfoTech IStorage System"
 
-[Software\\Classes\\MSITFS\\CLSID] 1689246993
-#time=1d9b57b7b0d5b1a
+[Software\\Classes\\MSITFS\\CLSID] 1689332957
+#time=1d9b643a189d9bc
 @="{5D02926A-212E-11D0-9DF9-00A0C922E6EC}"
 
 [Software\\Classes\\MSITFS\\CurVer] 1689246993
 #time=1d9b57b7b0d341e
 @="MSITFS1.0"
 
-[Software\\Classes\\MSITFS1.0] 1689246993
-#time=1d9b57b7b0d53ae
+[Software\\Classes\\MSITFS1.0] 1689332957
+#time=1d9b643a189cb7a
 @="Microsoft InfoTech IStorage System"
 
-[Software\\Classes\\MSITFS1.0\\CLSID] 1689246993
-#time=1d9b57b7b0d558e
+[Software\\Classes\\MSITFS1.0\\CLSID] 1689332957
+#time=1d9b643a189cf4e
 @="{5D02926A-212E-11D0-9DF9-00A0C922E6EC}"
 
-[Software\\Classes\\MSITStore] 1689246993
-#time=1d9b57b7b0d71f4
+[Software\\Classes\\MSITStore] 1689332957
+#time=1d9b643a18a4870
 @="Microsoft InfoTech Protocol for IE 3.0"
 
-[Software\\Classes\\MSITStore\\CLSID] 1689246993
-#time=1d9b57b7b0d701e
+[Software\\Classes\\MSITStore\\CLSID] 1689332957
+#time=1d9b643a18a44e2
 @="{9D148290-B9C8-11D0-A4CC-0000F80149F6}"
 
-[Software\\Classes\\MSITStore\\CurVer] 1689246993
-#time=1d9b57b7b0d7316
+[Software\\Classes\\MSITStore\\CurVer] 1689332957
+#time=1d9b643a18a4a32
 @="MSITStore1.0"
 
 [Software\\Classes\\MSScriptControl.ScriptControl] 1689246994
@@ -30612,40 +30612,40 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a295d16
 @="{CFC399AF-D876-11D0-9C10-00C04FC99C8E}"
 
-[Software\\Classes\\MSXML.DOMDocument] 1689246991
-#time=1d9b57b7a29639c
+[Software\\Classes\\MSXML.DOMDocument] 1689332955
+#time=1d9b643a096cf88
 @="XML DOM Document"
 
-[Software\\Classes\\MSXML.DOMDocument\\CLSID] 1689246991
-#time=1d9b57b7a296248
+[Software\\Classes\\MSXML.DOMDocument\\CLSID] 1689332955
+#time=1d9b643a096cc90
 @="{2933BF90-7B36-11D2-B20E-00C04F983E60}"
 
-[Software\\Classes\\MSXML.DOMDocument\\CurVer] 1689246991
-#time=1d9b57b7a296450
+[Software\\Classes\\MSXML.DOMDocument\\CurVer] 1689332955
+#time=1d9b643a096d0e6
 @="Microsoft.XMLDOM.1.0"
 
-[Software\\Classes\\MSXML.FreeThreadedDOMDocument] 1689246991
-#time=1d9b57b7a296a5e
+[Software\\Classes\\MSXML.FreeThreadedDOMDocument] 1689332955
+#time=1d9b643a09707aa
 @="Free Threaded XML DOM Document"
 
-[Software\\Classes\\MSXML.FreeThreadedDOMDocument\\CLSID] 1689246991
-#time=1d9b57b7a29690a
+[Software\\Classes\\MSXML.FreeThreadedDOMDocument\\CLSID] 1689332955
+#time=1d9b643a097048a
 @="{2933BF91-7B36-11D2-B20E-00C04F983E60}"
 
-[Software\\Classes\\MSXML.FreeThreadedDOMDocument\\CurVer] 1689246991
-#time=1d9b57b7a296b12
+[Software\\Classes\\MSXML.FreeThreadedDOMDocument\\CurVer] 1689332955
+#time=1d9b643a0970994
 @="Microsoft.FreeThreadedXMLDOM.1.0"
 
-[Software\\Classes\\Msxml2.DOMDocument] 1689246991
-#time=1d9b57b7a2fb9c2
+[Software\\Classes\\Msxml2.DOMDocument] 1689332955
+#time=1d9b643a0a2f056
 @="XML DOM Document"
 
-[Software\\Classes\\Msxml2.DOMDocument\\CLSID] 1689246991
-#time=1d9b57b7a2fbb16
+[Software\\Classes\\Msxml2.DOMDocument\\CLSID] 1689332955
+#time=1d9b643a0a2f312
 @="{F6D90F11-9C73-11D3-B32E-00C04F990BB4}"
 
-[Software\\Classes\\Msxml2.DOMDocument\\CurVer] 1689246991
-#time=1d9b57b7a2fb72e
+[Software\\Classes\\Msxml2.DOMDocument\\CurVer] 1689332955
+#time=1d9b643a0a2eb7e
 @="Msxml2.DOMDocument.3.0"
 
 [Software\\Classes\\Msxml2.DOMDocument.2.6] 1689246991
@@ -30680,16 +30680,16 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a397106
 @="{88D96A05-F192-11D4-A65F-0040963251E5}"
 
-[Software\\Classes\\Msxml2.FreeThreadedDOMDocument] 1689246991
-#time=1d9b57b7a2fcb74
+[Software\\Classes\\Msxml2.FreeThreadedDOMDocument] 1689332955
+#time=1d9b643a0a31658
 @="Free threaded XML DOM Document"
 
-[Software\\Classes\\Msxml2.FreeThreadedDOMDocument\\CLSID] 1689246991
-#time=1d9b57b7a2fccc8
+[Software\\Classes\\Msxml2.FreeThreadedDOMDocument\\CLSID] 1689332955
+#time=1d9b643a0a31888
 @="{F6D90F12-9C73-11D3-B32E-00C04F990BB4}"
 
-[Software\\Classes\\Msxml2.FreeThreadedDOMDocument\\CurVer] 1689246991
-#time=1d9b57b7a2fc8e0
+[Software\\Classes\\Msxml2.FreeThreadedDOMDocument\\CurVer] 1689332955
+#time=1d9b643a0a311bc
 @="Msxml2.FreeThreadedDOMDocument.3.0"
 
 [Software\\Classes\\Msxml2.FreeThreadedDOMDocument.2.6] 1689246991
@@ -30756,12 +30756,12 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3988da
 @="{88D96A11-F192-11D4-A65F-0040963251E5}"
 
-[Software\\Classes\\Msxml2.MXXMLWriter] 1689246991
-#time=1d9b57b7a3035f0
+[Software\\Classes\\Msxml2.MXXMLWriter] 1689332955
+#time=1d9b643a0a3f0f0
 @="MXXMLWriter"
 
-[Software\\Classes\\Msxml2.MXXMLWriter\\CLSID] 1689246991
-#time=1d9b57b7a303744
+[Software\\Classes\\Msxml2.MXXMLWriter\\CLSID] 1689332955
+#time=1d9b643a0a3f302
 @="{FC220AD8-A72A-4EE8-926E-0B7AD152A020}"
 
 [Software\\Classes\\Msxml2.MXXMLWriter\\CurVer] 1689246991
@@ -30792,12 +30792,12 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3984ca
 @="{88D96A0F-F192-11D4-A65F-0040963251E5}"
 
-[Software\\Classes\\Msxml2.SAXAttributes] 1689246991
-#time=1d9b57b7a3047b6
+[Software\\Classes\\Msxml2.SAXAttributes] 1689332955
+#time=1d9b643a0a40e64
 @="SAXAttributes"
 
-[Software\\Classes\\Msxml2.SAXAttributes\\CLSID] 1689246991
-#time=1d9b57b7a30490a
+[Software\\Classes\\Msxml2.SAXAttributes\\CLSID] 1689332955
+#time=1d9b643a0a414fe
 @="{4DD441AD-526D-4A77-9F1B-9841ED802FB0}"
 
 [Software\\Classes\\Msxml2.SAXAttributes\\CurVer] 1689246991
@@ -30828,12 +30828,12 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a398ce0
 @="{88D96A0E-F192-11D4-A65F-0040963251E5}"
 
-[Software\\Classes\\Msxml2.SAXXMLReader] 1689246991
-#time=1d9b57b7a30243e
+[Software\\Classes\\Msxml2.SAXXMLReader] 1689332955
+#time=1d9b643a0a3d1ec
 @="SAX XML Reader"
 
-[Software\\Classes\\Msxml2.SAXXMLReader\\CLSID] 1689246991
-#time=1d9b57b7a3025b0
+[Software\\Classes\\Msxml2.SAXXMLReader\\CLSID] 1689332955
+#time=1d9b643a0a3d412
 @="{079AA557-4A18-424A-8EEE-E39F0A8D41B9}"
 
 [Software\\Classes\\Msxml2.SAXXMLReader\\CurVer] 1689246991
@@ -30864,12 +30864,12 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a397912
 @="{88D96A0C-F192-11D4-A65F-0040963251E5}"
 
-[Software\\Classes\\Msxml2.ServerXMLHTTP] 1689246991
-#time=1d9b57b7a2fef32
+[Software\\Classes\\Msxml2.ServerXMLHTTP] 1689332955
+#time=1d9b643a0a36892
 @="Server XML HTTP"
 
-[Software\\Classes\\Msxml2.ServerXMLHTTP\\CLSID] 1689246991
-#time=1d9b57b7a2ff090
+[Software\\Classes\\Msxml2.ServerXMLHTTP\\CLSID] 1689332955
+#time=1d9b643a0a36ab8
 @="{AFBA6B42-5692-48EA-8141-DC517DCF0EF1}"
 
 [Software\\Classes\\Msxml2.ServerXMLHTTP\\CurVer] 1689246991
@@ -30900,16 +30900,16 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a399884
 @="{88D96A0B-F192-11D4-A65F-0040963251E5}"
 
-[Software\\Classes\\Msxml2.XMLHTTP] 1689246991
-#time=1d9b57b7a2fdd44
+[Software\\Classes\\Msxml2.XMLHTTP] 1689332955
+#time=1d9b643a0a33c64
 @="XML HTTP"
 
-[Software\\Classes\\Msxml2.XMLHTTP\\CLSID] 1689246991
-#time=1d9b57b7a2fde98
+[Software\\Classes\\Msxml2.XMLHTTP\\CLSID] 1689332955
+#time=1d9b643a0a33f0c
 @="{F6D90F16-9C73-11D3-B32E-00C04F990BB4}"
 
-[Software\\Classes\\Msxml2.XMLHTTP\\CurVer] 1689246991
-#time=1d9b57b7a2fdaa6
+[Software\\Classes\\Msxml2.XMLHTTP\\CurVer] 1689332955
+#time=1d9b643a0a33818
 @="Msxml2.XMLHTTP.3.0"
 
 [Software\\Classes\\Msxml2.XMLHTTP.2.6] 1689246991
@@ -30944,16 +30944,16 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3994a6
 @="{88D96A0A-F192-11D4-A65F-0040963251E5}"
 
-[Software\\Classes\\Msxml2.XMLParser] 1689246991
-#time=1d9b57b7a309202
+[Software\\Classes\\Msxml2.XMLParser] 1689332955
+#time=1d9b643a0a4874a
 @="XML Parser 3.0"
 
-[Software\\Classes\\Msxml2.XMLParser\\CLSID] 1689246991
-#time=1d9b57b7a309360
+[Software\\Classes\\Msxml2.XMLParser\\CLSID] 1689332955
+#time=1d9b643a0a4895c
 @="{F5078F31-C551-11D3-89B9-0000F81FE221}"
 
-[Software\\Classes\\Msxml2.XMLParser\\CurVer] 1689246991
-#time=1d9b57b7a30954a
+[Software\\Classes\\Msxml2.XMLParser\\CurVer] 1689332955
+#time=1d9b643a0a48c68
 @="Msxml2.XMLParser.3.0"
 
 [Software\\Classes\\Msxml2.XMLParser.2.6] 1689246991
@@ -30972,16 +30972,16 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a308f78
 @="{F5078F31-C551-11D3-89B9-0000F81FE221}"
 
-[Software\\Classes\\Msxml2.XMLSchemaCache] 1689246991
-#time=1d9b57b7a300102
+[Software\\Classes\\Msxml2.XMLSchemaCache] 1689332955
+#time=1d9b643a0a38656
 @="XML Schema Cache"
 
-[Software\\Classes\\Msxml2.XMLSchemaCache\\CLSID] 1689246991
-#time=1d9b57b7a300256
+[Software\\Classes\\Msxml2.XMLSchemaCache\\CLSID] 1689332955
+#time=1d9b643a0a38890
 @="{373984C9-B845-449B-91E7-45AC83036ADE}"
 
-[Software\\Classes\\Msxml2.XMLSchemaCache\\CurVer] 1689246991
-#time=1d9b57b7a2ffe64
+[Software\\Classes\\Msxml2.XMLSchemaCache\\CurVer] 1689332955
+#time=1d9b643a0a3811a
 @="Msxml2.XMLSchemaCache.3.0"
 
 [Software\\Classes\\Msxml2.XMLSchemaCache.2.6] 1689246991
@@ -31016,16 +31016,16 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a397cfa
 @="{88D96A07-F192-11D4-A65F-0040963251E5}"
 
-[Software\\Classes\\Msxml2.XSLTemplate] 1689246991
-#time=1d9b57b7a30128c
+[Software\\Classes\\Msxml2.XSLTemplate] 1689332955
+#time=1d9b643a0a3a758
 @="XSL Template"
 
-[Software\\Classes\\Msxml2.XSLTemplate\\CLSID] 1689246991
-#time=1d9b57b7a3013d6
+[Software\\Classes\\Msxml2.XSLTemplate\\CLSID] 1689332955
+#time=1d9b643a0a3a9ec
 @="{2933BF94-7B36-11D2-B20E-00C04F983E60}"
 
-[Software\\Classes\\Msxml2.XSLTemplate\\CurVer] 1689246991
-#time=1d9b57b7a300ff8
+[Software\\Classes\\Msxml2.XSLTemplate\\CurVer] 1689332955
+#time=1d9b643a0a3a23a
 @="Msxml2.XSLTemplate.3.0"
 
 [Software\\Classes\\Msxml2.XSLTemplate.2.6] 1689246991
@@ -31188,18 +31188,18 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ea23958
 @="WWW_OpenURL"
 
-[Software\\Classes\\PROTOCOLS\\Filter\\deflate] 1689246999
-#time=1d9b57b7ea8be54
+[Software\\Classes\\PROTOCOLS\\Filter\\deflate] 1689332961
+#time=1d9b643a401cf2e
 @="AP Deflate Encoding/Decoding Filter"
 "CLSID"="{8f6b0360-b80d-11d0-a9b3-006097942311}"
 
-[Software\\Classes\\PROTOCOLS\\Filter\\gzip] 1689246999
-#time=1d9b57b7ea8c912
+[Software\\Classes\\PROTOCOLS\\Filter\\gzip] 1689332961
+#time=1d9b643a401e23e
 @="AP Deflate Encoding/Decoding Filter"
 "CLSID"="{8f6b0360-b80d-11d0-a9b3-006097942311}"
 
-[Software\\Classes\\PROTOCOLS\\Filter\\lzdhtml] 1689246999
-#time=1d9b57b7ea8d34e
+[Software\\Classes\\PROTOCOLS\\Filter\\lzdhtml] 1689332961
+#time=1d9b643a401f512
 @="AP Deflate Encoding/Decoding Filter"
 "CLSID"="{8f6b0360-b80d-11d0-a9b3-006097942311}"
 
@@ -31207,38 +31207,38 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ea01a9c
 "CLSID"="{3050F406-98B5-11CF-BB82-00AA00BDCE0B}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\cdl] 1689246999
-#time=1d9b57b7ea86e72
+[Software\\Classes\\PROTOCOLS\\Handler\\cdl] 1689332961
+#time=1d9b643a401332a
 @="CDL: Asynchronous Pluggable Protocol Handler"
 "CLSID"="{3dd53d40-7b8b-11d0-b013-00aa0059ce02}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\file] 1689246999
-#time=1d9b57b7ea8787c
+[Software\\Classes\\PROTOCOLS\\Handler\\file] 1689332961
+#time=1d9b643a4014676
 @="file:, local: Asynchronous Pluggable Protocol Handler"
 "CLSID"="{79eac9e7-baf9-11ce-8c82-00aa004ba90b}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\ftp] 1689246999
-#time=1d9b57b7ea88c54
+[Software\\Classes\\PROTOCOLS\\Handler\\ftp] 1689332961
+#time=1d9b643a4016ca0
 @="ftp: Asynchronous Pluggable Protocol Handler"
 "CLSID"="{79eac9e3-baf9-11ce-8c82-00aa004ba90b}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\gopher] 1689246999
-#time=1d9b57b7ea89604
+[Software\\Classes\\PROTOCOLS\\Handler\\gopher] 1689332961
+#time=1d9b643a4017f74
 @="gopher: Asynchronous Pluggable Protocol Handler"
 "CLSID"="{79eac9e4-baf9-11ce-8c82-00aa004ba90b}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\http] 1689246999
-#time=1d9b57b7ea89f3c
+[Software\\Classes\\PROTOCOLS\\Handler\\http] 1689332961
+#time=1d9b643a40192ac
 @="http: Asynchronous Pluggable Protocol Handler"
 "CLSID"="{79eac9e2-baf9-11ce-8c82-00aa004ba90b}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\https] 1689246999
-#time=1d9b57b7ea8a8d8
+[Software\\Classes\\PROTOCOLS\\Handler\\https] 1689332961
+#time=1d9b643a401a580
 @="https: Asynchronous Pluggable Protocol Handler"
 "CLSID"="{79eac9e5-baf9-11ce-8c82-00aa004ba90b}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\its] 1689246993
-#time=1d9b57b7b0d8d88
+[Software\\Classes\\PROTOCOLS\\Handler\\its] 1689332957
+#time=1d9b643a18ace26
 @="its: Asychronous Pluggable Protocol Handler"
 "CLSID"="{9D148291-B9C8-11D0-A4CC-0000F80149F6}"
 
@@ -31246,8 +31246,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ea011a0
 "CLSID"="{3050F3B2-98B5-11CF-BB82-00AA00BDCE0B}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\local] 1689246999
-#time=1d9b57b7ea88290
+[Software\\Classes\\PROTOCOLS\\Handler\\local] 1689332961
+#time=1d9b643a4015954
 @="file:, local: Asynchronous Pluggable Protocol Handler"
 "CLSID"="{79eac9e7-baf9-11ce-8c82-00aa004ba90b}"
 
@@ -31255,18 +31255,18 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ea02618
 "CLSID"="{3050F3DA-98B5-11CF-BB82-00AA00BDCE0B}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\mhtml] 1689246993
-#time=1d9b57b7b0236a4
+[Software\\Classes\\PROTOCOLS\\Handler\\mhtml] 1689332957
+#time=1d9b643a1827f82
 @="MHTML Asynchronous Pluggable Protocol Handler"
 "CLSID"="{05300401-bcbc-11d0-85e3-00c04fd85ab4}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\mk] 1689246999
-#time=1d9b57b7ea8b1e8
+[Software\\Classes\\PROTOCOLS\\Handler\\mk] 1689332961
+#time=1d9b643a401b8ae
 @="mk: Asynchronous Pluggable Protocol Handler"
 "CLSID"="{79eac9e6-baf9-11ce-8c82-00aa004ba90b}"
 
-[Software\\Classes\\PROTOCOLS\\Handler\\ms-its] 1689246993
-#time=1d9b57b7b0d9256
+[Software\\Classes\\PROTOCOLS\\Handler\\ms-its] 1689332957
+#time=1d9b643a18ae10e
 @="ms-its: Asychronous Pluggable Protocol Handler"
 "CLSID"="{9D148291-B9C8-11D0-A4CC-0000F80149F6}"
 
@@ -31282,12 +31282,12 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ea0172c
 "CLSID"="{3050F3B2-98B5-11CF-BB82-00AA00BDCE0B}"
 
-[Software\\Classes\\PROTOCOLS\\Name-Space Handler\\mk] 1689246993
-#time=1d9b57b7b0d9918
+[Software\\Classes\\PROTOCOLS\\Name-Space Handler\\mk] 1689332957
+#time=1d9b643a18b0346
 @="NameSpace Filter for MK:@MSITStore:..."
 
-[Software\\Classes\\PROTOCOLS\\Name-Space Handler\\mk\\*] 1689246993
-#time=1d9b57b7b0d9a26
+[Software\\Classes\\PROTOCOLS\\Name-Space Handler\\mk\\*] 1689332957
+#time=1d9b643a18b054e
 "CLSID"="{9D148291-B9C8-11D0-A4CC-0000F80149F6}"
 
 [Software\\Classes\\RowPosition.RowPosition] 1689246992
@@ -31594,8 +31594,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3c4b56
 @="SearchAssistantOC"
 
-[Software\\Classes\\SearchAssistantOC.SearchAssistantOC\\CLSID] 1689246993
-#time=1d9b57b7afb977c
+[Software\\Classes\\SearchAssistantOC.SearchAssistantOC\\CLSID] 1689332957
+#time=1d9b643a17d5962
 @="{B45FF030-4447-11D2-85DE-00C04FA35C89}"
 
 [Software\\Classes\\SearchAssistantOC.SearchAssistantOC\\CurVer] 1689246992
@@ -31606,8 +31606,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3c458e
 @="SearchAssistantOC"
 
-[Software\\Classes\\SearchAssistantOC.SearchAssistantOC.1\\CLSID] 1689246993
-#time=1d9b57b7afb91dc
+[Software\\Classes\\SearchAssistantOC.SearchAssistantOC.1\\CLSID] 1689332957
+#time=1d9b643a17d4fe4
 @="{B45FF030-4447-11D2-85DE-00C04FA35C89}"
 
 [Software\\Classes\\Shell.Application] 1689246995
@@ -31630,16 +31630,16 @@ WINE REGISTRY Version 2
 #time=1d9b57b7c4715ac
 @="{13709620-C279-11CE-A49E-444553540000}"
 
-[Software\\Classes\\Shell.Explorer] 1689246993
-#time=1d9b57b7afb4100
+[Software\\Classes\\Shell.Explorer] 1689332957
+#time=1d9b643a17cc3a8
 @="Microsoft Web Browser"
 
-[Software\\Classes\\Shell.Explorer\\CLSID] 1689246993
-#time=1d9b57b7afb42ea
+[Software\\Classes\\Shell.Explorer\\CLSID] 1689332957
+#time=1d9b643a17cc722
 @="{8856F961-340A-11D0-A96B-00C04FD705A2}"
 
-[Software\\Classes\\Shell.Explorer\\CurVer] 1689246993
-#time=1d9b57b7afb45ba
+[Software\\Classes\\Shell.Explorer\\CurVer] 1689332957
+#time=1d9b643a17ccc36
 @="Shell.Explorer.2"
 
 [Software\\Classes\\Shell.Explorer.1] 1689246992
@@ -31682,8 +31682,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3c386e
 @="Shell Name Space"
 
-[Software\\Classes\\ShellNameSpace.ShellNameSpace\\CLSID] 1689246993
-#time=1d9b57b7afb7b2a
+[Software\\Classes\\ShellNameSpace.ShellNameSpace\\CLSID] 1689332957
+#time=1d9b643a17d29ce
 @="{55136805-B2DE-11D1-B9F2-00A0C98BC547}"
 
 [Software\\Classes\\ShellNameSpace.ShellNameSpace\\CurVer] 1689246992
@@ -31694,8 +31694,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3c32c4
 @="Shell Name Space"
 
-[Software\\Classes\\ShellNameSpace.ShellNameSpace.1\\CLSID] 1689246993
-#time=1d9b57b7afb7594
+[Software\\Classes\\ShellNameSpace.ShellNameSpace.1\\CLSID] 1689332957
+#time=1d9b643a17d200a
 @="{55136805-B2DE-11D1-B9F2-00A0C98BC547}"
 
 [Software\\Classes\\StaticDib] 1689246994
@@ -31946,8 +31946,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a61e64a
 @="ATL 2.0 Type Library"
 
-[Software\\Classes\\Typelib\\{44EC0535-400F-11D0-9DCD-00A0C90391D3}\\1.0\\0\\win32] 1689246992
-#time=1d9b57b7a64359e
+[Software\\Classes\\Typelib\\{44EC0535-400F-11D0-9DCD-00A0C90391D3}\\1.0\\0\\win32] 1689332956
+#time=1d9b643a0f2b3de
 @="C:\\windows\\system32\\atl90.dll"
 
 [Software\\Classes\\Typelib\\{44EC0535-400F-11D0-9DCD-00A0C90391D3}\\1.0\\FLAGS] 1689246992
@@ -32186,8 +32186,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7a3b0a70
 @="Microsoft Internet Controls"
 
-[Software\\Classes\\Typelib\\{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}\\1.1\\0\\win32] 1689246993
-#time=1d9b57b7af99d50
+[Software\\Classes\\Typelib\\{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}\\1.1\\0\\win32] 1689332957
+#time=1d9b643a179c022
 @="C:\\windows\\system32\\ieframe.dll"
 
 [Software\\Classes\\Typelib\\{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}\\1.1\\FLAGS] 1689246992
@@ -32320,32 +32320,32 @@ WINE REGISTRY Version 2
 [Software\\Classes\\VBScript.RegExp\\OLEScript] 1689246996
 #time=1d9b57b7c99db3e
 
-[Software\\Classes\\VBSFile] 1689246996
-#time=1d9b57b7c99e408
+[Software\\Classes\\VBSFile] 1689332959
+#time=1d9b643a292a0fa
 @="VBScript Script File"
 
-[Software\\Classes\\VBSFile\\ScriptEngine] 1689246996
-#time=1d9b57b7c99e21e
+[Software\\Classes\\VBSFile\\ScriptEngine] 1689332959
+#time=1d9b643a2929d80
 @="VBScript"
 
-[Software\\Classes\\VBSFile\\Shell] 1689246996
-#time=1d9b57b7c99f51a
+[Software\\Classes\\VBSFile\\Shell] 1689332959
+#time=1d9b643a292bf04
 @="Open"
 
-[Software\\Classes\\VBSFile\\Shell\\Edit\\Command] 1689246996
-#time=1d9b57b7c99e822
+[Software\\Classes\\VBSFile\\Shell\\Edit\\Command] 1689332959
+#time=1d9b643a292a816
 @="\"C:\\windows\\system32\\notepad.exe\" %1"
 
-[Software\\Classes\\VBSFile\\Shell\\Open\\Command] 1689246996
-#time=1d9b57b7c99ed18
+[Software\\Classes\\VBSFile\\Shell\\Open\\Command] 1689332959
+#time=1d9b643a292b0d6
 @="\"C:\\windows\\system32\\wscript.exe\" \"%1\" %*"
 
-[Software\\Classes\\VBSFile\\Shell\\Open2\\Command] 1689246996
-#time=1d9b57b7c99f236
+[Software\\Classes\\VBSFile\\Shell\\Open2\\Command] 1689332959
+#time=1d9b643a292b9d2
 @="\"C:\\windows\\system32\\cscript.exe\" \"%1\" %*"
 
-[Software\\Classes\\VBSFile\\Shell\\Print\\Command] 1689246996
-#time=1d9b57b7c99f722
+[Software\\Classes\\VBSFile\\Shell\\Print\\Command] 1689332959
+#time=1d9b643a292c292
 @="\"C:\\windows\\system32\\notepad.exe\" /p %1"
 
 [Software\\Classes\\WbemScripting.SWbemLocator] 1689246992
@@ -32587,8 +32587,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7d330ce6
 @="Windows Script Host Network Object"
 
-[Software\\Classes\\WScript.Network\\CLSID] 1689246997
-#time=1d9b57b7d331984
+[Software\\Classes\\WScript.Network\\CLSID] 1689332959
+#time=1d9b643a2d74854
 @="{093FF999-1EA0-4079-9525-9614C3504B74}"
 
 [Software\\Classes\\WScript.Network\\CurVer] 1689246997
@@ -32599,16 +32599,16 @@ WINE REGISTRY Version 2
 #time=1d9b57b7d3303d6
 @="Windows Script Host Network Object"
 
-[Software\\Classes\\WScript.Network.1\\CLSID] 1689246997
-#time=1d9b57b7d3313b2
+[Software\\Classes\\WScript.Network.1\\CLSID] 1689332959
+#time=1d9b643a2d73d96
 @="{093FF999-1EA0-4079-9525-9614C3504B74}"
 
 [Software\\Classes\\WScript.Shell] 1689246997
 #time=1d9b57b7d32ef36
 @="Windows Script Host Shell Object"
 
-[Software\\Classes\\WScript.Shell\\CLSID] 1689246997
-#time=1d9b57b7d32fbca
+[Software\\Classes\\WScript.Shell\\CLSID] 1689332959
+#time=1d9b643a2d71226
 @="{72C24DD5-D70A-438B-8A42-98424B88AFB8}"
 
 [Software\\Classes\\WScript.Shell\\CurVer] 1689246997
@@ -32619,8 +32619,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7d32e658
 @="Windows Script Host Shell Object"
 
-[Software\\Classes\\WScript.Shell.1\\CLSID] 1689246997
-#time=1d9b57b7d32f5f8
+[Software\\Classes\\WScript.Shell.1\\CLSID] 1689332959
+#time=1d9b643a2d70754
 @="{72C24DD5-D70A-438B-8A42-98424B88AFB8}"
 
 [Software\\Classes\\xbmfile] 1689246999
@@ -32704,8 +32704,8 @@ WINE REGISTRY Version 2
 "Locale"="*"
 "Version"="4,74,9273,0"
 
-[Software\\Microsoft\\ADs\\Providers\\LDAP] 1689246992
-#time=1d9b57b7a5d330c
+[Software\\Microsoft\\ADs\\Providers\\LDAP] 1689332956
+#time=1d9b643a0e9b090
 @="LDAPNamespace"
 
 [Software\\Microsoft\\Advanced INF Setup] 1689246999
@@ -32768,89 +32768,89 @@ WINE REGISTRY Version 2
 [Software\\Microsoft\\Cryptography\\Calais\\Readers] 1689246999
 #time=1d9b57b7ee77554
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base Cryptographic Provider v1.0] 1689246995
-#time=1d9b57b7c1337aa
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base Cryptographic Provider v1.0] 1689332958
+#time=1d9b643a2467572
 "Image Path"="C:\\windows\\system32\\rsaenh.dll"
 "Signature"=hex:de,ad,be,ef
 "Type"=dword:00000001
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base DSS and Diffie-Hellman Cryptographic Provider] 1689246993
-#time=1d9b57b7ad02966
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base DSS and Diffie-Hellman Cryptographic Provider] 1689332957
+#time=1d9b643a159c394
 "Image Path"="C:\\windows\\system32\\dssenh.dll"
 "Type"=dword:0000000d
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base DSS Cryptographic Provider] 1689246993
-#time=1d9b57b7ad02484
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base DSS Cryptographic Provider] 1689332957
+#time=1d9b643a159b0d4
 "Image Path"="C:\\windows\\system32\\dssenh.dll"
 "Type"=dword:00000003
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft DH SChannel Cryptographic Provider] 1689246993
-#time=1d9b57b7ad03302
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft DH SChannel Cryptographic Provider] 1689332957
+#time=1d9b643a159e8ba
 "Image Path"="C:\\windows\\system32\\dssenh.dll"
 "Type"=dword:00000012
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced Cryptographic Provider v1.0] 1689246995
-#time=1d9b57b7c133e3a
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced Cryptographic Provider v1.0] 1689332958
+#time=1d9b643a24689cc
 "Image Path"="C:\\windows\\system32\\rsaenh.dll"
 "Signature"=hex:de,ad,be,ef
 "Type"=dword:00000001
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced DSS and Diffie-Hellman Cryptographic Provider] 1689246993
-#time=1d9b57b7ad02e34
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced DSS and Diffie-Hellman Cryptographic Provider] 1689332957
+#time=1d9b643a159d5fa
 "Image Path"="C:\\windows\\system32\\dssenh.dll"
 "Type"=dword:0000000d
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced RSA and AES Cryptographic Provider] 1689246995
-#time=1d9b57b7c13447a
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced RSA and AES Cryptographic Provider] 1689332958
+#time=1d9b643a2469e76
 "Image Path"="C:\\windows\\system32\\rsaenh.dll"
 "Signature"=hex:de,ad,be,ef
 "Type"=dword:00000018
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced RSA and AES Cryptographic Provider (Prototype)] 1689246995
-#time=1d9b57b7c134aba
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced RSA and AES Cryptographic Provider (Prototype)] 1689332958
+#time=1d9b643a246b2b2
 "Image Path"="C:\\windows\\system32\\rsaenh.dll"
 "Signature"=hex:de,ad,be,ef
 "Type"=dword:00000018
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft RSA SChannel Cryptographic Provider] 1689246995
-#time=1d9b57b7c1350f0
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft RSA SChannel Cryptographic Provider] 1689332958
+#time=1d9b643a246c752
 "Image Path"="C:\\windows\\system32\\rsaenh.dll"
 "Signature"=hex:de,ad,be,ef
 "Type"=dword:0000000c
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Strong Cryptographic Provider] 1689246995
-#time=1d9b57b7c135708
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Strong Cryptographic Provider] 1689332958
+#time=1d9b643a246dbe8
 "Image Path"="C:\\windows\\system32\\rsaenh.dll"
 "Signature"=hex:de,ad,be,ef
 "Type"=dword:00000001
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 001] 1689246995
-#time=1d9b57b7c135e10
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 001] 1689332958
+#time=1d9b643a246f1c8
 "Name"="Microsoft Enhanced Cryptographic Provider v1.0"
 "TypeName"="RSA Full (Signature and Key Exchange)"
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 003] 1689246993
-#time=1d9b57b7ad03a0a
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 003] 1689332957
+#time=1d9b643a159fed6
 "Name"="Microsoft Base DSS Cryptographic Provider"
 "TypeName"="DSS Signature"
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 012] 1689246995
-#time=1d9b57b7c136306
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 012] 1689332958
+#time=1d9b643a2470438
 "Name"="Microsoft RSA SChannel Cryptographic Provider"
 "TypeName"="RSA SChannel"
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 013] 1689246993
-#time=1d9b57b7ad03ece
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 013] 1689332957
+#time=1d9b643a15a115a
 "Name"="Microsoft Enhanced DSS and Diffie-Hellman Cryptographic Provider"
 "TypeName"="DSS Signature with Diffie-Hellman Key Exchange"
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 018] 1689246993
-#time=1d9b57b7ad04392
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 018] 1689332957
+#time=1d9b643a15a238e
 "Name"="Microsoft DH SChannel Cryptographic Provider"
 "TypeName"="Diffie-Hellman SChannel"
 
-[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 024] 1689246995
-#time=1d9b57b7c136874
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 024] 1689332958
+#time=1d9b643a2471680
 "Name"="Microsoft Enhanced RSA and AES Cryptographic Provider"
 "TypeName"="RSA Full and AES"
 
@@ -37014,8 +37014,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ee7da8a
 "MAPI"="1"
 
-[Software\\Microsoft\\Windows NT\\CurrentVersion] 1689316043
-#time=1d9b61c400f19c6
+[Software\\Microsoft\\Windows NT\\CurrentVersion] 1689333642
+#time=1d9b6453a042e4e
 "CSDVersion"="Service Pack 1"
 "CurrentBuild"="7601"
 "CurrentBuildNumber"="7601"
@@ -37231,8 +37231,8 @@ WINE REGISTRY Version 2
 "Flags"=dword:00000000
 "ProfileImagePath"="C:\\users\\root"
 
-[Software\\Microsoft\\Windows NT\\CurrentVersion\\SvcHost] 1689247000
-#time=1d9b57b7f186f42
+[Software\\Microsoft\\Windows NT\\CurrentVersion\\SvcHost] 1689332962
+#time=1d9b643a4682a1c
 "imgsvc"=str(7):"StiSvc\0"
 "LocalServiceNetworkRestricted"=str(7):"EventLog\0"
 "netsvcs"=str(7):"BITS\0fontcache\0Schedule\0"
@@ -41963,92 +41963,92 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ee614a2
 "Shell"="explorer.exe"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Devices.Enumeration.DeviceAccessInformation] 1689246996
-#time=1d9b57b7cd28dee
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Devices.Enumeration.DeviceAccessInformation] 1689332959
+#time=1d9b643a2a75f54
 "DllPath"="C:\\windows\\system32\\windows.devices.enumeration.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Devices.Enumeration.DeviceInformation] 1689246996
-#time=1d9b57b7cd289fc
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Devices.Enumeration.DeviceInformation] 1689332959
+#time=1d9b643a2a74e88
 "DllPath"="C:\\windows\\system32\\windows.devices.enumeration.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Foundation.Metadata.ApiInformation] 1689246996
-#time=1d9b57b7d123de0
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Foundation.Metadata.ApiInformation] 1689332959
+#time=1d9b643a2c514ae
 "DllPath"="C:\\windows\\system32\\wintypes.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.ArcadeStick] 1689246996
-#time=1d9b57b7cd3f292
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.ArcadeStick] 1689332959
+#time=1d9b643a2a83d2a
 "DllPath"="C:\\windows\\system32\\windows.gaming.input.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.Custom.GameControllerFactoryManager] 1689246996
-#time=1d9b57b7cd406b0
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.Custom.GameControllerFactoryManager] 1689332959
+#time=1d9b643a2a890e0
 "DllPath"="C:\\windows\\system32\\windows.gaming.input.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.FlightStick] 1689246996
-#time=1d9b57b7cd3f6e8
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.FlightStick] 1689332959
+#time=1d9b643a2a84dce
 "DllPath"="C:\\windows\\system32\\windows.gaming.input.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.ForceFeedback.ConditionForceEffect] 1689246996
-#time=1d9b57b7cd3e6e4
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.ForceFeedback.ConditionForceEffect] 1689332959
+#time=1d9b643a2a80a4e
 "DllPath"="C:\\windows\\system32\\windows.gaming.input.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.ForceFeedback.ConstantForceEffect] 1689246996
-#time=1d9b57b7cd3eacc
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.ForceFeedback.ConstantForceEffect] 1689332959
+#time=1d9b643a2a81b74
 "DllPath"="C:\\windows\\system32\\windows.gaming.input.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect] 1689246996
-#time=1d9b57b7cd3e2f2
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect] 1689332959
+#time=1d9b643a2a7f978
 "DllPath"="C:\\windows\\system32\\windows.gaming.input.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.ForceFeedback.RampForceEffect] 1689246996
-#time=1d9b57b7cd3eeb4
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.ForceFeedback.RampForceEffect] 1689332959
+#time=1d9b643a2a82c36
 "DllPath"="C:\\windows\\system32\\windows.gaming.input.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.Gamepad] 1689246996
-#time=1d9b57b7cd3fada
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.Gamepad] 1689332959
+#time=1d9b643a2a85eae
 "DllPath"="C:\\windows\\system32\\windows.gaming.input.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.RacingWheel] 1689246996
-#time=1d9b57b7cd3fecc
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.RacingWheel] 1689332959
+#time=1d9b643a2a86f52
 "DllPath"="C:\\windows\\system32\\windows.gaming.input.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.RawGameController] 1689246996
-#time=1d9b57b7cd402b4
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.Input.RawGameController] 1689332959
+#time=1d9b643a2a87fe2
 "DllPath"="C:\\windows\\system32\\windows.gaming.input.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.UI.GameBar] 1689246996
-#time=1d9b57b7cd55cea
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Gaming.UI.GameBar] 1689332959
+#time=1d9b643a2a932a2
 "DllPath"="C:\\windows\\system32\\windows.gaming.ui.gamebar.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Media.ClosedCaptioning.ClosedCaptionProperties] 1689246996
-#time=1d9b57b7cd958cc
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Media.ClosedCaptioning.ClosedCaptionProperties] 1689332959
+#time=1d9b643a2ab1298
 "DllPath"="C:\\windows\\system32\\windows.media.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Media.Devices.MediaDevice] 1689246996
-#time=1d9b57b7cd7f1c6
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Media.Devices.MediaDevice] 1689332959
+#time=1d9b643a2aa71f8
 "DllPath"="C:\\windows\\system32\\windows.media.devices.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint] 1689246996
-#time=1d9b57b7cdacbc6
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint] 1689332959
+#time=1d9b643a2abaec4
 "DllPath"="C:\\windows\\system32\\windows.media.speech.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Media.SpeechRecognition.SpeechRecognizer] 1689246996
-#time=1d9b57b7cdacffe
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Media.SpeechRecognition.SpeechRecognizer] 1689332959
+#time=1d9b643a2abbfe0
 "DllPath"="C:\\windows\\system32\\windows.media.speech.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Media.SpeechSynthesis.SpeechSynthesizer] 1689246996
-#time=1d9b57b7cdad490
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Media.SpeechSynthesis.SpeechSynthesizer] 1689332959
+#time=1d9b643a2abd084
 "DllPath"="C:\\windows\\system32\\windows.media.speech.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Security.Cryptography.CryptographicBuffer] 1689246992
-#time=1d9b57b7a7cccd0
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.Security.Cryptography.CryptographicBuffer] 1689332956
+#time=1d9b643a10f8c48
 "DllPath"="C:\\windows\\system32\\cryptowinrt.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.System.Threading.ThreadPool] 1689246995
-#time=1d9b57b7c78458c
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.System.Threading.ThreadPool] 1689332958
+#time=1d9b643a27e50be
 "DllPath"="C:\\windows\\system32\\threadpoolwinrt.dll"
 
-[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.System.UserProfile.GlobalizationPreferences] 1689246996
-#time=1d9b57b7cd69e70
+[Software\\Microsoft\\WindowsRuntime\\ActivatableClassId\\Windows.System.UserProfile.GlobalizationPreferences] 1689332959
+#time=1d9b643a2a9cd3e
 "DllPath"="C:\\windows\\system32\\windows.globalization.dll"
 
 [Software\\Policies] 1689246999
@@ -42079,14 +42079,14 @@ WINE REGISTRY Version 2
 @="Disk drives"
 "Class"="DiskDrive"
 
-[System\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}] 1689316043
-#time=1d9b61c3fe49174
+[System\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}] 1689333642
+#time=1d9b64539e9ec0a
 "Class"="Display"
 
-[System\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000] 1689316043
-#time=1d9b61c3fe49624
+[System\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000] 1689333642
+#time=1d9b64539e9f1fa
 "DriverDate"="7-14-2023"
-"DriverDateData"=hex:60,6b,e4,3f,1c,b6,d9,01
+"DriverDateData"=hex:a8,c1,e9,39,45,b6,d9,01
 "DriverDesc"="Wine Adapter"
 "HardwareInformation.AdapterString"=hex:57,00,69,00,6e,00,65,00,20,00,41,00,64,\
   00,61,00,70,00,74,00,65,00,72,00,00,00
@@ -42097,12 +42097,12 @@ WINE REGISTRY Version 2
 "HardwareInformation.DacType"=hex:49,00,6e,00,74,00,65,00,72,00,67,00,72,00,61,\
   00,74,00,65,00,64,00,20,00,52,00,41,00,4d,00,44,00,41,00,43,00,00,00
 
-[System\\CurrentControlSet\\Control\\Class\\{4D36E96E-E325-11CE-BFC1-08002BE10318}] 1689316043
-#time=1d9b61c3fe4d65c
+[System\\CurrentControlSet\\Control\\Class\\{4D36E96E-E325-11CE-BFC1-08002BE10318}] 1689333642
+#time=1d9b64539ea45b0
 "Class"="Monitor"
 
-[System\\CurrentControlSet\\Control\\Class\\{4D36E96E-E325-11CE-BFC1-08002BE10318}\\0000] 1689316043
-#time=1d9b61c3fe4d65c
+[System\\CurrentControlSet\\Control\\Class\\{4D36E96E-E325-11CE-BFC1-08002BE10318}\\0000] 1689333642
+#time=1d9b64539ea45b0
 
 [System\\CurrentControlSet\\Control\\Class\\{4d36e978-e325-11ce-bfc1-08002be10318}] 1689246999
 #time=1d9b57b7ee4f694
@@ -42149,9 +42149,9 @@ WINE REGISTRY Version 2
 "InfPath"="input.inf"
 "InfSection"="device_section"
 
-[System\\CurrentControlSet\\Control\\ComputerName\\ComputerName] 1689246990
-#time=1d9b57b798d0d1c
-"ComputerName"="F10"
+[System\\CurrentControlSet\\Control\\ComputerName\\ComputerName] 1689333641
+#time=1d9b645397d52ac
+"ComputerName"="PURLEY26"
 
 [System\\CurrentControlSet\\Control\\ContentIndex\\Language\\Neutral] 1689246999
 #time=1d9b57b7ee4dcfe
@@ -42159,48 +42159,48 @@ WINE REGISTRY Version 2
 "StemmerClass"=""
 "WBreakerClass"="{369647e0-17b0-11ce-9950-00aa004bbb1f}"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}\\##?#PCI#VEN_0000&DEV_0000&SUBSYS_00000000&REV_00#00000000#{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}] 1689316043
-#time=1d9b61c3fe49e1c
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}\\##?#PCI#VEN_0000&DEV_0000&SUBSYS_00000000&REV_00#00000000#{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}] 1689333642
+#time=1d9b64539e9fc0e
 "DeviceInstance"="PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000000"
 
 [System\\CurrentControlSet\\Control\\DeviceClasses\\{378DE44C-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{378de44c-56ef-11d1-bc8c-00a0c91405dd}] 1689247000
 #time=1d9b57b7f500786
 "DeviceInstance"="HID\\VID_845E&PID_0001\\0&0000&0&0"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{378DE44C-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{378de44c-56ef-11d1-bc8c-00a0c91405dd}\\#] 1689316043
-#time=1d9b61c3ff705c0
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{378DE44C-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{378de44c-56ef-11d1-bc8c-00a0c91405dd}\\#] 1689333642
+#time=1d9b64539e2335c
 "SymbolicLink"="\\\\?\\hid#vid_845e&pid_0001#0&0000&0&0#{378de44c-56ef-11d1-bc8c-00a0c91405dd}"
 
 [System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}] 1689247000
 #time=1d9b57b7f4fe29c
 "DeviceInstance"="HID\\VID_845E&PID_0001\\0&0000&0&0"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}\\#] 1689316043
-#time=1d9b61c3ff6f9d6
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}\\#] 1689333642
+#time=1d9b64539e2252e
 "SymbolicLink"="\\\\?\\hid#vid_845e&pid_0001#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}"
 
 [System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}] 1689247000
 #time=1d9b57b7f4bc112
 "DeviceInstance"="HID\\VID_845E&PID_0002\\0&0000&0&0"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}\\#] 1689316043
-#time=1d9b61c3ff64dd8
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}\\#] 1689333642
+#time=1d9b64539e146fe
 "SymbolicLink"="\\\\?\\hid#vid_845e&pid_0002#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{5B45201D-F2F2-4F3B-85BB-30FF1F953599}\\##?#PCI#VEN_0000&DEV_0000&SUBSYS_00000000&REV_00#00000000#{5B45201D-F2F2-4F3B-85BB-30FF1F953599}] 1689316043
-#time=1d9b61c3fe498e0
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{5B45201D-F2F2-4F3B-85BB-30FF1F953599}\\##?#PCI#VEN_0000&DEV_0000&SUBSYS_00000000&REV_00#00000000#{5B45201D-F2F2-4F3B-85BB-30FF1F953599}] 1689333642
+#time=1d9b64539e9f560
 "DeviceInstance"="PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000000"
 
 [System\\CurrentControlSet\\Control\\DeviceClasses\\{884B96C3-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}] 1689247000
 #time=1d9b57b7f4be372
 "DeviceInstance"="HID\\VID_845E&PID_0002\\0&0000&0&0"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{884B96C3-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}\\#] 1689316043
-#time=1d9b61c3ff65ee0
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{884B96C3-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}\\#] 1689333642
+#time=1d9b64539e158d8
 "SymbolicLink"="\\\\?\\hid#vid_845e&pid_0002#0&0000&0&0#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{E6F07B5F-EE97-4A90-B076-33F57BF4EAA7}\\##?#DISPLAY#Default_Monitor#0000&0000#{E6F07B5F-EE97-4A90-B076-33F57BF4EAA7}] 1689316043
-#time=1d9b61c3fe4ba6e
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{E6F07B5F-EE97-4A90-B076-33F57BF4EAA7}\\##?#DISPLAY#Default_Monitor#0000&0000#{E6F07B5F-EE97-4A90-B076-33F57BF4EAA7}] 1689333642
+#time=1d9b64539ea20ee
 "DeviceInstance"="DISPLAY\\Default_Monitor\\0000&0000"
 
 [System\\CurrentControlSet\\Control\\hivelist] 1689246999
@@ -42764,17 +42764,17 @@ WINE REGISTRY Version 2
 "HeapSegmentCommit"=dword:00000000
 "HeapSegmentReserve"=dword:00000000
 
-[System\\CurrentControlSet\\Control\\Session Manager\\Environment] 1689246999
-#time=1d9b57b7ef6700e
+[System\\CurrentControlSet\\Control\\Session Manager\\Environment] 1689333641
+#time=1d9b645397ce510
 "ComSpec"=str(2):"%SystemRoot%\\system32\\cmd.exe"
-"NUMBER_OF_PROCESSORS"="78"
+"NUMBER_OF_PROCESSORS"="40"
 "OS"="Windows_NT"
 "PATH"=str(2):"%SystemRoot%\\system32;%SystemRoot%;%SystemRoot%\\system32\\wbem;%SystemRoot%\\system32\\WindowsPowershell\\v1.0"
 "PATHEXT"=".com;.exe;.bat;.cmd;.vbs;.vbe;.js;.jse;.wsf;.wsh"
 "PROCESSOR_ARCHITECTURE"="x86"
-"PROCESSOR_IDENTIFIER"="x86 Family 6 Model 85 Stepping 7, GenuineIntel"
+"PROCESSOR_IDENTIFIER"="x86 Family 6 Model 85 Stepping 4, GenuineIntel"
 "PROCESSOR_LEVEL"="6"
-"PROCESSOR_REVISION"="5507"
+"PROCESSOR_REVISION"="5504"
 "TEMP"=str(2):"%SystemRoot%\\temp"
 "TMP"=str(2):"%SystemRoot%\\temp"
 "windir"=str(2):"%SystemRoot%"
@@ -42800,41 +42800,41 @@ WINE REGISTRY Version 2
 #time=1d9b57b7ef66c9e
 "CSDVersion"=dword:00000100
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000] 1689316043
-#time=1d9b61c3fe4c41e
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000] 1689333642
+#time=1d9b64539ea2db4
 "Class"="Monitor"
 "ClassGUID"="{4D36E96E-E325-11CE-BFC1-08002BE10318}"
 "DeviceDesc"="Generic Non-PnP Monitor"
 "Driver"="{4D36E96E-E325-11CE-BFC1-08002BE10318}\\0000"
 "HardwareID"=str(7):"MONITOR\\Default_Monitor\0"
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Device Parameters] 1689316043
-#time=1d9b61c3fe4c23e
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Device Parameters] 1689333642
+#time=1d9b64539ea2b34
 "BAD_EDID"=hex:
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0002] 1689316043
-#time=1d9b61c3fe4c766
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0002] 1689333642
+#time=1d9b64539ea321e
 @=hex(ffff0007):03,00,00,00
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0003] 1689316043
-#time=1d9b61c3fe4c95a
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0003] 1689333642
+#time=1d9b64539ea34b2
 @=hex(ffff1003):00,00,00,00,00,00,00,00,00,04,00,00,00,03,00,00
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0004] 1689316043
-#time=1d9b61c3fe4cb4e
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0004] 1689333642
+#time=1d9b64539ea3746
 @=hex(ffff1003):00,00,00,00,00,00,00,00,00,04,00,00,00,03,00,00
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0005] 1689316043
-#time=1d9b61c3fe4cd42
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0005] 1689333642
+#time=1d9b64539ea39da
 @=hex(ffff0012):5c,00,5c,00,2e,00,5c,00,44,00,49,00,53,00,50,00,4c,00,41,00,59,\
   00,31,00,00,00
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{CA085853-16CE-48AA-B114-DE9C72334223}\\0001] 1689316043
-#time=1d9b61c3fe4d26a
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{CA085853-16CE-48AA-B114-DE9C72334223}\\0001] 1689333642
+#time=1d9b64539ea409c
 @=hex(ffff0008):f0,03,00,00,00,00,00,00
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{CA085853-16CE-48AA-B114-DE9C72334223}\\0002] 1689316043
-#time=1d9b61c3fe4d472
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{CA085853-16CE-48AA-B114-DE9C72334223}\\0002] 1689333642
+#time=1d9b64539ea4326
 @=hex(ffff0007):00,00,00,00
 
 [System\\CurrentControlSet\\Enum\\HID\\VID_845E&PID_0001\\0&0000&0&0] 1689247000
@@ -42879,8 +42879,8 @@ WINE REGISTRY Version 2
 #time=1d9b57b79cd5296
 @=hex(ffff000d):00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 
-[System\\CurrentControlSet\\Enum\\PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000000\\Properties\\{540B947E-8B40-45BC-A8A2-6A0B894CBDA2}\\0005] 1689316043
-#time=1d9b61c3fe48d82
+[System\\CurrentControlSet\\Enum\\PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000000\\Properties\\{540B947E-8B40-45BC-A8A2-6A0B894CBDA2}\\0005] 1689333642
+#time=1d9b64539e9e70a
 @=hex(ffff0011):01,00,00,00
 
 [System\\CurrentControlSet\\Enum\\PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000000\\Properties\\{60B193CB-5276-4D0F-96FC-F173ABAD3EC6}\\0002] 1689246991
@@ -43151,11 +43151,11 @@ WINE REGISTRY Version 2
 #time=1d9b57b7f05d9fe
 "ServiceDll"="C:\\windows\\system32\\wiaservc.dll"
 
-[System\\CurrentControlSet\\Services\\Tcpip\\Parameters] 1689246999
-#time=1d9b57b7ee8e15a
+[System\\CurrentControlSet\\Services\\Tcpip\\Parameters] 1689333641
+#time=1d9b645397d4ba4
 "DataBasePath"="C:\\windows\\system32\\drivers\\etc"
 "Domain"=""
-"Hostname"="f10"
+"Hostname"="purley26"
 
 [System\\CurrentControlSet\\Services\\TermService] 1689247000
 #time=1d9b57b7f063444

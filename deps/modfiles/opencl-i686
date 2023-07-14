@@ -2,7 +2,7 @@
 
 module load hpcenc
 set __encroot [getenv ENCROOT]
-set _MROOT ${__encroot}/deps/opencl-i386
+set _MROOT ${__encroot}/deps/opencl-i686
 set _LPATH ${_MROOT}/lib
 prepend-path LIBRARY_PATH ${_LPATH}
 prepend-path LD_LIBRARY_PATH ${_LPATH}
