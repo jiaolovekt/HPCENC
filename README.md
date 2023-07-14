@@ -151,15 +151,16 @@ You can create your own avs template according to config/base_template.avs or co
  - Video stream should be output stream 0, and audio stream 1. 
 
 ## Known issue
-  Since wine use dlopen(3) to load libraries. We cannot get every libraries wine will use, 
+  Since wine use dlopen(3) to load libraries. We cannot get every libraries wine will use, so there may be a lack of some libraries on some clusters.\
+  Please create issues about the missing library when you encounter this kind of error.
 
 ## Current status
  - [x] Webrip batch with avs
- - [x] Webrip batch with vs (testing)
+ - [x] Webrip batch with vs
  - [ ] BDMV preprocess
  - [ ] BDMV batch with avs
  - [ ] BDMV batch with vs
- - [x] VSFM support
+ - [x] VSFM support (i386 and x64)
  - [x] mktorrent
  - [x] update tracker list
  - [ ] Automatic job submission as daemon
