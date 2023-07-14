@@ -150,6 +150,9 @@ You can create your own avs template according to config/base_template.avs or co
 #### VS template rules
  - Video stream should be output stream 0, and audio stream 1. 
 
+## Known issue
+  Since wine use dlopen(3) to load libraries. We cannot get every libraries wine will use, 
+
 ## Current status
  - [x] Webrip batch with avs
  - [x] Webrip batch with vs (testing)
