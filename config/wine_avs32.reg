@@ -1,7 +1,7 @@
 Windows Registry Editor Version 5.00
 
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\AviSynth]
+[HKEY_LOCAL_MACHINE\SOFTWARE\AviSynth]
 @="Z:__WINE_AVS_PATH__"
 "plugindir2_5"="Z:__WINE_AVS_PLUGIN_PATH__"
 "plugindir+"="Z:__WINE_AVS_PLUGIN_PATH__"

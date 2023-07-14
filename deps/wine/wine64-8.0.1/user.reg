@@ -748,8 +748,8 @@ WINE REGISTRY Version 2
 "OpenWithIcon"="81F5_winebrowser.0"
 "ProgID"="xmlfile"
 
-[Software\\Wine\\Fonts] 1689171167
-#time=1d9b4caef2a80c4
+[Software\\Wine\\Fonts] 1689316173
+#time=1d9b61c8d5df760
 "Codepages"="1252,437"
 "LogPixels"=dword:00000060
 

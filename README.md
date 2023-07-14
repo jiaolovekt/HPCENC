@@ -22,8 +22,10 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
  - mkvtoolnix-r78
  - mktorrent v1.0
  - Wine64-8.0.1
- - Avisynth+ 3.7.1 Windows x64
- - VSFilterMod
+ - Avisynth+ 3.7.2 Windows i386
+ - Avisynth+ 3.7.2 Windows x64
+ - VSFilterMod i386
+ - VSFilterMod x64
 ## Requirements and limitations
   The package almost include every binary files needed for encoding, even with a gcc.\
   So the only requirement is [environment modules](https://github.com/cea-hpc/modules)(to manage environment variables), and,
@@ -32,21 +34,26 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
   __Slurm Only__\
   Can be ported to pbs/toqrue/LSF by modifying batch scripts.
   default batch template is config/sub_web.\
-  Can be replaced with webbatch -t.
+  Can be replaced with `webbatch -t`.
 ### Heterogeneous support
   Since it's difficult for some cluster to allocate CPUs and GPUs together, currently there'll be NO GPU support for plugins or encoders.
 ### Softsub support
   Currently not scheduled.
-### AVS/VS Plugins support
-  see deps/avsp3.7.2/lib/avisynth and deps/vs-plugins
 ### Architecture support
   Currently Broadwell(E5v4) and later Intel CPUs. May add EPYC2 support if I get a cluster to test.
 ### Numa support
-  Will try to bind x264 process to 1 socket on DP/MP platforms.
+  Will try to bind x264 process to 1 socket on DP/MP platforms if there's more than 12 threads per socket available.
+### AVS/VS Plugins support (Linux)
+  Check AVS plugins at deps/avsp3.7.2/lib/avisynth\
+  Check VS plugins at deps/vs-plugins
+### AVS Plugins support (Win64)
+  Currently only Lsmashsource and VSFilterMod\
+  Put x64 plugin dlls in deps/wine/avs64/plugins
+### AVS Plugins support (Win32)
+  Currently only Lsmashsource and VSFilterMod\
+  Put i386 plugin dlls in deps/wine/avs32/plugins
 ### VSFilterMod support
-  Supported by wine, currently only x64 version with avisynth windows x64,\
-  filter only contains LSM and VSFM, will add other filters later.\
-  May include a 32bit version later for better plugin compatibility
+  Supported by wine, i386 and x64 versions available
 ## Usage
 Just clone this project to your compute cluster.
 Initiate the environment by\

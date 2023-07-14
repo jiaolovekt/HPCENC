@@ -407,6 +407,7 @@ wine_configure()
 
 update_wine_avs_reg()
 {
+	[ -z "$TMPDIR" ] && TMDIR="/tmp"
 	[ -z "$CONFIGDIR" ] && logg "HPCENC CONFIGDIR not set" err && return 1
 	if [ -x "$(which wine64)" ] ; then
 		if ! [ -f "$CONFIGDIR"/wine_avs64.reg ] ; then
@@ -431,7 +432,7 @@ update_wine_avs_reg()
                 fi
                 logg "update wine avs32 reg" info
                 sed "s|__WINE_AVS_PATH__|$WINEAVSDIR|;s|__WINE_AVS_PLUGIN_PATH__|$WINEAVSPLGNDIR|" "$winereg" > "${TMPDIR}/avs32.reg"
-                if wine64 regedit "${TMPDIR}/avs64.reg" > /dev/null 2>&1 ; then
+                if wine regedit "${TMPDIR}/avs32.reg" > /dev/null 2>&1 ; then
                         logg "updated avs32 reg" info
                 else
                         logg "update avs32 reg failed" err
