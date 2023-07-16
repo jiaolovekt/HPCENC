@@ -748,8 +748,8 @@ WINE REGISTRY Version 2
 "OpenWithIcon"="81F5_winebrowser.0"
 "ProgID"="xmlfile"
 
-[Software\\Wine\\Fonts] 1689333642
-#time=1d9b64539cf780c
+[Software\\Wine\\Fonts] 1689490882
+#time=1d9b7b35404d9b4
 "Codepages"="1252,437"
 "LogPixels"=dword:00000060
 
@@ -774,16 +774,16 @@ WINE REGISTRY Version 2
 [Software\\Wine\\MenuFiles] 1689247039
 #time=1d9b57b965cec82
 
-[Volatile Environment] 1689333642
-#time=1d9b6453a0cf628
+[Volatile Environment] 1689490829
+#time=1d9b7b334ec942c
 "APPDATA"="C:\\users\\root\\AppData\\Roaming"
 "CLIENTNAME"="Console"
 "HOMEDRIVE"="C:"
 "HOMEPATH"="\\users\\root"
 "HOMESHARE"=""
 "LOCALAPPDATA"="C:\\users\\root\\AppData\\Local"
-"LOGONSERVER"="\\\\PURLEY26"
+"LOGONSERVER"="\\\\F10"
 "SESSIONNAME"="Console"
-"USERDOMAIN"="PURLEY26"
+"USERDOMAIN"="F10"
 "USERNAME"="root"
 "USERPROFILE"="C:\\users\\root"
