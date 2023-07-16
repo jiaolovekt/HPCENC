@@ -21,6 +21,8 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
  - Python 3.11
  - mkvtoolnix-r78
  - mktorrent v1.0
+ - GLIBC 2.17 i686
+ - Wine-8.0.1-mod
  - Wine64-8.0.1
  - Avisynth+ 3.7.2 Windows i686
  - Avisynth+ 3.7.2 Windows x64
@@ -161,6 +163,7 @@ You can create your own avs template according to config/base_template.avs or co
  - [ ] BDMV batch with avs
  - [ ] BDMV batch with vs
  - [x] VSFM support (i686 and x64)
+ - [ ] More avs win plugins
  - [x] mktorrent
  - [x] update tracker list
  - [ ] Automatic job submission as daemon
