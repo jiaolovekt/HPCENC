@@ -393,6 +393,12 @@ wine_configure()
 	#check wine exec
 	if WINE_EXEC="$(which wine 2>/dev/null)"; then
 		W_AVSPIPE="$(which avs2pipemod.exe) -dll avisynth32"
+		#check glibc i686
+		module is-loaded centos7-i686 || module load centos7-i686
+		if true || [ ! -f "/lib/ld-linux.so.2" ] ; then
+			logg "/lib/ld-linux.so.2 not found, use my own." info
+			WINE_EXEC="${ENCROOT}/deps/centos7-i686/lib/ld-linux.so.2 $WINE_EXEC" 
+		fi
 	elif WINE_EXEC="$(which wine64 2>/dev/null)"; then
 		W_AVSPIPE="$(which avs2pipemod64.exe)"
 	else
@@ -400,12 +406,6 @@ wine_configure()
 		exit 14
 	fi
 	logg "wine exec is $WINE_EXEC" info
-	#check glibc i686
-	module is-loaded centos7-i686 || module load centos7-i686
-	if true || [ ! -f "/lib/ld-linux.so.2" ] ; then
-		logg "/lib/ld-linux.so.2 not found, use my own." info
-		WINE_EXEC="${ENCROOT}/deps/centos7-i686/lib/ld-linux.so.2 $WINE_EXEC" 
-	fi
 	#check regedit
 	if ! grep -Fq "$WINEAVSDIR" "${WINEPREFIX}/system.reg" ; then
 		logg "need update wine avs reg" info
