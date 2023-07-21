@@ -15,12 +15,15 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
  - ffmpeg
  - libass
  - lsmash
+ - fdk_aac
  - VS r62
  - x264
  - x265
  - Python 3.11
+ - mediainfo
  - mkvtoolnix-r78
  - mktorrent v1.0
+ - mp4fpsmod
  - GLIBC 2.17 i686
  - Wine-8.0.1-mod
  - Wine64-8.0.1
@@ -162,10 +165,17 @@ You can create your own avs template according to config/base_template.avs or co
  - [ ] BDMV preprocess
  - [ ] BDMV batch with avs
  - [ ] BDMV batch with vs
+ - [x] x264 cpu binding on NUMA systems (4 Way Xeon)
+ - [x] Custom x26x parameters for seperate projects
+ - [x] Custom x26x scipt templates for seperate projects
  - [x] VSFM support (i686 and x64)
+ - [ ] MP4 VFR support
+ - [x] Linux AVS plugins
+ - [x] Linux VS plugins
  - [ ] More avs win plugins
  - [x] mktorrent
  - [x] update tracker list
- - [ ] Automatic job submission as daemon
+ - [ ] Automatic upload
  - [ ] Automatic mktorrent
- - [ ] Automatic publsh
+ - [ ] Automatic publish
+ - [ ] Automatic job submission as daemon
