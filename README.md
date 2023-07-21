@@ -45,7 +45,7 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
 ### Softsub support
   Currently not scheduled.
 ### Architecture support
-  Currently Broadwell(E5v4) and later Intel CPUs. May add EPYC2 support if I get a cluster to test.
+  Currently Broadwell(E5v4) and later Intel CPUs. May add EPYC2+ support if I get a cluster to test.
 ### Numa support
   Will try to bind x264 process to 1 socket on DP/MP platforms if there's more than 12 threads per socket available.
 ### AVS/VS Plugins support (Linux)
@@ -59,6 +59,8 @@ A pack of various prebuilt tools(?) used for video encoding(?) on (x86) [HPC clu
   Put i686 plugin dlls in deps/wine/avs32/plugins
 ### VSFilterMod support
   Supported by wine, i686 and x64 versions available
+### VFR source support
+  Scheduled, only MP4
 ## Usage
 Just clone this project to your compute cluster.
 Initiate the environment by\
@@ -76,6 +78,37 @@ mkdir KAKT
 cd KAKT
 mkdir ass font out script src tmp
 ```
+#### File name map
+if a project's name is KAKT, the file's naming rules will be following:
+
+namemap:
+```
+OUTNAME=[KTXP][Ayakashi_Triangle][$INDEX][$LANGG][$RESO]; SRC="Ayakashi Triangle"; ASS=KAKT # KAKT
+```
+
+Defines the output name, the SRC name is also used to search source file and ass file. \
+The source file should contain "Ayakashi Triangle", like [SubsPlease] Ayakashi Triangle - 01 (1080p).mkv.\
+The ass file like Ayakashi Triangle - 01_GB.ass or KAKT_01_GB.ass will be searched.\
+The name template pattern can be changed as your wish but do not change the $varaible name.
+
+### Prepare encoding script templates
+You can specify AVS/VS templates for each project, edit the project's profile's AVSTMPL/VSTMPL part.\
+Each project can have both AVS and VS templates, choosed when submiting jobs, by default avs will be used.\
+Separate template for x265 is also supported, useful for 8bit AVC and 10bit HEVC for a single project.\
+example scripts are config/base_template.avs or config/base_template.vpy, using the following varaible for substitution.
+#### AVS/VS template Variables
+|String|Usage|
+|-----------|----------|
+|\_\_ENCROOT\_\_|The HPCENC root dir|
+|\_\_SRCFILE\_\_|The source file name, without path|
+|\_\_ASSFILE\_\_|The ass file name without path|
+|\_\_FONTDIR\_\_|The relative font dir(in the project's dir)|
+
+#### AVS template rules
+ - If using automatic avs creation and 720p output, the template's last line should be __8bit__ final clip (e.g. Return V / Return Audiodub(V,A)) 
+#### VS template rules
+ - Video stream should be output stream 0, and audio stream 1. 
+
 ### Prepare files
 Copy sources, fonts, ass, and scripts(optional) into respective files.
 |DIR name|Usage|
@@ -126,34 +159,6 @@ Submitted batch job 60797
 ```
 
 #### And get your output file int the "out" dir
-
-### File name map
-if a project's name is KAKT, the file's naming rules will be following:
-
-namemap:
-```
-OUTNAME=[KTXP][Ayakashi_Triangle][$INDEX][$LANGG][$RESO]; SRC="Ayakashi Triangle"; ASS=KAKT # KAKT
-```
-
-Defines the output name, the SRC name is also used to search source file and ass file. \
-The source file should contain "Ayakashi Triangle", like [SubsPlease] Ayakashi Triangle - 01 (1080p).mkv.\
-The ass file like Ayakashi Triangle - 01_GB.ass or KAKT_01_GB.ass will be searched.
-The name template pattern can be changed as your wish but do not change the $varaible name.
-
-### Custom AVS/VS template
-You can create your own avs template according to config/base_template.avs or config/base_template.vpy, using the following varaible for substitution.
-#### AVS/VS template Variables
-|String|Usage|
-|-----------|----------|
-|\_\_ENCROOT\_\_|The HPCENC root dir|
-|\_\_SRCFILE\_\_|The source file name, without path|
-|\_\_ASSFILE\_\_|The ass file name without path|
-|\_\_FONTDIR\_\_|The relative font dir(in the project's dir)|
-
-#### AVS template rules
- - If using automatic avs creation and 720p output, the template's last line should be __8bit__ final clip (e.g. Return V / Return Audiodub(V,A)) 
-#### VS template rules
- - Video stream should be output stream 0, and audio stream 1. 
 
 ## Known issue
   Since wine use dlopen(3) to load libraries. We cannot get every libraries wine will use, so there may be a lack of some libraries on some clusters.\
