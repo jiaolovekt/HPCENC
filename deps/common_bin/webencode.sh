@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-set -x
 DEBUG=1 #Verbose logging
 DRYRUN=0 #dryrun
 
