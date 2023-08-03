@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -x
 DEBUG=1 #Verbose logging
 DRYRUN=0 #dryrun
 
@@ -130,7 +131,7 @@ logg "Output name $OUTNAME"
 #Encode part
 getwebsrc
 getwebsrcinfo #mediainfo
-
+font_config
 getwebscript "$CODEC" "$MODE"
 
 #VSFM dct only avs mode
@@ -389,3 +390,4 @@ if [ "$Automktorrent" != 0 ] ; then
 	mktor "$OUTFILE"
 fi
 
+exit 0

@@ -2,6 +2,7 @@
 
 if ! module > /dev/null ; then
 	echo "environment modules not found or not configured on this cluster at the current shell."
+	echo "try apt install environment-modules or yum install environment-modules.x86_64 if you are root"
 	echo "for details, check https://github.com/cea-hpc/modules"
 	return 1
 fi

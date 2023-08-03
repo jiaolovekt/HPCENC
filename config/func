@@ -410,6 +410,7 @@ wine_configure()
 	if ! grep -Fq "$WINEAVSDIR" "${WINEPREFIX}/system.reg" ; then
 		logg "need update wine avs reg" info
 		update_wine_avs_reg
+		check_wine_font
 	fi
 }
 
@@ -451,3 +452,69 @@ update_wine_avs_reg()
 	fi
 }
 
+check_wine_font()
+{
+	# all uses fullpath
+	case "$WINEFONT_MODE" in
+		link)
+		#check is syml
+		if [ -L "$WINEFONTDIR" ] ; then
+			#check link correct
+			if [ "$(readlink ${WINEFONTDIR})" = "${FONTDIR}" ] ; then
+				logg "symlink to $FONTDIR correct" debug
+			else
+				logg "recreate symlink from $FONTDIR to $WINEFONTDIR" info
+				if rm "$WINEFONTDIR" ; then
+					if ln -s "$FONTDIR" "$WINEFONTDIR" ; then
+						logg "reset winefontdir to $FONTDIR success" info
+					else
+						logg "reset winefontdir to $FONTDIR failed" err
+						exit 15
+					fi
+				else
+					logg "rm symlink $WINEFONTDIR failed" err
+					exit 15
+				fi
+			fi
+		else
+			logg "reset $WINE_EXEC font dir to symlink" info
+			if rm -r "$WINEFONTDIR" ; then
+				logg "rm $WINEFONTDIR success" info
+			else
+				logg "rm $WINEFONTDIR failed" err
+				exit 14
+			fi
+		fi
+		;;
+		copy)
+			if [ -L "$WINEFONTDIR" ] || [ -f "$WINEFONTDIR" ] ; then
+				if rm "$WINEFONTDIR" ; then
+					if cp -rp "$FONTDIR" "$WINEFONTDIR" ; then
+						logg "cp $FONTDIR to $WINEFONTDIR success" info
+					else
+						logg "cp $FONTDIR to $WINEFONTDIR failed" info
+						exit 15
+					fi
+				else
+					logg "rm symlink $WINEFONTDIR failed" err
+					exit 15
+				fi
+			elif [ -d "$WINEFONTDIR" ] ; then
+				if cp -rup "$FONTDIR" "$WINEFONTDIR" ; then
+					logg "cp $FONTDIR to $WINEFONTDIR success" info
+				else
+					logg "cp $FONTDIR to $WINEFONTDIR failed" info
+					exit 15
+				fi
+			fi
+		;;
+	esac
+}
+
+font_config()
+{
+	if [ "$FONT_MODE" = shared ] ; then
+		logg "font mode is $FONT_MODE , will use ${ENCROOT}/font as font dir" info
+		FONTDIR="${ENCROOT}/font"
+	fi
+}

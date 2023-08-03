@@ -11,7 +11,7 @@ OUTDIR="$WORKINGDIR/out"
 AVSTMPL="base_template.avs"	#template used to generate avs
 AVS265TMPL=""	#alt template for 265 scripts (10bit), left blank to use x264's
 VSTMPL="base_template.vpy"	#template used to generate vpy
-VS256TMPL=""
+VS265TMPL=""
 MODE="avs"	# use avs input by default, overrided by cmdline input
 
 #Type
@@ -86,6 +86,8 @@ MKVCOMMENT="$ENCROOT/config/defaulttag"
 #procedure param
 VS_CONFIG="$ENCROOT/config/vapoursynth.conf"
 MEDIAINFO_exec=mediainfo
+FONT_MODE=shared	# shared/isolated , isolated uses FONTDIR in profile, shared uses $ENCROOT/font
+WINEFONT_MODE=link	# link/copy , link uses symlink , copy copies all fonts to winedir.
 
 GBflag=GB
 B5flag=BIG5	#modify if needed

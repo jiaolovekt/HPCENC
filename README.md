@@ -121,6 +121,7 @@ Copy sources, fonts, ass, and scripts(optional) into respective files.
 |tmp|intermediate files here(.264 .265 .aac)|
 
 A symlink can be used for "font" dir across different projects, or modify the project's profile.
+__For multiple simultaneous projects using VSFM, project's profile's FONT_MODE should be set to shared, and move "font" dir to ENCROOT__
 ### Submit encode jobs
 For detailed information about cluster scheduler and job submitting, refer to https://slurm.schedmd.com/quickstart.html
 #### Direct run

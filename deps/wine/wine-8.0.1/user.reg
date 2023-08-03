@@ -748,13 +748,18 @@ WINE REGISTRY Version 2
 "OpenWithIcon"="81F5_winebrowser.0"
 "ProgID"="xmlfile"
 
-[Software\\Wine\\Fonts] 1689527582
-#time=1d9b808c7764eb4
+[Software\\Wine\\Fonts] 1690990370
+#time=1d9c55698aa7a82
 "Codepages"="1252,437"
 "LogPixels"=dword:00000060
 
-[Software\\Wine\\Fonts\\External Fonts] 1689527583
-#time=1d9b808c779d278
+[Software\\Wine\\Fonts\\External Fonts] 1690989462
+#time=1d9c5547b66b9a6
+"C059-BdIta (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\C059-BdIta.otf"
+"C059-Bold (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\C059-Bold.otf"
+"C059-Italic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\C059-Italic.otf"
+"C059-Roman (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\C059-Roman.otf"
+"D050000L (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\D050000L.otf"
 "DejaVu Sans (TrueType)"="Z:\\usr\\share\\fonts\\dejavu\\DejaVuSans.ttf"
 "DejaVu Sans Bold (TrueType)"="Z:\\usr\\share\\fonts\\dejavu\\DejaVuSans-Bold.ttf"
 "DejaVu Sans Bold Oblique (TrueType)"="Z:\\usr\\share\\fonts\\dejavu\\DejaVuSans-BoldOblique.ttf"
@@ -765,25 +770,54 @@ WINE REGISTRY Version 2
 "DejaVu Sans ExtraLight (TrueType)"="Z:\\usr\\share\\fonts\\dejavu\\DejaVuSans-ExtraLight.ttf"
 "DejaVu Sans Oblique (TrueType)"="Z:\\usr\\share\\fonts\\dejavu\\DejaVuSans-Oblique.ttf"
 "Marlett (TrueType)"="Z:\\home\\src\\HPCENC\\hpcenc\\deps\\wine-8.0.1\\share\\wine\\fonts\\marlett.ttf"
+"NimbusMonoPS-Bold (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusMonoPS-Bold.otf"
+"NimbusMonoPS-BoldItalic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusMonoPS-BoldItalic.otf"
+"NimbusMonoPS-Italic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusMonoPS-Italic.otf"
+"NimbusMonoPS-Regular (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusMonoPS-Regular.otf"
+"NimbusRoman-Bold (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusRoman-Bold.otf"
+"NimbusRoman-BoldItalic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusRoman-BoldItalic.otf"
+"NimbusRoman-Italic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusRoman-Italic.otf"
+"NimbusRoman-Regular (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusRoman-Regular.otf"
+"NimbusSans-Bold (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusSans-Bold.otf"
+"NimbusSans-BoldItalic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusSans-BoldItalic.otf"
+"NimbusSans-Italic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusSans-Italic.otf"
+"NimbusSans-Regular (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusSans-Regular.otf"
+"NimbusSansNarrow-Bold (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusSansNarrow-Bold.otf"
+"NimbusSansNarrow-BoldOblique (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusSansNarrow-BoldOblique.otf"
+"NimbusSansNarrow-Oblique (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusSansNarrow-Oblique.otf"
+"NimbusSansNarrow-Regular (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\NimbusSansNarrow-Regular.otf"
+"P052-Bold (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\P052-Bold.otf"
+"P052-BoldItalic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\P052-BoldItalic.otf"
+"P052-Italic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\P052-Italic.otf"
+"P052-Roman (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\P052-Roman.otf"
 "Symbol (TrueType)"="Z:\\home\\src\\HPCENC\\hpcenc\\deps\\wine-8.0.1\\share\\wine\\fonts\\symbol.ttf"
 "Tahoma (TrueType)"="Z:\\home\\src\\HPCENC\\hpcenc\\deps\\wine-8.0.1\\share\\wine\\fonts\\tahoma.ttf"
 "Tahoma Bold (TrueType)"="Z:\\home\\src\\HPCENC\\hpcenc\\deps\\wine-8.0.1\\share\\wine\\fonts\\tahomabd.ttf"
+"URWBookman-Demi (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\URWBookman-Demi.otf"
+"URWBookman-DemiItalic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\URWBookman-DemiItalic.otf"
+"URWBookman-Light (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\URWBookman-Light.otf"
+"URWBookman-LightItalic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\URWBookman-LightItalic.otf"
+"URWGothic-Book (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\URWGothic-Book.otf"
+"URWGothic-BookOblique (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\URWGothic-BookOblique.otf"
+"URWGothic-Demi (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\URWGothic-Demi.otf"
+"URWGothic-DemiOblique (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\URWGothic-DemiOblique.otf"
 "Webdings (TrueType)"="Z:\\home\\src\\HPCENC\\hpcenc\\deps\\wine-8.0.1\\share\\wine\\fonts\\webdings.ttf"
 "Wingdings (TrueType)"="Z:\\home\\src\\HPCENC\\hpcenc\\deps\\wine-8.0.1\\share\\wine\\fonts\\wingding.ttf"
+"Z003-MediumItalic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\Z003-MediumItalic.otf"
 
 [Software\\Wine\\MenuFiles] 1689247039
 #time=1d9b57b965cec82
 
-[Volatile Environment] 1689527583
-#time=1d9b808c7c71ec0
+[Volatile Environment] 1690990370
+#time=1d9c55698e81234
 "APPDATA"="C:\\users\\root\\AppData\\Roaming"
 "CLIENTNAME"="Console"
 "HOMEDRIVE"="C:"
 "HOMEPATH"="\\users\\root"
 "HOMESHARE"=""
 "LOCALAPPDATA"="C:\\users\\root\\AppData\\Local"
-"LOGONSERVER"="\\\\PURLEY16"
+"LOGONSERVER"="\\\\PURLEY12"
 "SESSIONNAME"="Console"
-"USERDOMAIN"="PURLEY16"
+"USERDOMAIN"="PURLEY12"
 "USERNAME"="root"
 "USERPROFILE"="C:\\users\\root"
