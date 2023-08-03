@@ -410,8 +410,8 @@ wine_configure()
 	if ! grep -Fq "$WINEAVSDIR" "${WINEPREFIX}/system.reg" ; then
 		logg "need update wine avs reg" info
 		update_wine_avs_reg
-		check_wine_font
 	fi
+	check_wine_font
 }
 
 update_wine_avs_reg()
@@ -476,13 +476,26 @@ check_wine_font()
 					exit 15
 				fi
 			fi
-		else
-			logg "reset $WINE_EXEC font dir to symlink" info
+		elif [ -d "$WINEFONTDIR" ] ; then
+			logg "reset $WINEFONTDIR to symlink" info
 			if rm -r "$WINEFONTDIR" ; then
 				logg "rm $WINEFONTDIR success" info
+				if ln -s "$FONTDIR" "$WINEFONTDIR" ; then
+					logg "reset winefontdir to $FONTDIR success" info
+				else
+					logg "reset winefontdir to $FONTDIR failed" err
+					exit 15
+				fi
 			else
 				logg "rm $WINEFONTDIR failed" err
 				exit 14
+			fi
+		else
+			if ln -s "$FONTDIR" "$WINEFONTDIR" ; then
+				logg "reset winefontdir to $FONTDIR success" info
+			else
+				logg "reset winefontdir to $FONTDIR failed" err
+				exit 15
 			fi
 		fi
 		;;
