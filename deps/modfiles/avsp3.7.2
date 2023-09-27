@@ -2,7 +2,7 @@
 
 module load hpcenc
 module load DevIL
-set __encroot [getenv ENCROOT]
+set __encroot $::env(ENCROOT)
 set _MROOT ${__encroot}/deps/avsp3.7.2
 set _LPATH ${_MROOT}/lib
 prepend-path LIBRARY_PATH ${_LPATH}

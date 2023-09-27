@@ -2,7 +2,7 @@
 
 module load hpcenc
 module load zimg-3.0.4 vmaf-2.3.1 fftw-3.3.10
-set __encroot [getenv ENCROOT]
+set __encroot $::env(ENCROOT)
 set _MROOT ${__encroot}/deps/vs-r62
 set _LPATH ${_MROOT}/lib
 prepend-path LIBRARY_PATH ${_LPATH}

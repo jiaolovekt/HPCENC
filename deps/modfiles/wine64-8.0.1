@@ -2,7 +2,7 @@
 
 module load hpcenc
 conflict wine-8.0.1
-set __encroot [getenv ENCROOT]
+set __encroot $::env(ENCROOT)
 set _MROOT ${__encroot}/deps/wine64-8.0.1
 set _LPATH ${_MROOT}/lib
 prepend-path LIBRARY_PATH ${_LPATH}

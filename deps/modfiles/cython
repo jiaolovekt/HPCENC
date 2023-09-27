@@ -1,7 +1,7 @@
 #%Module1.0
 
 module load hpcenc
-set __encroot [getenv ENCROOT]
+set __encroot $::env(ENCROOT)
 set _MROOT ${__encroot}/deps/cython
 set _LPATH ${_MROOT}/lib
 prepend-path PYTHONPATH ${_MROOT}/lib/python3.11/site-packages
