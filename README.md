@@ -162,8 +162,9 @@ Submitted batch job 60797
 #### And get your output file int the "out" dir
 
 ## Known issue
-  Since wine use dlopen(3) to load libraries. We cannot get every libraries wine will use, so there may be a lack of some libraries on some clusters.\
-  Please create issues about the missing library when you encounter this kind of error.
+ - Since wine use dlopen(3) to load libraries. We cannot get every libraries wine will use, so there may be a lack of some libraries on some clusters.\
+ - For unknown reasons when using vsfiltermod, wine sometimes exit before encode finish without errors. This is currently under investigation.\
+  Please create issues about the missing library when you encounter these kinds of error.
 
 ## Current status
  - [x] Webrip batch with avs
