@@ -748,13 +748,13 @@ WINE REGISTRY Version 2
 "OpenWithIcon"="81F5_winebrowser.0"
 "ProgID"="xmlfile"
 
-[Software\\Wine\\Fonts] 1691082297
-#time=1d9c62ca18aef2a
+[Software\\Wine\\Fonts] 1695647874
+#time=1d9efb2b1ae581a
 "Codepages"="1252,437"
 "LogPixels"=dword:00000060
 
-[Software\\Wine\\Fonts\\External Fonts] 1691082297
-#time=1d9c62ca18d06d4
+[Software\\Wine\\Fonts\\External Fonts] 1695647874
+#time=1d9efb2b1b025b4
 "C059-BdIta (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\C059-BdIta.otf"
 "C059-Bold (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\C059-Bold.otf"
 "C059-Italic (TrueType)"="Z:\\usr\\share\\fonts\\urw-base35\\C059-Italic.otf"
@@ -808,16 +808,16 @@ WINE REGISTRY Version 2
 [Software\\Wine\\MenuFiles] 1689247039
 #time=1d9b57b965cec82
 
-[Volatile Environment] 1691082297
-#time=1d9c62ca1c58b62
+[Volatile Environment] 1695647874
+#time=1d9efb2b1b5462a
 "APPDATA"="C:\\users\\root\\AppData\\Roaming"
 "CLIENTNAME"="Console"
 "HOMEDRIVE"="C:"
 "HOMEPATH"="\\users\\root"
 "HOMESHARE"=""
 "LOCALAPPDATA"="C:\\users\\root\\AppData\\Local"
-"LOGONSERVER"="\\\\PURLEY10"
+"LOGONSERVER"="\\\\D36"
 "SESSIONNAME"="Console"
-"USERDOMAIN"="PURLEY10"
+"USERDOMAIN"="D36"
 "USERNAME"="root"
 "USERPROFILE"="C:\\users\\root"

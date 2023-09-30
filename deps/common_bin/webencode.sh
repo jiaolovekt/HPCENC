@@ -118,7 +118,7 @@ else
 	exit 10
 fi
 logg "Encode $PROJECT Eps $INDEX $RESO $LANGG Codec $CODEC input $MODE" info
-nmmap=$(grep "$PROJECT" "$CONFIGDIR"/namemap | grep -v ^# )
+nmmap=$(grep "$PROJECT" "$CONFIGDIR"/namemap | grep -v ^# || true)
 if [ -z "$nmmap" ] ; then 
 	logg "No project namemap defined" err
 	exit 6

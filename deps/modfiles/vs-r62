@@ -8,6 +8,7 @@ set _LPATH ${_MROOT}/lib
 prepend-path LIBRARY_PATH ${_LPATH}
 prepend-path LD_LIBRARY_PATH ${_LPATH}
 prepend-path PYTHONPATH ${_LPATH}/python3.11/site-packages
+prepend-path PYTHONPATH ${_MROOT}/../vs-plugins
 prepend-path CPATH ${_MROOT}/include/vapoursynth
 prepend-path CPATH ${_MROOT}/include
 prepend-path PATH ${_MROOT}/bin
